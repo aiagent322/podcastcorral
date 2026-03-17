@@ -756,7 +756,7 @@
 </section>
 
 <div class="stats-bar">
-  <div class="stat-item"><span class="stat-num" id="totalCount">91</span><span class="stat-label">Shows Listed</span></div>
+  <div class="stat-item"><span class="stat-num" id="totalCount">92</span><span class="stat-label">Shows Listed</span></div>
   <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Categories</span></div>
 </div>
 
@@ -2230,6 +2230,21 @@ const PODCASTS = [
     spotify: "https://open.spotify.com/show/0NC8LsedyH4rOaNeAyGcMj",
     apple: "https://podcasts.apple.com/us/podcast/the-score-from-the-team-roping-journal/id1364586489",
     artwork: "https://i.scdn.co/image/ab6765630000ba8a3cf465841e53768a6e8c9319"
+  },
+  {
+    id: 92,
+    featured: false,
+    title: "Cowboy Office Show",
+    host: "Brian Dygert & Jody Brainard",
+    category: "training",
+    catLabel: "Training",
+    catClass: "cat-training",
+    emoji: "🏆",
+    desc: "Expert analysis and epic discussions from NRHA judges and industry veterans Brian Dygert and Jody Brainard. Data-driven breakdowns of reining scores, spreads, and judging — plus real conversations about the western horse industry's growth, officiating, and future.",
+    format: "video",
+    spotify: "https://open.spotify.com/show/3Vz2YjlA4Wi9tMW49JMx88",
+    apple: "https://podcasts.apple.com/us/podcast/cowboy-office-show/id1659149039",
+    artwork: "https://i.scdn.co/image/ab6765630000ba8aeaca75bdbef3ddae339fe31e"
   }
 ];
 
@@ -2329,7 +2344,7 @@ function renderAll() {
   `).join('');
 
   showingCount.textContent = matching.length + ' shows';
-  // totalCount is static (91) — do not overwrite dynamically
+  // totalCount is static (92) — do not overwrite dynamically
 
   const empty = matching.length === 0;
   noResults.style.display = empty ? 'block' : 'none';
