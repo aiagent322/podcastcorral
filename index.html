@@ -809,7 +809,7 @@
 </section>
 
 <div class="stats-bar">
-  <div class="stat-item"><span class="stat-num" id="totalCount">92</span><span class="stat-label">Shows Listed</span></div>
+  <div class="stat-item"><span class="stat-num" id="totalCount">93</span><span class="stat-label">Shows Listed</span></div>
   <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Categories</span></div>
 </div>
 
@@ -2292,6 +2292,21 @@ const PODCASTS = [
     spotify: "https://open.spotify.com/show/3Vz2YjlA4Wi9tMW49JMx88",
     apple: "https://podcasts.apple.com/us/podcast/cowboy-office-show/id1659149039",
     artwork: "https://i.scdn.co/image/ab6765630000ba8aeaca75bdbef3ddae339fe31e"
+  },
+  {
+    id: 93,
+    featured: false,
+    title: "Rodeo Time with Dale Brisby",
+    host: "Dale Brisby",
+    category: "lifestyle",
+    catLabel: "Lifestyle",
+    catClass: "cat-lifestyle",
+    emoji: "🤠",
+    desc: "Dale Brisby is the expert on all things rodeo, ranching, and pretty much everything — just ask him. Rodeo athletes, legendary cowboy stories, and laughs from the Winnebago crew. The #1 rodeo podcast with 310+ episodes.",
+    format: "video",
+    spotify: "https://open.spotify.com/show/5nR3hQZcNWoUXngEmL4FAh",
+    apple: "https://podcasts.apple.com/us/podcast/rodeo-time-with-dale-brisby/id1450121744",
+    artwork: "https://i.scdn.co/image/ab6765630000ba8a0e7e2aa2b1c4e046c6ba1ae0"
   }
 ];
 
@@ -2389,7 +2404,7 @@ function renderAll() {
   `).join('');
 
   showingCount.textContent = matching.length + ' shows';
-  // totalCount is static (92) — do not overwrite dynamically
+  // totalCount is static (93) — do not overwrite dynamically
 
   const empty = matching.length === 0;
   noResults.style.display = empty ? 'block' : 'none';
