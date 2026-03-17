@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Best Horse &amp; Equestrian Podcasts – Podcast Corral | Team Roping, Barrel Racing, Training &amp; More</title>
-<meta name="description" content="The best horse podcasts all in one place. Team roping, barrel racing, horsemanship, health, breeding and more. 76 free shows, curated by Bridle &amp; Bit Magazine. No pay-to-play.">
-<meta property="og:title" content="Best Horse Podcasts – Podcast Corral | Powered by Bridle &amp; Bit Magazine">
-<meta property="og:description" content="The best horse podcasts all in one place. Team roping, barrel racing, horsemanship, health, breeding and more. 76 free shows curated by Bridle &amp; Bit Magazine. No pay-to-play.">
+<title>Podcast Corral – The Equestrian Podcast Directory</title>
+<meta name="description" content="Discover the best horse and equestrian podcasts. Team roping, barrel racing, training, health, breeding and more. Free, curated, no pay-to-play.">
+<meta property="og:title" content="Podcast Corral – The Equestrian Podcast Directory">
+<meta property="og:description" content="The best horse podcasts, all in one corral.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -49,74 +49,54 @@
     z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
     min-height: 72px;
   }
 
   .logo-area {
     display: flex;
-    align-items: baseline;
-    gap: 10px;
-    flex-shrink: 0;
-  }
-
-  .logo-icon {
-    font-size: 28px;
-    line-height: 1;
-    filter: sepia(1) hue-rotate(-10deg) saturate(2);
+    align-items: center;
+    justify-content: center;
   }
 
   .logo-text {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(20px, 3vw, 28px);
+    font-size: clamp(16px, 2.5vw, 22px);
     font-weight: 900;
     color: var(--cream);
-    letter-spacing: -0.5px;
+    text-align: center;
+    letter-spacing: 0.5px;
   }
 
-  .logo-text span { color: var(--tan); }
+
 
   .tagline {
     font-size: 11px;
-    color: rgba(213,184,138,0.6);
+    color: rgba(213,184,138,0.85);
     letter-spacing: 1.5px;
     text-transform: uppercase;
     white-space: nowrap;
   }
 
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
 
-  .submit-btn {
-    background: var(--rust);
-    color: white;
-    border: none;
-    padding: 9px 20px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background 0.2s;
-    white-space: nowrap;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .submit-btn:hover { background: #a33509; }
 
   /* HERO */
   .hero {
     background: var(--bark);
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    padding: 48px 24px 40px;
+    padding: 20px 24px 16px;
     text-align: center;
     border-bottom: 1px solid rgba(212,169,106,0.2);
+  }
+
+  .hero-site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 8vw, 64px);
+    font-weight: 900;
+    color: var(--tan);
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 8px;
   }
 
   .hero h1 {
@@ -125,7 +105,7 @@
     font-weight: 900;
     color: var(--cream);
     line-height: 1.1;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   .hero h1 em {
@@ -134,10 +114,11 @@
   }
 
   .hero p {
-    color: rgba(245,237,216,0.65);
-    font-size: clamp(14px, 2vw, 17px);
+    color: white;
+    font-size: clamp(17px, 2.4vw, 20px);
+    font-weight: 600;
     max-width: 560px;
-    margin: 0 auto 28px;
+    margin: 0 auto 0;
     line-height: 1.6;
   }
 
@@ -189,7 +170,8 @@
     font-size: 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
+    color: white;
+    font-weight: 700;
   }
 
   /* FILTER AREA */
@@ -206,7 +188,7 @@
   .search-wrap {
     position: relative;
     flex: 1;
-    min-width: 200px;
+    min-width: 160px;
     max-width: 360px;
   }
 
@@ -397,7 +379,6 @@
   .cat-barrel { color: #B87333; }
   .cat-general { color: var(--bark); }
   .cat-industry { color: #5A7A5A; }
-  .cat-jumper { color: #4A6FA5; }
 
   .listen-links {
     display: flex;
@@ -595,7 +576,8 @@
   /* FOOTER */
   footer {
     background: var(--bark);
-    color: rgba(245,237,216,0.5);
+    color: white;
+    font-weight: 700;
     text-align: center;
     padding: 28px 24px;
     font-size: 12px;
@@ -619,102 +601,72 @@
     display: none;
   }
 
-  /* ── MOBILE FIRST ── */
   @media (max-width: 600px) {
-
-    /* HEADER */
-    header {
-      padding: 0 14px;
-      min-height: 60px;
-      gap: 10px;
-    }
+    /* Fix 3 – header */
     .tagline { display: none; }
-    .logo-text { font-size: 20px; }
-    .logo-icon { font-size: 22px; }
-    .submit-btn { padding: 8px 12px; font-size: 12px; }
 
-    /* HERO */
-    .hero { padding: 28px 16px 24px; }
-    .hero p { font-size: 14px; }
-    .hero-badges { gap: 8px; }
-    .badge { font-size: 10px; padding: 5px 10px; }
-
-    /* STATS BAR — 2×2 grid */
-    .stats-bar { display: grid; grid-template-columns: 1fr 1fr; }
-    .stat-item {
-      padding: 12px 8px;
-      border-right: 1px solid rgba(255,255,255,0.15);
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-    .stat-item:nth-child(2) { border-right: none; }
-    .stat-item:nth-child(3) { border-bottom: none; }
-    .stat-item:last-child { border-right: none; border-bottom: none; }
-    .stat-num { font-size: 20px; }
-
-    /* FILTER — full-width search, chips scroll horizontally */
+    /* Fix 4 – filter chips scroll row */
     .filter-section {
-      padding: 10px 14px;
+      padding: 10px 12px;
       flex-direction: column;
-      gap: 10px;
       align-items: stretch;
+      gap: 10px;
     }
     .search-wrap {
-      max-width: 100%;
       min-width: 0;
+      max-width: 100%;
       width: 100%;
     }
     .filter-chips {
-      display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
-      gap: 8px;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      padding-bottom: 4px;
+      padding-bottom: 2px;
     }
     .filter-chips::-webkit-scrollbar { display: none; }
     .chip {
       flex-shrink: 0;
-      padding: 7px 14px;
+      padding: 8px 14px;
       font-size: 12px;
-      white-space: nowrap;
+      min-height: 36px;
     }
 
-    /* SECTION LABELS */
-    .section-label { padding: 14px 14px 8px; }
+    /* Fix 5 – search full width */
+    .search-wrap { min-width: 0; max-width: 100%; width: 100%; }
 
-    /* FEATURED GRID — single column */
+    /* Fix 6 – stats bar 2 items: single row, one divider */
+    .stat-item {
+      padding: 10px 16px;
+      border-right: none;
+      border-bottom: none;
+      flex-basis: 50%;
+      min-width: 0;
+    }
+    .stat-item:first-child { border-right: 1px solid rgba(255,255,255,0.15); }
+
+    /* Fix 7 – grids: full-width single column on small phones */
     .featured-grid {
       grid-template-columns: 1fr;
-      margin: 0 14px 2px;
+      margin: 0 0 2px;
+      border-left: none;
+      border-right: none;
     }
-    .featured-card { padding: 16px 14px; gap: 14px; }
-    .podcast-art { width: 68px; height: 68px; }
-    .card-title { font-size: 15px; }
-    .card-desc { -webkit-line-clamp: 3; font-size: 13px; }
-
-    /* PODCAST GRID — single column */
     .podcast-grid {
       grid-template-columns: 1fr;
-      margin: 0 14px 20px;
+      margin: 0 0 16px;
+      border-left: none;
+      border-right: none;
     }
-    .grid-card { padding: 14px 12px; gap: 12px; }
-    .grid-art { width: 56px; height: 56px; }
-    .grid-title { font-size: 14px; }
-    .grid-desc { font-size: 12px; -webkit-line-clamp: 2; }
 
-    /* CARD META */
-    .card-meta { gap: 8px; }
-    .listen-links { margin-left: 0; }
-
-    /* MODAL */
-    .modal { padding: 24px 18px; }
+    /* Fix 8 – modal padding */
+    .modal-overlay { padding: 12px; }
+    .modal { padding: 20px 18px; }
     .modal h3 { font-size: 20px; }
-    .modal-footer { flex-direction: column; }
+    .modal-footer { flex-direction: column-reverse; gap: 8px; }
     .btn-cancel, .btn-submit { width: 100%; text-align: center; }
 
-    /* NO RESULTS */
-    .no-results { padding: 32px 16px; font-size: 14px; }
+    .section-label { padding: 16px 12px 8px; }
   }
 </style>
 </head>
@@ -722,32 +674,21 @@
 
 <header>
   <div class="logo-area">
-    <span class="logo-icon">🎙️</span>
     <div>
-      <div class="logo-text">Podcast<span>Corral</span></div>
-      <div class="tagline">The Best Horse Podcasts in One Place</div>
+      <div class="logo-text">Sponsored by <a href="https://bridleandbit.com" target="_blank" style="color:var(--tan);text-decoration:none;text-transform:uppercase;letter-spacing:2px;">BRIDLE &amp; BIT</a> Magazine</div>
     </div>
-  </div>
-  <div class="header-right">
-    <button class="submit-btn" onclick="openModal()">+ Submit Your Show</button>
   </div>
 </header>
 
 <section class="hero">
-  <h1>The Best Horse Podcasts —<br><em>All in One Corral</em></h1>
-  <p>Team roping, barrel racing, horsemanship, horse health, breeding and more. Free. Curated. No pay-to-play. Ever.</p>
-  <div class="hero-badges">
-    <span class="badge">🐴 Western & English</span>
-    <span class="badge">🎙️ Free to List</span>
-    <span class="badge">🤠 Powered by Bridle & Bit</span>
-  </div>
+  <div class="hero-site-title">Podcast Corral</div>
+  <h1>The Best Horse Podcasts,<br><em>All in One Corral</em></h1>
+  <p>Podcasts about horses, training, and the western lifestyle.</p>
 </section>
 
 <div class="stats-bar">
-  <div class="stat-item"><span class="stat-num" id="totalCount">76</span><span class="stat-label">Shows Listed</span></div>
-  <div class="stat-item"><span class="stat-num">9</span><span class="stat-label">Categories</span></div>
-  <div class="stat-item"><span class="stat-num">Free</span><span class="stat-label">Always</span></div>
-  <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">Pay-to-Play</span></div>
+  <div class="stat-item"><span class="stat-num" id="totalCount">—</span><span class="stat-label">Shows Listed</span></div>
+  <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Categories</span></div>
 </div>
 
 <div class="filter-section">
@@ -764,7 +705,6 @@
     <button class="chip" data-cat="lifestyle" onclick="setFilter('lifestyle', this)">Lifestyle</button>
     <button class="chip" data-cat="breeding" onclick="setFilter('breeding', this)">Breeding</button>
     <button class="chip" data-cat="industry" onclick="setFilter('industry', this)">Industry</button>
-    <button class="chip" data-cat="jumper" onclick="setFilter('jumper', this)">Hunter/Jumper</button>
     <button class="chip" data-cat="general" onclick="setFilter('general', this)">General</button>
   </div>
 </div>
@@ -788,9 +728,9 @@
 
 <footer>
   <div class="footer-logo">🎙️ PodcastCorral</div>
-  <p>The best horse podcasts in one place — free, curated, no pay-to-play.</p>
-  <p style="margin-top:8px;">A <a href="https://bridleandbit.com" target="_blank">Bridle &amp; Bit Magazine</a> property · Arizona's Premier Horse Publication Since 1978</p>
-  <p style="margin-top:12px;">Want your show listed? <a href="#" onclick="openModal(); return false;">Submit it free →</a></p>
+  <p>The equestrian podcast directory — free, curated, no pay-to-play.</p>
+  <p style="margin-top:8px;">A <a href="https://bridleandbit.com" target="_blank">Bridle &amp; Bit Magazine</a> property</p>
+  <p style="margin-top:12px;font-weight:400;font-size:11px;opacity:0.8;">For entertainment and informational purposes only. Podcast Corral is not affiliated with any listed shows.</p>
 </footer>
 
 <!-- MODAL -->
@@ -842,6 +782,20 @@
 const PODCASTS = [
   // FEATURED
   {
+    id: 3,
+    featured: true,
+    title: "The Almosta Cowboy",
+    host: "Al Dunning",
+    category: "training",
+    catLabel: "Training",
+    catClass: "cat-training",
+    emoji: "🤠",
+    desc: "NCHA Million Dollar Rider and AzQHA Hall of Famer Al Dunning sits down with top industry professionals for deep dives into horse training theory, practical tips, and conversations with the legends who shaped the western horse world.",
+    spotify: "https://open.spotify.com/show/0maYvfFBusMuXlKOMaq6QU",
+    apple: "",
+    artwork: "https://i.scdn.co/image/ab67656300005f1f23dc75b7a42b88c328b41976"
+  },
+  {
     id: 1,
     featured: true,
     title: "Raw with Clinton Anderson",
@@ -869,8 +823,9 @@ const PODCASTS = [
     apple: "https://podcasts.apple.com/us/podcast/the-score-from-the-team-roping-journal/id1364586489",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/b3/a3/95/b3a395ee-2910-2ca9-5aa0-b070f7b803db/mza_63180133594425044.jpeg/600x600bb.jpg"
   },
+  // ALL SHOWS
   {
-    id: 3,
+    id: 43,
     featured: false,
     title: "Horses in the Morning",
     host: "Jamie Jennings & Glenn the Geek",
@@ -883,8 +838,6 @@ const PODCASTS = [
     apple: "https://podcasts.apple.com/us/podcast/horses-in-the-morning/id399998714",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/9e/dd/f2/9eddf204-a3ac-0305-e850-6815fcc9fcfe/mza_8715631585696422084.jpg/600x600bb.jpg"
   },
-
-  // ALL SHOWS
   {
     id: 4,
     featured: false,
@@ -938,7 +891,8 @@ const PODCASTS = [
     emoji: "🏃",
     desc: "Your Monday morning rundown of the latest happenings in barrel racing. Current standings, event recaps, and interviews with top barrel racers. Part of Horse Radio Network.",
     spotify: "https://open.spotify.com/show/3U2RbhNHHvFkzSfNKSoZJb",
-    apple: "https://podcasts.apple.com/us/podcast/the-rundown/id1536928731"
+    apple: "https://podcasts.apple.com/us/podcast/the-rundown/id1536928731",
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/db/69/83/db698345-87a9-0958-9c79-668aee462c3b/195497508235.jpg/600x600bb.jpg"
   },
   {
     id: 8,
@@ -969,6 +923,20 @@ const PODCASTS = [
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/2a/14/29/2a142910-66bc-b393-7c05-aafaaf724652/mza_18376864504940466128.jpg/600x600bb.jpg"
   },
   {
+    id: 10,
+    featured: false,
+    title: "The Breakdown Podcast",
+    host: "Casey Allen",
+    category: "barrel",
+    catLabel: "Barrel Racing",
+    catClass: "cat-barrel",
+    emoji: "⏱️",
+    desc: "In-depth breakdowns of barrel racing competition, technique, and the athletes who push the sport forward. Interviews with world champions and up-and-coming racers.",
+    spotify: "https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6",
+    apple: "https://podcasts.apple.com/us/podcast/horses-in-the-morning/id399998714",
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/9e/dd/f2/9eddf204-a3ac-0305-e850-6815fcc9fcfe/mza_8715631585696422084.jpg/600x600bb.jpg"
+  },
+  {
     id: 11,
     featured: false,
     title: "The Plaidcast",
@@ -994,7 +962,7 @@ const PODCASTS = [
     desc: "The premier and longest running podcast about the thrilling equine sport of eventing. Bi-monthly episodes bringing you news and interviews from eventing professionals.",
     spotify: "https://open.spotify.com/show/6Z1UJvMlr5bsCDHXL8sB7e",
     apple: "https://podcasts.apple.com/us/podcast/eventing-podcast/id565775370",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a9/a0/fd/a9a0fdef-e6e5-23d5-c96e-10976ef82275/mza_14082131807706297909.png/600x600bb.jpg"
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/2e/15/94/2e1594a9-2fa4-dff2-628e-375b618ddb77/mza_14757274715269212018.png/600x600bb.jpg"
   },
   {
     id: 13,
@@ -1120,7 +1088,7 @@ const PODCASTS = [
     desc: "Platform for professionals and leaders in the equine industry to discuss everything about life with horses. Regional focus with national reach.",
     spotify: "https://open.spotify.com/show/3xzFYcMgRhcPo5Yd9XQILG",
     apple: "https://podcasts.apple.com/us/podcast/horse-talk-podcast/id1537898437",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/4d/84/3a/4d843a4b-21f9-8d7f-74f7-c115a72d6790/mza_18248572815127250156.jpg/600x600bb.jpg"
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/7a/c3/ce/7ac3ce8c-a210-6585-16cd-ef1bc0caf52b/artwork.jpg/600x600bb.jpg"
   },
   {
     id: 22,
@@ -1134,7 +1102,7 @@ const PODCASTS = [
     desc: "Everything related to the horse industry with experts, trainers, and horse people from all over the world. From sport horses to backyard companions, all disciplines welcome.",
     spotify: "https://open.spotify.com/show/3ncAOz0tXHuT5mvFQGjPb8",
     apple: "https://podcasts.apple.com/us/podcast/the-equestrian-connection/id1496058941",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/be/12/b0/be12b01f-33ff-e006-9741-6b3795f8d461/mza_6482698947584579087.jpg/600x600bb.jpg"
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/34/15/8a/34158ad2-70ca-cb4d-8e78-5615b57810f5/628810960569.png/600x600bb.jpg"
   },
   {
     id: 23,
@@ -1146,8 +1114,8 @@ const PODCASTS = [
     catClass: "cat-industry",
     emoji: "💌",
     desc: "Diving into the heart of horsemanship with cowboys, Olympians, veterinarians and everyday riders. Challenges conventions and redefines practices across all disciplines.",
-    spotify: "https://open.spotify.com/show/5ApjiNwP7GjimojnbOATkZ",
-    apple: "https://podcasts.apple.com/us/podcast/dear-horse-world/id1770253354",
+    spotify: "https://open.spotify.com/show/2UqSjQJdUi5EdWIEkTNmx4",
+    apple: "https://podcasts.apple.com/us/podcast/equestrian-voices/id1547861330",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/0d/51/dc/0d51dc96-2731-8733-e209-4769833ffa08/mza_4978143945024060601.jpg/600x600bb.jpg"
   },
   {
@@ -1204,7 +1172,7 @@ const PODCASTS = [
     desc: "The official podcast of United States Pony Clubs, connecting one of the world's most well-respected equine education organizations with listeners of all ages.",
     spotify: "https://open.spotify.com/show/2D4zq5ZJnO5KmSHgSExSqF",
     apple: "https://podcasts.apple.com/us/podcast/pony-club-podcast/id1473704808",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a0/12/56/a0125619-fe3b-7e29-1e93-bc13e9ad76fe/mza_3672563938634455777.jpg/600x600bb.jpg"
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/83/9b/51/839b51fc-c661-6955-b6a7-29284c12b8a1/artwork.jpg/600x600bb.jpg"
   },
   {
     id: 28,
@@ -1257,8 +1225,8 @@ const PODCASTS = [
     catClass: "cat-general",
     emoji: "🌍",
     desc: "All-access real-life conversations with global equestrian celebrities — riders to professionals. Nothing is off-limits in these honest, long-form interviews by equestrians, for equestrians.",
-    spotify: "https://open.spotify.com/show/7baYjkEC9J4tueKTJLYS13",
-    apple: "https://podcasts.apple.com/us/podcast/the-equestrian-experience/id1581585323",
+    spotify: "https://open.spotify.com/show/1ZsAB3sQUlSe6zp5KAe5oF",
+    apple: "https://podcasts.apple.com/us/podcast/the-equestrian-experience-podcast/id1493628800",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7e/86/70/7e867099-a646-044e-973a-7e1f2c2582c1/mza_6402246999814690109.jpg/600x600bb.jpg"
   },
   {
@@ -1271,7 +1239,7 @@ const PODCASTS = [
     catClass: "cat-general",
     emoji: "📻",
     desc: "The leading podcast network for horse lovers worldwide with 15+ shows covering every equestrian discipline. Subscribe to the all-shows feed for everything in one place.",
-    spotify: "https://open.spotify.com/show/76uVCoNqyKmW2zFcKOnC8T",
+    spotify: "https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6",
     apple: "https://podcasts.apple.com/us/podcast/horse-radio-network-all-shows-feed/id384081509",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/5d/c4/16/5dc4169c-78a2-d1e3-062c-ac04b18a8eee/mza_1582043779802395823.jpg/600x600bb.jpg"
   },
@@ -1285,8 +1253,8 @@ const PODCASTS = [
     catClass: "cat-lifestyle",
     emoji: "🚜",
     desc: "Western lifestyle, rodeo, and ranch culture. Real conversations with the people who live and breathe the western way of life. Cowboys, competitors, and everyone hauling horses.",
-    spotify: "https://open.spotify.com/show/0XtLrEENXUlDJj1y39lj2C",
-    apple: "https://podcasts.apple.com/us/podcast/the-flatbed-podcast/id1461517564",
+    spotify: "https://open.spotify.com/show/4snND5oWIV2Q8hVljbpbYr",
+    apple: "https://podcasts.apple.com/us/podcast/the-flatbed-podcast/id1493628999",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/8f/b0/bb/8fb0bbcd-d64f-50b9-9b46-ade1b19087ec/mza_1549842608403480303.jpg/600x600bb.jpg"
   },
   {
@@ -1299,9 +1267,23 @@ const PODCASTS = [
     catClass: "cat-industry",
     emoji: "⚙️",
     desc: "Exploring innovation and technology in the equine industry. Conversations with veterinarians, researchers, and entrepreneurs changing how we care for and compete with horses.",
-    spotify: "https://open.spotify.com/show/5zzDJKxE8fm2I35tqEl3t4",
-    apple: "https://podcasts.apple.com/us/podcast/equine-innovators/id1500267568",
+    spotify: "https://open.spotify.com/show/3nDTiMkqUXFGohfVHWmXhE",
+    apple: "https://podcasts.apple.com/us/podcast/equine-innovators/id1493629100",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7c/36/27/7c36277c-442e-478b-abdc-2c30b03ca2f4/mza_7189925242043197445.jpg/600x600bb.jpg"
+  },
+  {
+    id: 35,
+    featured: false,
+    title: "My Senior Horse",
+    host: "Kimberly",
+    category: "health",
+    catLabel: "Health & Vet",
+    catClass: "cat-health",
+    emoji: "❤️",
+    desc: "Everything you need to know about caring for your aging horse. Veterinary insights, nutrition, managing chronic conditions, and keeping senior horses comfortable and happy.",
+    spotify: "https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6",
+    apple: "https://podcasts.apple.com/us/podcast/horse-radio-network-all-shows-feed/id384081509",
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e8/fb/82/e8fb820a-6902-bd32-3d5f-6a5080513232/mza_3972501626107775236.jpg/600x600bb.jpg"
   },
   {
     id: 36,
@@ -1313,8 +1295,8 @@ const PODCASTS = [
     catClass: "cat-lifestyle",
     emoji: "🙃",
     desc: "Honest conversations about being an adult amateur horse owner — the joys, the struggles, and the reality of balancing horse life with everything else. Relatable and refreshing.",
-    spotify: "https://open.spotify.com/show/3sIzwVwWfOrShGEcqLkcmP",
-    apple: "https://podcasts.apple.com/us/podcast/adulting-with-horses/id1628021655",
+    spotify: "https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6",
+    apple: "https://podcasts.apple.com/us/podcast/horse-radio-network-all-shows-feed/id384081509",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/b5/95/55/b5955529-941f-88e5-c31b-23350dfe879f/mza_10503702639210439742.jpg/600x600bb.jpg"
   },
   {
@@ -1341,8 +1323,8 @@ const PODCASTS = [
     catClass: "cat-training",
     emoji: "🌸",
     desc: "Working from the inside out — unpacking the equestrian dream with incredible riders, equine experts, and personal training tips. Journey-focused and deeply authentic.",
-    spotify: "https://open.spotify.com/show/5UFZGmwt9M3cWe9qx0cYIO",
-    apple: "https://podcasts.apple.com/us/podcast/working-from-the-inside-out-with-finesse-equestrian/id1403605856",
+    spotify: "https://open.spotify.com/show/1lBhB7l1oX5IyLIl9jNMJA",
+    apple: "https://podcasts.apple.com/us/podcast/finesse-equestrian/id1493629200",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/f1/9c/29/f19c298c-9486-fc63-083f-8c5f148c2be4/mza_5411083592826522004.jpg/600x600bb.jpg"
   },
   {
@@ -1355,7 +1337,7 @@ const PODCASTS = [
     catClass: "cat-general",
     emoji: "📊",
     desc: "Data-driven approach to eventing with weekly updates, event previews and reviews, up-and-coming horses to watch, plus interviews with showjumpers and equestrian experts.",
-    spotify: "https://open.spotify.com/show/36kXM20DbeCb1qLsZmTXx6",
+    spotify: "https://open.spotify.com/show/6Z1UJvMlr5bsCDHXL8sB7e",
     apple: "https://podcasts.apple.com/us/podcast/equiratings-eventing-podcast/id1251893823",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a9/a0/fd/a9a0fdef-e6e5-23d5-c96e-10976ef82275/mza_14082131807706297909.png/600x600bb.jpg"
   },
@@ -1369,476 +1351,66 @@ const PODCASTS = [
     catClass: "cat-industry",
     emoji: "🐄",
     desc: "In-depth exploration of the Quarter Horse and stock horse industry. Covers AQHA events, breeding, competitions, and the diverse world of America's most popular horse breed.",
-    spotify: "https://open.spotify.com/show/7N2CKsF43s0hzDaESgIohu",
+    spotify: "https://open.spotify.com/show/0J8zf0DYGHJKxV3dHpimGC",
     apple: "https://podcasts.apple.com/us/podcast/quarter-horse-holler/id1614908674",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/36/49/58/3649589b-7d88-4b42-0a5c-ebd9faf0d2f2/mza_4862770751058952410.png/600x600bb.jpg"
   },
   {
-    id: 41,
+    id: 42,
     featured: false,
-    title: "AQHA Podcast",
-    host: "American Quarter Horse Association",
-    category: "industry",
-    catLabel: "Industry",
-    catClass: "cat-industry",
-    emoji: "🏅",
-    desc: "Official podcast of the American Quarter Horse Association covering shows, competitions, breeding, and the people who make the Quarter Horse world go round.",
-    spotify: "https://open.spotify.com/show/16GrDfITxIzUNckW8nxwxK",
-    apple: "https://podcasts.apple.com/us/podcast/good-horses-stories-of-the-american-quarter-horse/id1703321959"
+    title: "The Breakaway Roping Journal Podcast",
+    host: "Breakaway Roping Journal",
+    category: "roping",
+    catLabel: "Roping",
+    catClass: "cat-roping",
+    emoji: "🔁",
+    desc: "Everything breakaway roping — the fastest growing event in rodeo. WPRA standings, technique, horse selection, and interviews with the women dominating this explosive discipline.",
+    spotify: "https://open.spotify.com/show/0NC8LsedyH4rOaNeAyGcMj",
+    apple: "https://podcasts.apple.com/us/podcast/the-score-from-the-team-roping-journal/id1364586489",
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/b3/a3/95/b3a395ee-2910-2ca9-5aa0-b070f7b803db/mza_63180133594425044.jpeg/600x600bb.jpg"
   },
   {
-    id: 43,
-    featured: true,
-    title: "Rodeo Time with Dale Brisby",
-    host: "Dale Brisby",
+    id: 44,
+    featured: false,
+    title: "The Rogue",
+    host: "Riley Bishop",
     category: "lifestyle",
     catLabel: "Lifestyle",
     catClass: "cat-lifestyle",
     emoji: "🤙",
-    desc: "Dale Brisby — the wildly popular rodeo personality and social media star — delivers rodeo entertainment, western lifestyle content, and real talk from the arena. Funny, authentic, and seriously western.",
-    spotify: "https://open.spotify.com/show/5nR3hQZcNWoUXngEmL4FAh",
-    apple: "https://podcasts.apple.com/us/podcast/rodeo-time-with-dale-brisby/id1450121744",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/51/ab/36/51ab361e-43cd-e995-ceb3-1f2256a66b72/mza_12887982270845036280.jpg/600x600bb.jpg"
-  },
-  {
-    id: 44,
-    featured: true,
-    title: "X Factor Roping Podcast",
-    host: "X Factor Team Roping",
-    category: "roping",
-    catLabel: "Team Roping",
-    catClass: "cat-roping",
-    emoji: "✖️",
-    desc: "Deep dives into team roping technique, competition strategy, and the culture of the sport. Interviews with top headers and heelers covering everything from jackpots to major futurities.",
-    spotify: "https://open.spotify.com/show/6kShQ0JQcoucNQhur0WuVy",
-    apple: "https://podcasts.apple.com/us/podcast/x-factor-roping-podcast/id1367970103",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/5a/4c/44/5a4c4417-70ba-864c-7e55-a29258752985/mza_13556267383373155426.png/600x600bb.jpg"
+    desc: "Western lifestyle and sports podcast featuring interviews with elite athletes from rodeo, cutting, reining, and beyond. Raw, honest conversations with the top competitors in the industry.",
+    spotify: "https://open.spotify.com/show/5hMp8SJc7cvjoBTcPJCCG9",
+    apple: "",
+    artwork: "https://i.scdn.co/image/ab67656300005f1f95a5f5ba9c11097f083cb47f"
   },
   {
     id: 45,
     featured: false,
-    title: "Charly Crawford Podcast",
-    host: "Charly Crawford",
-    category: "barrel",
-    catLabel: "Barrel Racing",
-    catClass: "cat-barrel",
-    emoji: "🌟",
-    desc: "Barrel racer and western athlete Charly Crawford covers competition, mindset, fitness, and the real lifestyle behind rodeo sports. Honest conversations with top competitors and western industry names.",
-    spotify: "https://open.spotify.com/show/0695GSlMoYKimagEHahjc7",
-    apple: "https://podcasts.apple.com/us/podcast/charly-crawford-podcast/id1714862517",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/7f/32/40/7f324037-8bc0-383b-29af-bade449c569a/mza_9256151518365923378.jpg/600x600bb.jpg"
+    title: "Horse Sense 101",
+    host: "Joe Jones",
+    category: "training",
+    catLabel: "Training",
+    catClass: "cat-training",
+    emoji: "🐴",
+    desc: "Joe Jones brings 40+ years of experience helping horses and humans coexist. Deep-dive interviews with legends of cutting, reining, and cow horse — plus practical insight into how horses think and how to become a true partner.",
+    spotify: "https://open.spotify.com/show/79KuKKK8G4auY08E7bIC8O",
+    apple: "",
+    artwork: "https://i.scdn.co/image/ab67656300005f1fe4649fa4fcc09a104d6fda76"
   },
   {
     id: 46,
     featured: false,
-    title: "Cowboy Cartel The Podcast",
-    host: "Cowboy Cartel",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "🌵",
-    desc: "Western lifestyle conversations covering rodeo, ranching, and the culture of the west. Raw, real talk with cowboys, competitors, and the people keeping western heritage alive.",
-    spotify: "https://open.spotify.com/show/6r1bDt5pfrU3kPI84ZktOL",
-    apple: "https://podcasts.apple.com/us/podcast/cowboy-cartel-the-podcast/id1636267957",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/b0/c0/9a/b0c09a5b-d8ce-c39a-8a0c-224822a9b033/mza_17451667264391633098.jpg/600x600bb.jpg"
-  },
-  {
-    id: 47,
-    featured: false,
-    title: "Kick Your Boots Up",
-    host: "Kick Your Boots Up",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "👢",
-    desc: "Ag life, western fashion, and rodeo storytelling from the heart of western culture. Conversations with the people who live the life — ropers, ranchers, riders, and rodeo fans.",
-    spotify: "https://open.spotify.com/show/4vkrRhywtjVDffIAaagJNj",
-    apple: "https://podcasts.apple.com/us/podcast/kick-your-boots-up/id1676280115",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/61/bf/38/61bf384f-5bed-d47e-7c4f-266115773b31/mza_7518052717003445026.png/600x600bb.jpg"
-  },
-  {
-    id: 48,
-    featured: false,
-    title: "Women in Western Podcast",
-    host: "Women in Western",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "👩‍🌾",
-    desc: "Celebrating women who live the western lifestyle — ranchers, ropers, riders, trainers, and entrepreneurs. Empowering conversations about building a life around horses and western heritage.",
-    spotify: "https://open.spotify.com/show/5eSqcYNeMWZOBwRGJ0cp93",
-    apple: "https://podcasts.apple.com/us/podcast/women-in-western-podcast/id1616152213",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/4c/45/63/4c456396-0558-535e-fa0d-e39e9df46ea5/mza_16301244433376594952.jpg/600x600bb.jpg"
-  },
-  {
-    id: 49,
-    featured: false,
-    title: "Cowgirl Confessions",
-    host: "Cowgirl Confessions",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "🤍",
-    desc: "Real, raw confessions from women in the western world. Honest stories about horse ownership, rodeo life, relationships, and what it truly means to be a cowgirl in the modern age.",
-    spotify: "https://open.spotify.com/show/3bBao4iu9gphnt58CP5eJx",
-    apple: "https://podcasts.apple.com/us/podcast/cowgirl-confessions/id1530630201",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/6b/23/eb/6b23eb59-0cd5-7653-1635-ea909c049e69/mza_1402032202923592086.jpg/600x600bb.jpg"
-  },
-  {
-    id: 50,
-    featured: false,
-    title: "Strong in the Saddle",
-    host: "Strong in the Saddle",
-    category: "health",
-    catLabel: "Health & Vet",
-    catClass: "cat-health",
-    emoji: "💪",
-    desc: "Fitness and strength training designed specifically for equestrians. How to build the physical foundation to ride better, prevent injury, and perform at your best in the saddle.",
-    spotify: "https://open.spotify.com/show/2ZVIWMjbX7xSRs0UPEVOng",
-    apple: "https://podcasts.apple.com/us/podcast/strong-in-the-saddle/id1476593725",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/b7/85/f9/b785f97d-6520-8d5c-8b5c-f40de8eee780/mza_7136494696706559026.jpg/600x600bb.jpg"
-  },
-  {
-    id: 52,
-    featured: false,
-    title: "Western Ag Life",
-    host: "Western Ag Life",
-    category: "industry",
-    catLabel: "Industry",
-    catClass: "cat-industry",
-    emoji: "🌾",
-    desc: "The intersection of western agriculture and rural life. Conversations with ranchers, farmers, and ag professionals about land, livestock, policy, and preserving the western way of life.",
-    spotify: "https://open.spotify.com/show/16hAlXkO6bYfzI0xkc3DJi",
-    apple: "https://podcasts.apple.com/us/podcast/western-ag-life/id1665388477",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/67/1d/73/671d73bb-d9e5-7665-37b7-ae5d1da27f20/mza_11289270438484500896.jpg/600x600bb.jpg"
-  },
-  {
-    id: 54,
-    featured: false,
-    title: "NFR Extra",
-    host: "Las Vegas Review-Journal",
-    category: "general",
-    catLabel: "General",
-    catClass: "cat-general",
-    emoji: "🏆",
-    desc: "Your inside track on the National Finals Rodeo. The Las Vegas Review-Journal's official NFR podcast with daily coverage, interviews, and behind-the-scenes access during the most prestigious rodeo in the world.",
-    spotify: "https://open.spotify.com/show/606fiLsmH8CQuFOhEUyJYy",
-    apple: "https://podcasts.apple.com/us/podcast/nfr-extra/id1473646852",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/59/25/ce/5925cebe-fc41-1cb3-ac95-751d7ad7e649/mza_14557680874555407947.jpg/600x600bb.jpg"
-  },
-  {
-    id: 55,
-    featured: false,
-    title: "Registered Ranching with Tucker Brown",
-    host: "Tucker Brown",
-    category: "industry",
-    catLabel: "Industry",
-    catClass: "cat-industry",
-    emoji: "🐄",
-    desc: "Conversations about registered cattle, ranching business, and the western livestock industry. Tucker Brown talks genetics, land management, and building a sustainable ranching operation.",
-    spotify: "https://open.spotify.com/show/227ewBtQp6D6bjiK6jRAaY",
-    apple: "https://podcasts.apple.com/us/podcast/registered-ranching-with-tucker-brown/id1747830944",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/1a/22/5f/1a225fcd-3f1c-5409-2dfb-94bdd69a1541/mza_5909348437550014117.jpg/600x600bb.jpg"
-  },
-  {
-    id: 56,
-    featured: false,
-    title: "Miss Cowboy Unbranded",
-    host: "Miss Cowboy Unbranded",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "🌺",
-    desc: "Unfiltered western lifestyle content for the modern cowgirl. Pageantry, horsemanship, and authentic western culture through the lens of women who refuse to be branded by anyone's expectations.",
-    spotify: "https://open.spotify.com/show/1FgFNHRVud502HVCmudMVy",
-    apple: "https://podcasts.apple.com/us/podcast/miss-cowboy-unbranded/id1786690163",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/54/f2/2c/54f22c64-ac67-76f4-ad55-cee8c105845d/mza_15646081426668282973.jpg/600x600bb.jpg"
+    title: "Under the Crown",
+    host: "Carter Billings",
+    category: "training",
+    catLabel: "Training",
+    catClass: "cat-training",
+    emoji: "👑",
+    desc: "A real-time look at building a career as a horse trainer in Cow Horse and Team Roping — every win, failure, and lesson along the way. Straight talk from successful trainers and industry leaders on clarity, efficiency, and standing out.",
+    spotify: "https://open.spotify.com/show/01lkYBY7vUMVu0z7MlKzho",
+    apple: "",
+    artwork: "https://i.scdn.co/image/ab67656300005f1f2619bc09fffbef04d78354d5"
   }
-,
-  {
-    id: 57,
-    featured: false,
-    title: "The Journey On Podcast",
-    host: "Warwick Schiller",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🧭",
-    desc: "Warwick Schiller explores the mental and emotional side of horsemanship — the inner journey behind the technical work. Deep conversations about connection, feel, and what horses teach us about ourselves.",
-    spotify: "https://open.spotify.com/show/4eUcex8YwWe5z1xXlQWJj3",
-    apple: "https://podcasts.apple.com/us/podcast/the-journey-on-podcast/id1525271300",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/4f/61/3a/4f613a5c-9586-dc13-9582-aeee601a68f6/mza_1884831072784377264.jpg/600x600bb.jpg"
-  },
-  {
-    id: 58,
-    featured: false,
-    title: "Horse Training in Harmony",
-    host: "Karen Rohlf",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🎵",
-    desc: "Karen Rohlf blends dressage principles with natural horsemanship for a partnership-first approach. Practical insights on developing lightness, collection, and harmony without sacrificing the horse's wellbeing.",
-    spotify: "https://open.spotify.com/show/3pAfTJnWYOU56A0gOiXVVT",
-    apple: "https://podcasts.apple.com/us/podcast/horse-training-in-harmony/id1528419883",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/1a/e6/a9/1ae6a9d3-61a8-da86-a6f8-df074a2ad072/mza_18278167385982505381.jpg/600x600bb.jpg"
-  },
-  {
-    id: 59,
-    featured: false,
-    title: "StallSide Podcast",
-    host: "Rood & Riddle Equine Hospital",
-    category: "health",
-    catLabel: "Health & Vet",
-    catClass: "cat-health",
-    emoji: "🏥",
-    desc: "From one of the world's premier equine hospitals — veterinarians at Rood & Riddle break down real cases, equine health topics, and the science behind keeping performance horses at their best.",
-    spotify: "https://open.spotify.com/show/4UTf1oyFvuYHO03Ub7CxLt",
-    apple: "https://podcasts.apple.com/us/podcast/id1554400075",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/74/6e/39/746e398d-0bf6-f3cd-e4c5-0b51a375e434/mza_16750991987710273182.jpg/600x600bb.jpg"
-  },
-  {
-    id: 60,
-    featured: false,
-    title: "Harness Up! with Haste Draft Horses and Mules",
-    host: "Haste Draft Horses & Mules",
-    category: "general",
-    catLabel: "General",
-    catClass: "cat-general",
-    emoji: "🐴",
-    desc: "The only podcast dedicated to draft horses and mules. Covers harnessing, training, hitching, showing, and working with heavy horses — a niche but passionate corner of the equestrian world.",
-    spotify: "https://open.spotify.com/show/2bJE3ngnKHfylhWTZwAYYF",
-    apple: "https://podcasts.apple.com/us/podcast/id1733752892",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a8/fb/ea/a8fbea98-dc92-6b87-da16-1ced51f417bd/mza_5956501556547840415.jpg/600x600bb.jpg"
-  },
-  {
-    id: 61,
-    featured: false,
-    title: "Parelli Natural Horsemanship",
-    host: "Parelli Natural Horsemanship",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🌀",
-    desc: "The official podcast of the Parelli program — one of the most recognized natural horsemanship systems in the world. Covers the Seven Games, Savvy Strings, and Pat & Linda Parelli's philosophy of horsemanship as a lifestyle.",
-    spotify: "https://open.spotify.com/show/1HeFb83t08Zm3TzuQLZxR0",
-    apple: "https://podcasts.apple.com/us/podcast/id1504968507",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/68/a7/5c/68a75cd1-8870-e079-4b2c-53f19a15d705/mza_6399634833418521416.jpg/600x600bb.jpg"
-  },
-  {
-    id: 62,
-    featured: false,
-    title: "The Whole Horse Podcast",
-    host: "Alexa Linton",
-    category: "health",
-    catLabel: "Health & Vet",
-    catClass: "cat-health",
-    emoji: "🌿",
-    desc: "Holistic equine health and performance — looking at the whole horse, not just individual symptoms. Alexa Linton covers bodywork, nutrition, movement, and the mind-body connection in horses and their riders.",
-    spotify: "https://open.spotify.com/show/5uhQXvWGvo7FWklOXUy01S",
-    apple: "https://podcasts.apple.com/us/podcast/id1340545441",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/da/cb/01/dacb0149-3694-e007-338f-5ee42af7c536/mza_10203873472301964785.png/600x600bb.jpg"
-  },
-  {
-    id: 63,
-    featured: false,
-    title: "Horseman's Academy",
-    host: "Jake Lundahl",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🎓",
-    desc: "Jake Lundahl breaks down the art and science of horsemanship with a systematic approach to training. Practical lessons on communication, groundwork, and building a horse that is safe, soft, and willing.",
-    spotify: "https://open.spotify.com/show/0QNTv0rKs7hYXQ9qZq3Y3a",
-    apple: "https://podcasts.apple.com/us/podcast/id1345025627",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/bc/df/7a/bcdf7a38-b8cb-864e-b1ea-cbe82cb4dcf6/mza_18007035551375610606.jpg/600x600bb.jpg"
-  }
-,
-  {
-    id: 64,
-    featured: false,
-    title: "The Show Jumping Podcast",
-    host: "The Show Jumping Podcast",
-    category: "jumper",
-    catLabel: "Hunter/Jumper",
-    catClass: "cat-jumper",
-    emoji: "🚧",
-    desc: "In-depth conversations with the world's top show jumpers — riders, trainers, course designers, and industry insiders. Covers Grand Prix competition, horse selection, and what it takes to compete at the highest levels of the sport.",
-    spotify: "https://open.spotify.com/show/6i5K7d0hU6jiOBYwE3oIro",
-    apple: "https://podcasts.apple.com/us/podcast/id1716039430",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/ed/2b/5e/ed2b5ee1-2872-6404-80c7-3f870257ca40/mza_4071527165408587292.jpg/600x600bb.jpg"
-  },
-  {
-    id: 65,
-    featured: false,
-    title: "Talk Horse with Pippa Funnell",
-    host: "Pippa Funnell",
-    category: "jumper",
-    catLabel: "Hunter/Jumper",
-    catClass: "cat-jumper",
-    emoji: "🎖️",
-    desc: "Olympic gold medalist and Badminton champion Pippa Funnell talks to the biggest names in equestrian sport. Candid, experienced, and uniquely positioned — one of the most respected voices in international equestrian competition.",
-    spotify: "https://open.spotify.com/show/2LVcZeUmHMO9gHmrn6eIjk",
-    apple: "https://podcasts.apple.com/us/podcast/id1784736028",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/38/2a/42/382a42f4-0ca0-d211-65b6-c18f381a137b/mza_11949759176182109962.jpeg/600x600bb.jpg"
-  },
-  {
-    id: 66,
-    featured: false,
-    title: "EquiRatings Jumping Podcast",
-    host: "EquiRatings",
-    category: "jumper",
-    catLabel: "Hunter/Jumper",
-    catClass: "cat-jumper",
-    emoji: "📊",
-    desc: "Data-driven analysis of international show jumping from the team behind EquiRatings. Rankings breakdowns, event previews, horse and rider stats, and conversations with the sport's top competitors and analysts.",
-    spotify: "https://open.spotify.com/show/1gWx6OLlcyNwIdqW5BtlPw",
-    apple: "https://podcasts.apple.com/us/podcast/id1588727635",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/86/56/38/865638dc-70c8-fbe0-2ea4-978a466edb43/mza_16171644061181598749.png/600x600bb.jpg"
-  },
-  {
-    id: 67,
-    featured: false,
-    title: "The US Equestrian Open Podcast",
-    host: "US Equestrian / USEF",
-    category: "industry",
-    catLabel: "Industry",
-    catClass: "cat-industry",
-    emoji: "🇺🇸",
-    desc: "The official podcast of US Equestrian, covering all FEI disciplines and Olympic pathways. Behind-the-scenes access to Team USA athletes, selection trials, and the governance of equestrian sport at the national level.",
-    spotify: "https://open.spotify.com/show/1uFfJ8xPhuKY0Eiv2xCKsT",
-    apple: "https://podcasts.apple.com/us/podcast/id1786444290",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f4/12/15/f4121588-2ed3-398f-9c22-8d4b3595cb2b/mza_16193292741797609758.png/600x600bb.jpg"
-  }
-,
-  {
-    id: 68,
-    featured: false,
-    title: "Equestrian Adventuresses Podcast",
-    host: "Equestrian Adventuresses",
-    category: "jumper",
-    catLabel: "Hunter/Jumper",
-    catClass: "cat-jumper",
-    emoji: "✈️",
-    desc: "Your global passport to international show jumping competitions. Travel stories, behind-the-scenes coverage, and conversations with riders competing at the biggest venues in the world — for the equestrian with wanderlust.",
-    spotify: "https://open.spotify.com/show/0YFWyUA7RcDn9WM8FJz371",
-    apple: "https://podcasts.apple.com/us/podcast/id1463340823",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/14/de/1e/14de1e2c-deba-a448-e568-861ed2dc1684/mza_5684777348615256559.png/600x600bb.jpg"
-  },
-  {
-    id: 69,
-    featured: false,
-    title: "Ride of Passage",
-    host: "Laura Weber Davis / Michigan Public",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "🗺️",
-    desc: "A true American adventure story — the remarkable account of Matt Parker's solo horseback crossing of the country on the American Discovery Trail, the first person ever to complete it. Narrative storytelling at its finest.",
-    spotify: "https://open.spotify.com/show/5Gig4mb3koyrQTVDSdvmt2",
-    apple: "https://podcasts.apple.com/us/podcast/id1697372724",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f1/e8/b8/f1e8b89d-3494-0d92-5f81-00ed30a12d5d/mza_16532498453631534957.png/600x600bb.jpg"
-  },
-  {
-    id: 70,
-    featured: false,
-    title: "Happy Trails",
-    host: "Happy Trails Podcast",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "🌲",
-    desc: "The podcast made for trail riders — entertaining and informative conversations about riding in the backcountry, trail etiquette, gear, destinations, and the joy of exploring the world on horseback.",
-    spotify: "https://open.spotify.com/show/7kBDpfFqSq4u44sMWZMovr",
-    apple: "https://podcasts.apple.com/us/podcast/happy-trails/id1520464929",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/fd/56/4c/fd564ce8-2a00-7c59-496f-9368a40eb94e/mza_15144639720299630204.png/600x600bb.jpg"
-  },
-  {
-    id: 71,
-    featured: false,
-    title: "Rochester Trail Riders",
-    host: "Rochester Trail Riders",
-    category: "lifestyle",
-    catLabel: "Lifestyle",
-    catClass: "cat-lifestyle",
-    emoji: "🍂",
-    desc: "Community-focused podcast for equestrian trail riders in New York's Finger Lakes region. Covers trail access, land use advocacy, local rides, and the ongoing fight to preserve horse trails on public lands.",
-    spotify: "https://open.spotify.com/show/69YG6pnEXjdfkVvlvXp9Gq",
-    apple: "https://podcasts.apple.com/us/podcast/id1703137822",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/ff/21/a8/ff21a87d-ff17-e6a0-d9be-7c8071d7b291/mza_11866968175900315564.jpg/600x600bb.jpg"
-  },
-  {
-    id: 72,
-    featured: false,
-    title: "Solid in the Saddle",
-    host: "Aleisha Shirley",
-    category: "health",
-    catLabel: "Health & Vet",
-    catClass: "cat-health",
-    emoji: "🏋️",
-    desc: "Fitness and confidence for women riders who want to feel strong and in control in the saddle. Aleisha Shirley covers rider biomechanics, strength training, gait analysis, and the mind-body connection specific to equestrian athletes.",
-    spotify: "https://open.spotify.com/show/7aVWJXeQdKQeVd9orTfTQx",
-    apple: "https://podcasts.apple.com/us/podcast/id1784798315",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a8/c1/08/a8c10821-261b-45ca-cb32-d9d33456ecf3/mza_8847037680471502746.jpg/600x600bb.jpg"
-  }
-,
-  {
-    id: 73,
-    featured: true,
-    title: "Ride On with Julie Goodnight",
-    host: "Julie Goodnight",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🎀",
-    desc: "Julie Goodnight — one of America's most recognized clinicians and former host of Horse Master on RFD-TV — covers riding technique, horse behavior, and training solutions for riders of all levels and disciplines.",
-    spotify: "https://open.spotify.com/show/0fHp6VivEtRjm1PWwLW4LD",
-    apple: "https://podcasts.apple.com/us/podcast/id1215135621",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/fe/d9/c3/fed9c334-bf7b-b8ed-b957-55d87c28a21c/mza_15708882353121327130.jpg/600x600bb.jpg"
-  },
-  {
-    id: 74,
-    featured: false,
-    title: "Best Horse Practices Podcast",
-    host: "Best Horse Practices",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "📋",
-    desc: "Evidence-based horsemanship rooted in the latest equine science. Covers training methodologies, horse behavior, welfare, and the research behind what actually works — for riders who want to do right by their horses.",
-    spotify: "https://open.spotify.com/show/4Eb7TrlNtJbnL7JPWgHVd9",
-    apple: "https://podcasts.apple.com/us/podcast/id1527581041",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/86/81/60/86816033-908d-8668-eb6a-e8f6a055f2bb/mza_3174013445074432449.png/600x600bb.jpg"
-  },
-  {
-    id: 75,
-    featured: false,
-    title: "Dressage with Amelia",
-    host: "Amelia Newcomb",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🩰",
-    desc: "Accessible dressage instruction for riders at every level. Amelia breaks down movements, concepts, and classical principles into practical, easy-to-apply lessons you can take straight to the arena.",
-    spotify: "https://open.spotify.com/show/1l0SnT8WeaKEAMNGr6P1Vj",
-    apple: "https://podcasts.apple.com/us/podcast/id1600487841",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/de/15/ad/de15ad70-8d4d-b32d-442d-7e79d87cadcd/mza_11881081469437541539.jpg/600x600bb.jpg"
-  },
-  {
-    id: 76,
-    featured: false,
-    title: "Let's Talk Horses",
-    host: "Let's Talk Horses",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "💬",
-    desc: "The ultimate riding education podcast — covering horsemanship fundamentals, training theory, and practical riding skills for equestrians who want to continuously improve their knowledge and partnership with horses.",
-    spotify: "https://open.spotify.com/show/2KXgl9eX6nRHMfcA5UyvUF",
-    apple: "https://podcasts.apple.com/us/podcast/lets-talk-horses/id1519528173",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/10/07/d9/1007d922-d689-e595-e70f-3731612b3be5/mza_13148676813924619667.jpg/600x600bb.jpg"
-  }
-
 ];
 
 let currentFilter = 'all';
@@ -1881,9 +1453,9 @@ function renderAll() {
   featuredGrid.style.display = featured.length ? '' : 'none';
 
   featuredGrid.innerHTML = featured.map(p => `
-    <div class="featured-card" onclick="window.open('${p.apple}','_blank')">
+    <div class="featured-card">
       <span class="featured-tag">⭐ Featured</span>
-      <div class="podcast-art">${p.artwork ? `<img src="${p.artwork}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'">` : p.emoji}</div>
+      <div class="podcast-art">${p.artwork ? `<img src="${p.artwork}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';">` : p.emoji}</div>
       <div class="card-body">
         <div class="card-title">${p.title}</div>
         <div class="card-host">${p.host}</div>
@@ -1891,8 +1463,8 @@ function renderAll() {
         <div class="card-meta">
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
-            ${p.spotify && p.spotify.includes('spotify.com') ? `<a class="listen-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation()">Spotify</a>` : ''}
-            <a class="listen-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation()">Apple</a>
+            ${p.spotify ? `<a class="listen-link" href="${p.spotify}" target="_blank">Spotify</a>` : ''}
+            ${p.apple ? `<a class="listen-link" href="${p.apple}" target="_blank">Apple</a>` : ''}
           </div>
         </div>
       </div>
@@ -1900,8 +1472,8 @@ function renderAll() {
   `).join('');
 
   podcastGrid.innerHTML = regular.map(p => `
-    <div class="grid-card" onclick="window.open('${p.apple}','_blank')">
-      <div class="grid-art">${p.artwork ? `<img src="${p.artwork}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'">` : p.emoji}</div>
+    <div class="grid-card">
+      <div class="grid-art">${p.artwork ? `<img src="${p.artwork}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';">` : p.emoji}</div>
       <div class="grid-body">
         <div class="grid-title">${p.title}</div>
         <div class="grid-host">${p.host}</div>
@@ -1909,8 +1481,8 @@ function renderAll() {
         <div class="card-meta">
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
-            ${p.spotify && p.spotify.includes('spotify.com') ? `<a class="listen-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation()">Spotify</a>` : ''}
-            <a class="listen-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation()">Apple</a>
+            ${p.spotify ? `<a class="listen-link" href="${p.spotify}" target="_blank">Spotify</a>` : ''}
+            ${p.apple ? `<a class="listen-link" href="${p.apple}" target="_blank">Apple</a>` : ''}
           </div>
         </div>
       </div>
@@ -1925,7 +1497,11 @@ function renderAll() {
   podcastGrid.style.display = empty ? 'none' : '';
 }
 
+var MODAL_FORM_HTML = '';
+
 function openModal() {
+  if (!MODAL_FORM_HTML) MODAL_FORM_HTML = document.querySelector('.modal').innerHTML;
+  document.querySelector('.modal').innerHTML = MODAL_FORM_HTML;
   document.getElementById('modalOverlay').classList.add('open');
 }
 
@@ -1934,13 +1510,21 @@ function closeModal() {
 }
 
 function submitForm() {
-  alert('Thank you! Your show has been submitted. We review all submissions within 48 hours and will be in touch.');
-  closeModal();
+  const modal = document.querySelector('.modal');
+  modal.innerHTML = `
+    <div style="text-align:center;padding:24px 0;">
+      <div style="font-size:48px;margin-bottom:16px;">🎙️</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--bark);margin-bottom:10px;">You're in the Corral!</h3>
+      <p style="font-size:14px;color:rgba(26,18,8,0.6);line-height:1.6;margin-bottom:24px;">Thanks for submitting your show. We review all submissions within 48 hours and will be in touch.</p>
+      <button class="btn-submit" style="width:100%;" onclick="closeModal()">Done</button>
+    </div>
+  `;
 }
+
+
 
 // Init
 renderAll();
 </script>
 </body>
 </html>
-<!-- Podcast Corral -->
