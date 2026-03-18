@@ -2585,9 +2585,9 @@ function renderAll() {
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
             <div class="listen-links-row">
-              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.spotify}','_blank');return false;">Spotify</a>` : ''}
-              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.apple}','_blank');return false;">Apple</a>` : ''}
-              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.website}','_blank');return false;">Watch</a>` : ''}
+              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();">Spotify</a>` : ''}
+              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation();">Apple</a>` : ''}
+              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" onclick="event.stopPropagation();">Watch</a>` : ''}
               ${!p.spotify && !p.apple && !p.website ? `<span class="listen-link" style="opacity:0.4;cursor:default;">No Link</span>` : ''}
             </div>
             ${(p.spotify || p.apple || p.website) ? `<div class="listen-click-label">Click Here</div>` : ''}
@@ -2608,9 +2608,9 @@ function renderAll() {
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
             <div class="listen-links-row">
-              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.spotify}','_blank');return false;">Spotify</a>` : ''}
-              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.apple}','_blank');return false;">Apple</a>` : ''}
-              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.website}','_blank');return false;">Watch</a>` : ''}
+              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();">Spotify</a>` : ''}
+              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation();">Apple</a>` : ''}
+              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" onclick="event.stopPropagation();">Watch</a>` : ''}
               ${!p.spotify && !p.apple && !p.website ? `<span class="listen-link" style="opacity:0.4;cursor:default;">No Link</span>` : ''}
             </div>
             ${(p.spotify || p.apple || p.website) ? `<div class="listen-click-label">Click Here</div>` : ''}
@@ -2638,9 +2638,9 @@ function openPodcastDetail(id) {
        <div class="detail-art-placeholder" style="display:none;">${p.emoji}</div>`
     : `<div class="detail-art-placeholder">${p.emoji}</div>`;
   const linksHtml = [
-    p.spotify ? `<a class="detail-link spotify" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.spotify}','_blank');return false;">Spotify</a>` : '',
-    p.apple   ? `<a class="detail-link apple"   href="${p.apple}"   target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.apple}','_blank');return false;">Apple Podcasts</a>` : '',
-    p.website ? `<a class="detail-link website" href="${p.website}" target="_blank" onclick="event.stopPropagation();event.preventDefault();window.open('${p.website}','_blank');return false;">Watch / Website</a>` : ''
+    p.spotify ? `<a class="detail-link spotify" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();">Spotify</a>` : '',
+    p.apple   ? `<a class="detail-link apple"   href="${p.apple}"   target="_blank" onclick="event.stopPropagation();">Apple Podcasts</a>` : '',
+    p.website ? `<a class="detail-link website" href="${p.website}" target="_blank" onclick="event.stopPropagation();">Watch / Website</a>` : ''
   ].join('');
   document.getElementById('detailModal').innerHTML = `
     ${artHtml}
