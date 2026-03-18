@@ -824,6 +824,8 @@
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       padding-bottom: 2px;
+      -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+      mask-image: linear-gradient(to right, black 85%, transparent 100%);
     }
     .filter-chips::-webkit-scrollbar { display: none; }
     .chip {
@@ -837,6 +839,16 @@
     .search-wrap { min-width: 0; max-width: 100%; width: 100%; }
 
     .podcast-art { width: 64px; height: 64px; font-size: 26px; }
+
+    /* Fix 5 – listen button tap targets */
+    .listen-link {
+      min-height: 36px;
+      padding: 6px 12px;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     /* Fix 6 – stats bar 2 items: single row, one divider */
     .stat-item {
@@ -870,6 +882,16 @@
     .btn-cancel, .btn-submit { width: 100%; text-align: center; }
 
     .section-label { padding: 16px 12px 8px; }
+
+    /* Fix 7 – safe-area insets for iPhone notch/home bar */
+    footer {
+      padding-bottom: calc(28px + env(safe-area-inset-bottom));
+      padding-left: calc(24px + env(safe-area-inset-left));
+      padding-right: calc(24px + env(safe-area-inset-right));
+    }
+
+    /* Fix 8 – prevent iOS auto-zoom on search input focus */
+    .search-input { font-size: 16px; }
   }
 </style>
 </head>
