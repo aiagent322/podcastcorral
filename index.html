@@ -452,6 +452,7 @@
   .cat-roping { color: var(--rust); }
   .cat-training { color: var(--sage); }
   .cat-health { color: var(--sky); }
+  .cat-dressage { color: #7b5ea7; }
   .cat-lifestyle { color: var(--tan); filter: saturate(2) brightness(0.75); }
   .cat-breeding { color: #8B5E8B; }
   .cat-barrel { color: #B87333; }
@@ -969,6 +970,7 @@ setInterval(function(){
     <button class="chip" data-cat="breeding" onclick="setFilter('breeding', this)">Breeding</button>
     <button class="chip" data-cat="industry" onclick="setFilter('industry', this)">Industry</button>
     <button class="chip" data-cat="general" onclick="setFilter('general', this)">General</button>
+    <button class="chip" data-cat="dressage" onclick="setFilter('dressage', this)">Dressage</button>
   </div>
 </div>
 
@@ -2510,9 +2512,9 @@ const PODCASTS = [
     featured: false,
     title: "The Dressage Radio Show",
     host: "Reese Koffler-Stanfield & Megan McIsaac",
-    category: "discipline",
-    catLabel: "Discipline",
-    catClass: "cat-discipline",
+    category: "dressage",
+    catLabel: "Dressage",
+    catClass: "cat-dressage",
     emoji: "🎼",
     desc: "The world's premier and longest-running dressage podcast and official podcast of the United States Dressage Federation (USDF). Two Grand Prix riders host training insights, top rider interviews, book reviews, and news from the elegant world of dressage. Published twice monthly.",
     format: "audio",
