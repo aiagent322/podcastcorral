@@ -383,8 +383,8 @@
   }
 
   .podcast-art {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     flex-shrink: 0;
     background: var(--bark);
     display: flex;
@@ -398,7 +398,7 @@
   .podcast-art img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .card-body { flex: 1; min-width: 0; }
@@ -839,7 +839,7 @@
     /* Fix 5 – search full width */
     .search-wrap { min-width: 0; max-width: 100%; width: 100%; }
 
-    .podcast-art { width: 64px; height: 64px; font-size: 26px; }
+    .podcast-art { width: 80px; height: 80px; font-size: 26px; }
 
     /* Fix 5 – listen button tap targets */
     .listen-link {
