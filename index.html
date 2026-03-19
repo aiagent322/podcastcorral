@@ -532,14 +532,14 @@
   }
   .detail-art {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     object-position: top;
     display: block;
   }
   .detail-art-placeholder {
     width: 100%;
-    height: 140px;
+    height: 220px;
     background: var(--bark);
     display: flex;
     align-items: center;
@@ -547,13 +547,13 @@
     font-size: 48px;
   }
   .detail-body {
-    padding: 24px 28px 28px;
+    padding: 12px 16px 14px;
   }
   .detail-title {
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 20px;
     color: var(--bark);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     line-height: 1.2;
   }
   .detail-host {
@@ -562,19 +562,20 @@
     letter-spacing: 1.2px;
     text-transform: uppercase;
     color: var(--rust);
-    margin-bottom: 14px;
+    margin-bottom: 7px;
   }
   .detail-desc {
-    font-size: 14px;
-    color: rgba(26,18,8,0.72);
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(26,18,8,0.82);
+    line-height: 1.35;
+    margin-bottom: 10px;
   }
   .detail-links {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 18px;
+    align-items: center;
   }
   .detail-link {
     font-size: 11px;
@@ -583,14 +584,15 @@
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-    padding: 8px 18px;
+    padding: 5px 12px;
+    line-height: 1;
   }
   .detail-link.spotify { background: #e00000; }
   .detail-link.apple { background: #1a7a1a; }
   .detail-link.website { background: var(--bark); }
   .detail-close {
-    width: 100%;
-    padding: 10px;
+    margin-left: auto;
+    padding: 5px 12px;
     background: transparent;
     border: 1px solid rgba(61,43,31,0.25);
     font-family: 'Source Sans 3', sans-serif;
@@ -600,6 +602,8 @@
     text-transform: uppercase;
     color: var(--bark);
     cursor: pointer;
+    line-height: 1;
+    white-space: nowrap;
   }
   .detail-close:hover { background: rgba(61,43,31,0.08); }
 
@@ -2634,8 +2638,7 @@ function openPodcastDetail(id) {
       <div class="detail-title">${p.title}</div>
       <div class="detail-host">${p.host}</div>
       <div class="detail-desc">${p.desc}</div>
-      ${linksHtml ? `<div class="detail-links">${linksHtml}</div>` : ''}
-      <button class="detail-close" onclick="closeDetail()">Close</button>
+      <div class="detail-links">${linksHtml}${!linksHtml ? '' : ''}<button class="detail-close" onclick="closeDetail()">Close</button></div>
     </div>
   `;
   document.getElementById('detailOverlay').classList.add('open');
