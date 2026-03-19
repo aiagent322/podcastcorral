@@ -534,6 +534,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    object-position: top;
     display: block;
   }
   .detail-art-placeholder {
@@ -1086,7 +1087,7 @@ const PODCASTS = [
     format: "video",
     spotify: "https://open.spotify.com/show/6gxikHAu26r2V7qilQc7QN",
     apple: "https://podcasts.apple.com/us/podcast/tom-mccutcheons-the-show/id1729258992",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/96/8d/09/968d0997-8a74-2d47-3e13-1f5c1a16c0e4/mza_5246274052016641022.jpg/600x600bb.jpg"
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/96/8d/09/968d0997-8a74-28d1-8907-ccbebf9d60ab/mza_8532432479804929984.jpg/600x600bb.jpg"
   },
   {
     id: 4,
@@ -1099,7 +1100,7 @@ const PODCASTS = [
     emoji: "🤠",
     desc: "Dale Brisby — professional rodeo cowboy, social media icon, and founder of Rad Rodeo World — brings his signature humor and cowboy wisdom to conversations about rodeo life, western culture, and everything in between.",
     format: "video",
-    spotify: "https://open.spotify.com/show/6XBlRmVDTRkaFgBN4hfXFG",
+    spotify: "https://open.spotify.com/show/5nR3hQZcNWoUXngEmL4FAh",
     apple: "https://podcasts.apple.com/us/podcast/rodeo-time-with-dale-brisby/id1450121744",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/51/ab/36/51ab361e-43cd-e995-ceb3-1f2256a66b72/mza_12887982270845036280.jpg/600x600bb.jpg"
   },
@@ -1161,7 +1162,7 @@ const PODCASTS = [
     desc: "Top 5 rodeo sports podcast covering PRCA, NFR, barrel racing, team roping and all things western lifestyle. Real talk from insiders who live the western life.",
     format: 'video',
     spotify: "https://open.spotify.com/show/4snND5oWIV2Q8hVljbpbYr",
-    apple: "https://podcasts.apple.com/us/podcast/that-western-life/id1215897229",
+    apple: "https://podcasts.apple.com/us/podcast/that-western-life/id1451270471",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts123/v4/3c/eb/96/3ceb96d2-9b4d-0185-0d23-6b252dcb41bd/mza_3611206735124619952.png/600x600bb.jpg"
   },
   {
@@ -1175,8 +1176,8 @@ const PODCASTS = [
     emoji: "🏃",
     desc: "Your Monday morning rundown of the latest happenings in barrel racing. Current standings, event recaps, and interviews with top barrel racers. Part of Horse Radio Network.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/3U2RbhNHHvFkzSfNKSoZJb",
-    apple: "https://podcasts.apple.com/us/podcast/the-rundown/id1536928731",
+    spotify: "https://open.spotify.com/show/1syHdPqgihwm4GauPdKmi3",
+    apple: "https://podcasts.apple.com/us/podcast/the-money-barrel/id1524124984",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/db/69/83/db698345-87a9-0958-9c79-668aee462c3b/195497508235.jpg/600x600bb.jpg"
   },
   {
@@ -1205,8 +1206,8 @@ const PODCASTS = [
     emoji: "🎧",
     desc: "Bethany Lee talks to interesting people and top professionals throughout the horse world. One of the most listened-to equestrian podcasts with a wide-ranging guest list.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/1zVVGBNhlR1p6kDx91Bj5d",
-    apple: "https://podcasts.apple.com/us/podcast/the-equestrian-podcast/id1289081764",
+    spotify: "https://open.spotify.com/show/0ZGFz99JUtzDViQ5OoBBE1",
+    apple: "https://podcasts.apple.com/us/podcast/the-equestrian-podcast/id1447789118",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/2a/14/29/2a142910-66bc-b393-7c05-aafaaf724652/mza_18376864504940466128.jpg/600x600bb.jpg"
   },
   {
@@ -1235,14 +1236,14 @@ const PODCASTS = [
     emoji: "🧬",
     desc: "Focused on horse breeding and the equestrian industry, featuring interviews with breeders, trainers, and equestrian professionals from the hunter/jumper and breeding world.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/1kHpMCXdJuAIGCJTiGfJnZ",
-    apple: "https://podcasts.apple.com/us/podcast/the-plaidcast/id1239706981",
+    spotify: "https://open.spotify.com/show/701o5wZN89jT5kDXgseF00",
+    apple: "https://podcasts.apple.com/us/podcast/the-plaidcast/id1192996514",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/dd/b2/b4ddb233-16fd-8aa8-61bc-44ffeff3e90c/mza_12909546658497094830.jpg/600x600bb.jpg"
   },
   {
     id: 15,
     featured: false,
-    title: "Eventing Podcast",
+    title: "Eventing Radio Show",
     host: "Professional Riders Organization",
     category: "general",
     catLabel: "General",
@@ -1250,25 +1251,11 @@ const PODCASTS = [
     emoji: "🏇",
     desc: "The premier and longest running podcast about the thrilling equine sport of eventing. Bi-monthly episodes bringing you news and interviews from eventing professionals.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/6Z1UJvMlr5bsCDHXL8sB7e",
-    apple: "https://podcasts.apple.com/us/podcast/eventing-podcast/id565775370",
+    spotify: "https://open.spotify.com/show/7E7mZPvXeRO1f7lN6bOmFG",
+    apple: "https://podcasts.apple.com/us/podcast/eventing-radio-show/id302608056",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/2e/15/94/2e1594a9-2fa4-dff2-628e-375b618ddb77/mza_14757274715269212018.png/600x600bb.jpg"
   },
-  {
-    id: 16,
-    featured: false,
-    title: "American Horse Council Podcast",
-    host: "American Horse Council",
-    category: "industry",
-    catLabel: "Industry",
-    catClass: "cat-industry",
-    emoji: "🏛️",
-    desc: "Monthly podcast highlighting AHC members doing amazing horse-related things across the country. Covers legislation and regulations affecting riders in all 50 states.",
-    format: 'video',
-    spotify: "https://open.spotify.com/show/2hKcHvSmHBTPAYBrDgwgOr",
-    apple: "https://podcasts.apple.com/us/podcast/american-horse-council-podcast/id1498445411",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/22/1c/8c/221c8c2a-d700-1302-1c21-3d0dd432d44e/mza_4453833474026141434.jpg/600x600bb.jpg"
-  },
+
   {
     id: 17,
     featured: false,
@@ -1280,8 +1267,8 @@ const PODCASTS = [
     emoji: "🌱",
     desc: "Science-based training to improve the bond and relationship between horse and human. Practical advice on positive reinforcement and ethical horsemanship from a global audience favorite.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/5Q6N9IHqrhtAVb91LGv0aJ",
-    apple: "https://podcasts.apple.com/us/podcast/the-willing-equine/id1450791729",
+    spotify: "https://open.spotify.com/show/53MmIvDLkuBwkOEmPtCmeJ",
+    apple: "https://podcasts.apple.com/us/podcast/the-willing-equine/id1451017955",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/1f/18/a9/1f18a9b6-1b13-a187-1fa8-d32056ea146b/mza_15619013604038530625.jpg/600x600bb.jpg"
   },
   {
@@ -1310,7 +1297,7 @@ const PODCASTS = [
     emoji: "🐴",
     desc: "Horse Illustrated's podcast — the editor and writer chat all things horsey with a new guest each month, diving into every nook and cranny of the equestrian world.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/5fqFNiJPSIaBMNKWMt1YCh",
+    spotify: "https://open.spotify.com/show/4rOBH2RKptRW7PP9UxTfE8",
     apple: "https://podcasts.apple.com/us/podcast/barn-banter-by-horse-illustrated/id1656086178",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f0/6b/12/f06b12b0-5a82-187d-09f4-73cf971a6078/mza_7011945664113228217.jpg/600x600bb.jpg"
   },
@@ -1340,8 +1327,8 @@ const PODCASTS = [
     emoji: "🔬",
     desc: "Equine scientists discuss recently published research studies to bridge the gap between horse owners and the scientific community. Evidence-based, accessible, and essential.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/2IOSzrJXsHXCPSAb2FTLhc",
-    apple: "https://podcasts.apple.com/us/podcast/conversations-in-equine-science/id1527763518",
+    spotify: "https://open.spotify.com/show/0L9iSKPBP7NE5On4tXt44F",
+    apple: "https://podcasts.apple.com/us/podcast/conversations-in-equine-science/id1519509568",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e9/f5/58/e9f55811-a71f-f196-cd96-24ce1f6679d8/mza_16234558742300579956.jpeg/600x600bb.jpg"
   },
   {
@@ -1355,8 +1342,8 @@ const PODCASTS = [
     emoji: "📍",
     desc: "Topics related to equine behaviour, science, welfare, training and more. Shelby Dennis brings a relatable and science-forward approach to horsemanship for everyday riders.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/0Tq8CQZXQ4T3CJbkTjxQSU",
-    apple: "https://podcasts.apple.com/us/podcast/making-milestones/id1493628614",
+    spotify: "https://open.spotify.com/show/3s8mJIS4vt2uAxzg8mXFGk",
+    apple: "https://podcasts.apple.com/us/podcast/making-milestones/id1474531515",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/fb/30/3e/fb303e7c-450f-6e2f-aee6-131bc93f8cb1/mza_5040186418917474338.jpg/600x600bb.jpg"
   },
   {
@@ -1370,14 +1357,14 @@ const PODCASTS = [
     emoji: "🥂",
     desc: "Fun podcast from the Heels Down team featuring informative discussions about the horse world in an informal setting. Guests often share their favorite off-duty life too.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/5eoFcMGnYA3qK8F8bR4fEg",
-    apple: "https://podcasts.apple.com/us/podcast/heels-down-happy-hour/id1273990061",
+    spotify: "https://open.spotify.com/show/13U39gCdN6b22ouXMUAOuf",
+    apple: "https://podcasts.apple.com/us/podcast/heels-down-happy-hour/id1250592268",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/28/95/17/28951715-757e-d8b8-0c6d-5f4af0f1b551/mza_13113377924049402118.jpg/600x600bb.jpg"
   },
   {
     id: 24,
     featured: false,
-    title: "Horse Talk Podcast",
+    title: "Horse Talk by The Horse Review",
     host: "Mid-South Horse Review",
     category: "industry",
     catLabel: "Industry",
@@ -1385,8 +1372,8 @@ const PODCASTS = [
     emoji: "📰",
     desc: "Platform for professionals and leaders in the equine industry to discuss everything about life with horses. Regional focus with national reach.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/3xzFYcMgRhcPo5Yd9XQILG",
-    apple: "https://podcasts.apple.com/us/podcast/horse-talk-podcast/id1537898437",
+    spotify: "https://open.spotify.com/show/5JdmcZUNtZyS2WZCVUDRnC",
+    apple: "https://podcasts.apple.com/us/podcast/horse-talk-by-the-horse-review/id1708618817",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/7a/c3/ce/7ac3ce8c-a210-6585-16cd-ef1bc0caf52b/artwork.jpg/600x600bb.jpg"
   },
   {
@@ -1400,8 +1387,8 @@ const PODCASTS = [
     emoji: "🔗",
     desc: "Everything related to the horse industry with experts, trainers, and horse people from all over the world. From sport horses to backyard companions, all disciplines welcome.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/3ncAOz0tXHuT5mvFQGjPb8",
-    apple: "https://podcasts.apple.com/us/podcast/the-equestrian-connection/id1496058941",
+    spotify: "https://open.spotify.com/show/7CgJ5xvnQgaFOdunKFSfIv",
+    apple: "https://podcasts.apple.com/us/podcast/the-equestrian-connection/id1582176472",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/34/15/8a/34158ad2-70ca-cb4d-8e78-5615b57810f5/628810960569.png/600x600bb.jpg"
   },
   {
@@ -1415,14 +1402,12 @@ const PODCASTS = [
     emoji: "💌",
     desc: "Diving into the heart of horsemanship with cowboys, Olympians, veterinarians and everyday riders. Challenges conventions and redefines practices across all disciplines.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/2UqSjQJdUi5EdWIEkTNmx4",
-    apple: "https://podcasts.apple.com/us/podcast/equestrian-voices/id1547861330",
+    spotify: "https://open.spotify.com/show/5ApjiNwP7GjimojnbOATkZ",
+    apple: "https://podcasts.apple.com/us/podcast/dear-horse-world/id1770253354",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/0d/51/dc/0d51dc96-2731-8733-e209-4769833ffa08/mza_4978143945024060601.jpg/600x600bb.jpg"
   },
   {
     id: 27,
-    featured: false,
-    title: "Equestrian Voices",
     host: "Caroline Culbertson",
     category: "lifestyle",
     catLabel: "Lifestyle",
@@ -1445,8 +1430,8 @@ const PODCASTS = [
     emoji: "💡",
     desc: "The science and connection behind all things horsemanship from the perspective of a relatable equestrian. Evidence-based training that bridges theory and real-world riding.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/3W7nEKlTFqHUwMEmpqwrYA",
-    apple: "https://podcasts.apple.com/us/podcast/equitheory/id1493067553",
+    spotify: "https://open.spotify.com/show/387i3AZBFr7UWCkTwXb7o5",
+    apple: "https://podcasts.apple.com/us/podcast/equitheory/id1458525712",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/2a/d5/ab/2ad5ab82-f9c9-a905-e331-4cc0f3aaed34/mza_14157334246156765398.jpg/600x600bb.jpg"
   },
   {
@@ -1460,8 +1445,8 @@ const PODCASTS = [
     emoji: "📋",
     desc: "Interviews with leading equestrian figures and panel discussions on the most pressing topics in the horse world each week from the UK's premier equestrian publication.",
     format: 'video',
-    spotify: "https://open.spotify.com/show/1R4qXrJJb0iBmUMULdSTkU",
-    apple: "https://podcasts.apple.com/us/podcast/horse-hound-podcast/id1448934428",
+    spotify: "https://open.spotify.com/show/6S2j7KiSczTnv1mgVAMxw3",
+    apple: "https://podcasts.apple.com/us/podcast/the-horse-hound-podcast/id1522277163",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/5c/4f/df/5c4fdf52-3d89-ae7f-d6db-9c7004d156fc/mza_13302101187782118202.jpg/600x600bb.jpg"
   },
   {
@@ -2393,7 +2378,7 @@ const PODCASTS = [
     format: "video",
     spotify: "https://open.spotify.com/show/6gxikHAu26r2V7qilQc7QN",
     apple: "https://podcasts.apple.com/us/podcast/tom-mccutcheons-the-show/id1729258992",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/96/8d/09/968d0997-8a74-2d47-3e13-1f5c1a16c0e4/mza_5246274052016641022.jpg/600x600bb.jpg"
+    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/96/8d/09/968d0997-8a74-28d1-8907-ccbebf9d60ab/mza_8532432479804929984.jpg/600x600bb.jpg"
   },
   {
     id: 92,
