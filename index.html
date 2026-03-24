@@ -3045,6 +3045,8 @@ function matchesPodcast(p) {
     p.host.toLowerCase().includes(currentSearch) ||
     p.desc.toLowerCase().includes(currentSearch) ||
     p.catLabel.toLowerCase().includes(currentSearch);
+  // When searching, bypass format filter so results appear across both tabs
+  if (currentSearch) return catMatch && searchMatch;
   return fmtMatch && catMatch && searchMatch;
 }
 
