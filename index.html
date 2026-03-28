@@ -994,8 +994,8 @@ setInterval(function(){
 </div>
 
 <div class="format-tabs">
-  <button class="format-tab active" id="tabVideo" onclick="setFormat('video', this)"><span class="tab-icon">🎬</span>Video Podcasts</button>
-  <button class="format-tab" id="tabAudio" onclick="setFormat('audio', this)"><span class="tab-icon">🎧</span>Audio Podcasts</button>
+  <button class="format-tab" id="tabVideo" onclick="setFormat('video', this)"><span class="tab-icon">🎬</span>Video Podcasts</button>
+  <button class="format-tab active" id="tabAudio" onclick="setFormat('audio', this)"><span class="tab-icon">🎧</span>Audio Podcasts</button>
 </div>
 
 <div id="emptyVideo" style="display:none;padding:48px 24px;text-align:center;background:var(--cream);">
@@ -3087,8 +3087,8 @@ function setFormat(fmt, btn) {
   currentFormat = fmt;
   document.querySelectorAll('.format-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById('audioUI').style.display = '';
-  document.getElementById('emptyVideo').style.display = 'none';
+  document.getElementById('audioUI').style.display = fmt === 'audio' ? '' : 'none';
+  document.getElementById('emptyVideo').style.display = fmt === 'video' ? '' : 'none';
   // Reset category filter when switching tabs
   currentFilter = 'all';
   document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
@@ -3261,7 +3261,7 @@ function submitForm() {
 
 
 // Init
-setFormat('video', document.getElementById('tabVideo'));
+setFormat('audio', document.getElementById('tabAudio'));
 </script>
 
 <!-- Back to Top Button -->
