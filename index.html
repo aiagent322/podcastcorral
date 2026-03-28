@@ -10,6 +10,14 @@
 <meta name="description" content="Discover the best horse and equestrian podcasts. Team roping, barrel racing, training, health, breeding and more. Free, curated, no pay-to-play.">
 <meta property="og:title" content="Podcast Corral – The Equestrian Podcast Directory">
 <meta property="og:description" content="The best horse podcasts, all in one corral.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://podcastcorral.com/">
+<meta property="og:image" content="https://podcastcorral.com/og-image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Podcast Corral – The Equestrian Podcast Directory">
+<meta name="twitter:description" content="Discover the best horse podcasts. Team roping, barrel racing, training, health, and more.">
+<meta name="twitter:image" content="https://podcastcorral.com/og-image.png">
+<link rel="canonical" href="https://podcastcorral.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
@@ -941,13 +949,14 @@
     #heroBanner { max-width: calc(100% - 24px) !important; width: calc(100% - 24px) !important; }
   }
 </style>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Podcast Corral","url":"https://podcastcorral.com/","description":"The equestrian podcast directory — 129 shows across 12 categories. Free, curated, no pay-to-play.","publisher":{"@type":"Organization","name":"Bridle </head> Bit Magazine","url":"https://www.bridleandbit.com"}},{"@context":"https://schema.org","@type":"Organization","name":"Podcast Corral","url":"https://podcastcorral.com/","parentOrganization":{"@type":"Organization","name":"Bridle </head> Bit Magazine","url":"https://www.bridleandbit.com"}}]</script>
 </head>
 <body>
 
 <header>
   <div class="logo-area">
     <div>
-      <div class="logo-text">Sponsored by <a href="https://bridleandbit.com" target="_blank" style="color:var(--tan);text-decoration:none;text-transform:uppercase;letter-spacing:2px;">BRIDLE &amp; BIT</a> Magazine</div>
+      <div class="logo-text">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener" style="color:var(--tan);text-decoration:none;text-transform:uppercase;letter-spacing:2px;">BRIDLE &amp; BIT</a> Magazine</div>
     </div>
     <div style="display:flex;gap:12px;align-items:center;">
       <a href="/about/" style="font-size:0.78rem;color:var(--tan);text-decoration:none;font-weight:600;letter-spacing:0.5px;">About</a>
@@ -1039,7 +1048,7 @@ setInterval(function(){
 <footer>
   <div class="footer-logo">🎙️ Podcast Corral</div>
   <p>The 100 Best Horse Podcasts</p>
-  <p style="margin-top:8px;">Sponsored by <a href="https://bridleandbit.com" target="_blank">Bridle &amp; Bit Magazine</a></p>
+  <p style="margin-top:8px;">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener">Bridle &amp; Bit Magazine</a></p>
   <p style="margin-top:12px;font-weight:400;font-size:11px;opacity:0.8;">For entertainment and informational purposes only. Podcast Corral is not affiliated with any listed shows.</p>
 </footer>
 
@@ -3120,9 +3129,9 @@ function renderAll() {
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
             <div class="listen-links-row">
-              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();">Spotify</a>` : ''}
-              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation();">Apple</a>` : ''}
-              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" onclick="event.stopPropagation();">Watch</a>` : ''}
+              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Spotify</a>` : ''}
+              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Apple</a>` : ''}
+              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Watch</a>` : ''}
               ${!p.spotify && !p.apple && !p.website ? `<span class="listen-link" style="opacity:0.4;cursor:default;">No Link</span>` : ''}
             </div>
             ${(p.spotify || p.apple || p.website) ? `<div class="listen-click-label">Click Here</div>` : ''}
@@ -3143,9 +3152,9 @@ function renderAll() {
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
             <div class="listen-links-row">
-              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();">Spotify</a>` : ''}
-              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" onclick="event.stopPropagation();">Apple</a>` : ''}
-              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" onclick="event.stopPropagation();">Watch</a>` : ''}
+              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Spotify</a>` : ''}
+              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Apple</a>` : ''}
+              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Watch</a>` : ''}
               ${!p.spotify && !p.apple && !p.website ? `<span class="listen-link" style="opacity:0.4;cursor:default;">No Link</span>` : ''}
             </div>
             ${(p.spotify || p.apple || p.website) ? `<div class="listen-click-label">Click Here</div>` : ''}
@@ -3173,9 +3182,9 @@ function openPodcastDetail(id) {
        <div class="detail-art-placeholder" style="display:none;">${p.emoji}</div>`
     : `<div class="detail-art-placeholder">${p.emoji}</div>`;
   const linksHtml = [
-    p.spotify ? `<a class="detail-link spotify" href="${p.spotify}" target="_blank" onclick="event.stopPropagation();">Spotify</a>` : '',
-    p.apple   ? `<a class="detail-link apple"   href="${p.apple}"   target="_blank" onclick="event.stopPropagation();">Apple Podcasts</a>` : '',
-    p.website ? `<a class="detail-link website" href="${p.website}" target="_blank" onclick="event.stopPropagation();">Watch / Website</a>` : ''
+    p.spotify ? `<a class="detail-link spotify" href="${p.spotify}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Spotify</a>` : '',
+    p.apple   ? `<a class="detail-link apple"   href="${p.apple}"   target="_blank" rel="noopener" onclick="event.stopPropagation();">Apple Podcasts</a>` : '',
+    p.website ? `<a class="detail-link website" href="${p.website}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Watch / Website</a>` : ''
   ].join('');
   document.getElementById('detailModal').innerHTML = `
     ${artHtml}
