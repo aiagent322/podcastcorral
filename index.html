@@ -998,8 +998,6 @@ setInterval(function(){
   <button class="format-tab active" id="tabAudio" onclick="setFormat('audio', this)"><span class="tab-icon">🎧</span>Audio Podcasts</button>
 </div>
 
-<div id="emptyVideo" style="display:none;padding:48px 24px;text-align:center;background:var(--cream);">
-  <div style="font-size:48px;margin-bottom:16px;">🎬</div>
   <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--bark);margin-bottom:10px;">Video Podcasts Coming Soon</div>
   <div style="font-size:14px;color:rgba(26,18,8,0.5);max-width:360px;margin:0 auto;">We're curating the best equestrian video podcasts. Check back soon.</div>
 </div>
@@ -3087,8 +3085,7 @@ function setFormat(fmt, btn) {
   currentFormat = fmt;
   document.querySelectorAll('.format-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById('audioUI').style.display = fmt === 'audio' ? '' : 'none';
-  document.getElementById('emptyVideo').style.display = fmt === 'video' ? '' : 'none';
+  document.getElementById('audioUI').style.display = '';
   // Reset category filter when switching tabs
   currentFilter = 'all';
   document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
