@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#3D2B1F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Podcast Corral – The Equestrian Podcast Directory</title>
 <meta name="description" content="Discover the best horse and equestrian podcasts. Team roping, barrel racing, training, health, breeding and more. Free, curated, no pay-to-play.">
 <meta property="og:title" content="Podcast Corral – The Equestrian Podcast Directory">
 <meta property="og:description" content="The best horse podcasts, all in one corral.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -316,6 +320,9 @@
   }
 
   .chip {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     padding: 7px 16px;
     background: white;
     border: 1px solid rgba(61,43,31,0.2);
@@ -542,6 +549,10 @@
   }
   .detail-overlay.open { display: flex; }
   .detail-modal {
+    max-height: 90vh;
+    max-height: 90dvh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: var(--cream);
     width: 100%;
     max-width: 520px;
@@ -853,10 +864,13 @@
     }
     .filter-chips::-webkit-scrollbar { display: none; }
     .chip {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
       flex-shrink: 0;
       padding: 8px 14px;
       font-size: 12px;
-      min-height: 36px;
+      min-height: 44px;
     }
 
     /* Fix 5 – search full width */
@@ -980,7 +994,7 @@ setInterval(function(){
 <div class="filter-section">
   <div class="search-wrap">
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input class="search-input" type="text" placeholder="Search shows, hosts, topics…" id="searchInput" oninput="filterPodcasts()">
+    <input class="search-input" type="search" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Search shows, hosts, topics…" id="searchInput" oninput="filterPodcasts()">
   </div>
   <div class="filter-chips">
     <button class="chip active" data-cat="all" onclick="setFilter('all', this)">All Shows</button>

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#3D2B1F">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Score — Chelsea Shaffer & Team Roping Journal | Podcast Corral</title>
 <meta name="description" content="The Score podcast hosted by Chelsea Shaffer & Team Roping Journal. Featured on Podcast Corral — the equestrian podcast directory. Listen on Spotify and Apple Podcasts.">
@@ -13,6 +15,7 @@
 <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3f/56/ab/3f56ab39-cd5f-2ff8-7d0d-03c16607da7e/mza_14055497152082994447.jpg/600x600bb.jpg">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root { --rust:#C1440E; --tan:#D4A96A; --cream:#F5EDD8; --dark:#1A1208; --bark:#3D2B1F; --sage:#7A8C6E; --sky:#5B8FA8; --light-tan:#EDE0C4; }
@@ -43,6 +46,10 @@ a { color:var(--rust); }
   .listen-btns { justify-content:center; }
 }
 @media(min-width:600px) { .show-info h1 { font-size:2rem; } .bio { padding:36px 24px 56px; } }
+/* Mobile foundations */
+body { overflow-x: hidden; }
+a, button { touch-action: manipulation; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition-duration:0.01ms!important; animation-duration:0.01ms!important; } }
 </style>
 </head>
 <body>

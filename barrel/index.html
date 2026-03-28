@@ -910,6 +910,11 @@
     /* Fix 9 – banner ad breathing room at 320px */
     #heroBanner { max-width: calc(100% - 24px) !important; width: calc(100% - 24px) !important; }
   }
+/* Mobile touch targets */
+.card .listen-link { min-height:44px; padding:8px 14px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; touch-action:manipulation; }
+a, button { touch-action: manipulation; }
+body { overflow-x: hidden; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition-duration:0.01ms!important; animation-duration:0.01ms!important; } }
 </style>
 <style>
 .cat-hero {
@@ -987,6 +992,11 @@
   .cat-grid { grid-template-columns: 1fr 1fr 1fr; }
   .cat-hero h1 { font-size: 2.2rem; }
 }
+/* Mobile touch targets */
+.card .listen-link { min-height:44px; padding:8px 14px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; touch-action:manipulation; }
+a, button { touch-action: manipulation; }
+body { overflow-x: hidden; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition-duration:0.01ms!important; animation-duration:0.01ms!important; } }
 </style>
 </head>
 <body>

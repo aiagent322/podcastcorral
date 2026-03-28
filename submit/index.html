@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#3D2B1F">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Submit Your Podcast — Podcast Corral</title>
 <meta name="description" content="Submit your equestrian podcast to Podcast Corral for free. Team roping, barrel racing, training, dressage — every horse podcast gets listed.">
@@ -14,6 +16,7 @@
 <meta name="twitter:title" content="Submit Your Podcast — Podcast Corral">
 <meta name="twitter:description" content="Submit your equestrian podcast to Podcast Corral for free. Team roping, barrel racing, training, dressage — every horse podcast gets listed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -219,6 +222,10 @@ a:hover { text-decoration: underline; }
   .page-hero { padding: 44px 24px 36px; }
   .page-hero h1 { font-size: 2.6rem; }
 }
+/* Mobile foundations */
+body { overflow-x: hidden; }
+a, button { touch-action: manipulation; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition-duration:0.01ms!important; animation-duration:0.01ms!important; } }
 </style>
 </head>
 <body>
