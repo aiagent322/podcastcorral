@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Podcasts — Podcast Corral</title>
+<meta name="description" content="General equestrian podcasts covering all aspects of the horse world — news, interviews, education, and entertainment.">
+<link rel="canonical" href="https://podcastcorral.com/general/">
+<meta property="og:title" content="General Podcasts — Podcast Corral">
+<meta property="og:description" content="General equestrian podcasts covering all aspects of the horse world — news, interviews, education, and entertainment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://podcastcorral.com/general/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="General Podcasts — Podcast Corral">
+<meta name="twitter:description" content="General equestrian podcasts covering all aspects of the horse world — news, interviews, education, and entertainment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rust: #C1440E;
+    --tan: #D4A96A;
+    --cream: #F5EDD8;
+    --dark: #1A1208;
+    --bark: #3D2B1F;
+    --sage: #7A8C6E;
+    --sky: #5B8FA8;
+    --light-tan: #EDE0C4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--bark);
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.015) 2px,
+        rgba(255,255,255,0.015) 4px
+      );
+    padding: 5px 24px;
+    border-bottom: 2px solid var(--rust);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(10px, 1.8vw, 13px);
+    font-weight: 700;
+    color: var(--cream);
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+
+
+  .tagline {
+    font-size: 11px;
+    color: rgba(213,184,138,0.85);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+
+
+  /* HERO */
+  .hero {
+    background: var(--bark);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    padding: 20px 24px 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212,169,106,0.2);
+  }
+
+  .hero-site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 8vw, 64px);
+    font-weight: 900;
+    color: var(--tan);
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 5.5vw, 42px);
+    font-weight: 900;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .hero h1 em {
+    color: var(--tan);
+    font-style: normal;
+  }
+
+  .hero p {
+    color: white;
+    font-size: clamp(17px, 2.4vw, 20px);
+    font-weight: 600;
+    max-width: 560px;
+    margin: 0 auto 0;
+    line-height: 1.6;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(212,169,106,0.25);
+    color: var(--tan);
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+  }
+
+  /* STATS BAR */
+  .stats-bar-wrap {
+    background: var(--bark);
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(212,169,106,0.2);
+  }
+
+  .stats-bar {
+    background: var(--rust);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+  }
+
+  .stat-item {
+    padding: 6px 28px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+  }
+
+  /* FORMAT TABS */
+  .format-tabs {
+    background: var(--bark);
+    display: flex;
+    border-bottom: 3px solid var(--rust);
+  }
+
+  .format-tab {
+    flex: 1;
+    padding: 14px 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(15px, 2.5vw, 20px);
+    font-weight: 700;
+    color: rgba(245,237,216,0.45);
+    cursor: pointer;
+    border: none;
+    background: none;
+    letter-spacing: 0.5px;
+    transition: all 0.15s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+
+  .format-tab.active {
+    color: var(--cream);
+    border-bottom-color: var(--tan);
+  }
+
+  .format-tab:hover:not(.active) { color: rgba(245,237,216,0.75); }
+
+  .format-tab .tab-icon { margin-right: 8px; }
+
+  /* FORMAT TABS */
+  .format-tabs {
+    background: var(--dark);
+    display: flex;
+    border-bottom: 3px solid var(--rust);
+  }
+
+  .format-tab {
+    flex: 1;
+    padding: 14px 16px;
+    text-align: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: rgba(245,237,216,0.45);
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+
+  .format-tab.active {
+    color: var(--cream);
+    border-bottom: 3px solid var(--tan);
+  }
+
+  .format-tab:hover { color: var(--cream); }
+
+  .format-tab .tab-icon { margin-right: 6px; }
+
+  /* FILTER AREA */
+  .filter-section {
+    background: var(--light-tan);
+    border-bottom: 2px solid rgba(61,43,31,0.1);
+    padding: 16px 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 160px;
+    max-width: 360px;
+  }
+
+  .search-wrap svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bark);
+    opacity: 0.4;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    background: white;
+    border: 1px solid rgba(61,43,31,0.2);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: var(--dark);
+    outline: none;
+    transition: border 0.2s;
+  }
+
+  .search-input:focus { border-color: var(--rust); }
+
+  .filter-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    padding: 7px 16px;
+    background: white;
+    border: 1px solid rgba(61,43,31,0.2);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--bark);
+  }
+
+  .chip:hover, .chip.active {
+    background: var(--bark);
+    color: var(--cream);
+    border-color: var(--bark);
+  }
+
+  .chip.active { background: var(--rust); border-color: var(--rust); }
+
+  /* FEATURED */
+  .section-label {
+    padding: 24px 24px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--bark);
+  }
+
+  .section-label .line {
+    flex: 1;
+    height: 1px;
+    background: rgba(61,43,31,0.15);
+  }
+
+  .section-label .count-tag {
+    font-size: 11px;
+    color: var(--rust);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  /* FEATURED CARDS */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1px;
+    background: rgba(61,43,31,0.1);
+    margin: 0 24px 2px;
+    border: 1px solid rgba(61,43,31,0.1);
+  }
+
+  .featured-card {
+    background: var(--cream);
+    padding: 24px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: background 0.15s;
+    position: relative;
+  }
+
+  .featured-card:hover { background: white; }
+
+  .featured-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--rust);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    font-weight: 600;
+  }
+
+  .podcast-art {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    background: var(--bark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border: 2px solid rgba(61,43,31,0.15);
+    overflow: hidden;
+  }
+
+  .podcast-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .card-body { flex: 1; min-width: 0; }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+
+  .card-host {
+    font-size: 11px;
+    color: var(--rust);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  .card-desc {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(26,18,8,0.65);
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .cat-tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 3px 8px;
+    border: 1px solid currentColor;
+  }
+
+  .cat-roping { color: var(--rust); }
+  .cat-training { color: var(--sage); }
+  .cat-health { color: var(--sky); }
+  .cat-dressage { color: #7b5ea7; }
+  .cat-eventing { color: #2e7d32; }
+  .cat-lifestyle { color: var(--tan); filter: saturate(2) brightness(0.75); }
+  .cat-breeding { color: #8B5E8B; }
+  .cat-barrel { color: #B87333; }
+  .cat-general { color: var(--bark); }
+  .cat-industry { color: #5A7A5A; }
+
+  .listen-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .listen-links-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .listen-link {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 3px 8px;
+    background: var(--light-tan);
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .listen-link.spotify-link {
+    background: #e00000;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .listen-link.apple-link {
+    background: #1a7a1a;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .listen-link:hover {
+    opacity: 0.85;
+    color: #ffffff;
+  }
+
+  .listen-click-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--bark);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* DETAIL MODAL */
+  .detail-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,18,8,0.75);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .detail-overlay.open { display: flex; }
+  .detail-modal {
+    background: var(--cream);
+    width: 100%;
+    max-width: 520px;
+    border-top: 4px solid var(--rust);
+    animation: slideUp 0.2s ease;
+    overflow: hidden;
+  }
+  .detail-art {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+  .detail-art-placeholder {
+    width: 100%;
+    height: 220px;
+    background: var(--bark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+  .detail-body {
+    padding: 12px 16px 14px;
+  }
+  .detail-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--bark);
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+  .detail-host {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 7px;
+  }
+  .detail-desc {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(26,18,8,0.82);
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+  .detail-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .detail-link {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 12px;
+    line-height: 1;
+  }
+  .detail-link.spotify { background: #e00000; }
+  .detail-link.apple { background: #1a7a1a; }
+  .detail-link.website { background: var(--bark); }
+  .detail-close {
+    margin-left: auto;
+    padding: 5px 12px;
+    background: transparent;
+    border: 1px solid rgba(61,43,31,0.25);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--bark);
+    cursor: pointer;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .detail-close:hover { background: rgba(61,43,31,0.08); }
+
+  /* GRID CARDS */
+  .podcast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: rgba(61,43,31,0.08);
+    margin: 0 24px 24px;
+    border: 1px solid rgba(61,43,31,0.1);
+  }
+
+  .grid-card {
+    background: var(--cream);
+    padding: 18px;
+    display: flex;
+    gap: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .grid-card:hover { background: white; }
+
+  .grid-art {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background: var(--bark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 1px solid rgba(61,43,31,0.15);
+    overflow: hidden;
+  }
+
+  .grid-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .grid-body { flex: 1; min-width: 0; }
+
+  .grid-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+
+  .grid-host {
+    font-size: 11px;
+    color: var(--rust);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .grid-desc {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(26,18,8,0.6);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  /* SUBMIT MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,18,8,0.75);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--cream);
+    width: 100%;
+    max-width: 520px;
+    padding: 36px;
+    border-top: 4px solid var(--rust);
+    animation: slideUp 0.2s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .modal h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--bark);
+    margin-bottom: 6px;
+  }
+
+  .modal p { font-size: 14px; color: rgba(26,18,8,0.6); margin-bottom: 24px; }
+
+  .form-row { margin-bottom: 16px; }
+
+  .form-row label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--bark);
+    margin-bottom: 6px;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: white;
+    border: 1px solid rgba(61,43,31,0.2);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: var(--dark);
+    outline: none;
+  }
+
+  .form-row textarea { height: 80px; resize: vertical; }
+
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus { border-color: var(--rust); }
+
+  .modal-footer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+
+  .btn-cancel {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid rgba(61,43,31,0.3);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--bark);
+  }
+
+  .btn-submit {
+    padding: 10px 28px;
+    background: var(--rust);
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bark);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12px;
+    border-top: 2px solid var(--rust);
+  }
+
+  footer a { color: var(--tan); text-decoration: none; }
+
+  footer .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .no-results {
+    padding: 48px 24px;
+    text-align: center;
+    color: rgba(26,18,8,0.4);
+    font-size: 16px;
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    /* Fix 3 – header */
+    .tagline { display: none; }
+    .hero { padding: 14px 12px 12px; }
+    .hero-site-title { font-size: clamp(28px, 7vw, 36px); margin-bottom: 4px; }
+
+    /* Fix 4 – filter chips scroll row */
+    .filter-section {
+      padding: 10px 12px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+    .search-wrap {
+      min-width: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+    .filter-chips {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+      -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+      mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    }
+    .filter-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      flex-shrink: 0;
+      padding: 8px 14px;
+      font-size: 12px;
+      min-height: 36px;
+    }
+
+    /* Fix 5 – search full width */
+    .search-wrap { min-width: 0; max-width: 100%; width: 100%; }
+
+    .podcast-art { width: 90px; height: 90px; font-size: 28px; flex-shrink: 0; }
+    .card-desc { -webkit-line-clamp: 1; margin-bottom: 6px; }
+
+    /* Fix 5 – listen button tap targets */
+    .listen-link {
+      min-height: 36px;
+      padding: 6px 12px;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Fix 6 – stats bar 2 items: single row, one divider */
+    .stat-item {
+      padding: 10px 16px;
+      border-right: none;
+      border-bottom: none;
+      flex-basis: 50%;
+      min-width: 0;
+    }
+    .stat-item:first-child { border-right: 1px solid rgba(255,255,255,0.15); }
+
+    /* Fix 7 – grids: full-width single column on small phones */
+    .featured-grid {
+      grid-template-columns: 1fr;
+      margin: 0 0 2px;
+      border-left: none;
+      border-right: none;
+    }
+    .podcast-grid {
+      grid-template-columns: 1fr;
+      margin: 0 0 16px;
+      border-left: none;
+      border-right: none;
+    }
+
+    /* Fix 8 – modal padding */
+    .modal-overlay { padding: 12px; }
+    .modal { padding: 20px 18px; }
+    .modal h3 { font-size: 20px; }
+    .modal-footer { flex-direction: column-reverse; gap: 8px; }
+    .btn-cancel, .btn-submit { width: 100%; text-align: center; }
+
+    .section-label { padding: 16px 12px 8px; }
+
+    /* Fix 7 – safe-area insets for iPhone notch/home bar */
+    footer {
+      padding-bottom: calc(28px + env(safe-area-inset-bottom));
+      padding-left: calc(24px + env(safe-area-inset-left));
+      padding-right: calc(24px + env(safe-area-inset-right));
+    }
+
+    /* Fix 8 – prevent iOS auto-zoom on search input focus */
+    .search-input { font-size: 16px; }
+
+    /* Fix 9 – banner ad breathing room at 320px */
+    #heroBanner { max-width: calc(100% - 24px) !important; width: calc(100% - 24px) !important; }
+  }
+</style>
+<style>
+.cat-hero {
+  background: var(--bark);
+  color: var(--cream);
+  padding: 28px 16px 22px;
+  text-align: center;
+}
+.cat-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.cat-hero p {
+  font-size: 0.92rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto 14px;
+  line-height: 1.5;
+}
+.cat-hero .stat {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--tan);
+}
+.cat-nav {
+  padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.cat-nav .cat-tag {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.78rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+.cat-nav .cat-tag:hover {
+  background: var(--rust);
+  color: white;
+  text-decoration: none;
+}
+.breadcrumb {
+  padding: 10px 16px;
+  font-size: 0.8rem;
+  color: rgba(26,18,8,0.5);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.breadcrumb a {
+  color: var(--rust);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.cat-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 0 16px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media(min-width:500px) {
+  .cat-grid { grid-template-columns: 1fr 1fr; }
+}
+@media(min-width:800px) {
+  .cat-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .cat-hero h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header style="background:var(--bark);border-bottom:2px solid var(--tan);">
+  <div style="max-width:900px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+    <a href="/" style="font-family:'Playfair Display',serif;font-weight:900;font-size:1.1rem;color:var(--cream);text-decoration:none;">🎙️ Podcast Corral</a>
+    <a href="/" style="font-size:0.82rem;color:var(--tan);text-decoration:none;">All Shows</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <a href="/">Home</a> &rsaquo; <span>General Podcasts</span>
+</nav>
+
+<!-- CATEGORY HERO -->
+<section class="cat-hero">
+  <h1>🎙️ General Podcasts</h1>
+  <p>General equestrian podcasts covering all aspects of the horse world — news, interviews, education, and entertainment.</p>
+  <div class="stat">38 shows in this category</div>
+</section>
+
+<!-- CATEGORY NAV -->
+<nav class="cat-nav">
+  <a href="/" class="cat-tag" style="background:var(--bark);color:var(--cream);">All (129)</a>
+  <a href="/general/" class="cat-tag cat-general" style="background:var(--rust);color:white;">General (38)</a> <a href="/training/" class="cat-tag cat-training">Training (21)</a> <a href="/lifestyle/" class="cat-tag cat-lifestyle">Lifestyle (14)</a> <a href="/roping/" class="cat-tag cat-roping">Team Roping (12)</a> <a href="/industry/" class="cat-tag cat-industry">Industry (10)</a> <a href="/health/" class="cat-tag cat-health">Health & Vet (8)</a> <a href="/barrel/" class="cat-tag cat-barrel">Barrel Racing (7)</a> <a href="/western/" class="cat-tag cat-western">Western Lifestyle (7)</a> <a href="/dressage/" class="cat-tag cat-dressage">Dressage (4)</a> <a href="/rodeo/" class="cat-tag cat-rodeo">Rodeo (4)</a> <a href="/eventing/" class="cat-tag cat-eventing">Eventing (3)</a> <a href="/breeding/" class="cat-tag cat-breeding">Breeding (1)</a> 
+</nav>
+
+<!-- SHOW CARDS -->
+<div class="cat-grid">
+
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/52/9d/d1/529dd1be-b8d4-8d38-4e1e-f987bdede3a7/mza_8243452367960884834.jpg/600x600bb.jpg" alt="A Splash of Color: An Equine Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">A Splash of Color: An Equine Podcast</div>
+        <div class="card-host">Splash of Color</div>
+        <div class="card-desc">Dedicated to the world of Paint and color horses — covering APHA showing, breeding, training, and the community behind one of the fastest-growing segments of the horse show world. Conversations with owners, trainers, and competitors who live and breathe color.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/a-splash-of-color-an-equine-podcast/id1851092304" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/70/d7/17/70d71743-d171-dea0-7575-ae2a560acc59/mza_7840948456592713922.jpg/600x600bb.jpg" alt="Beyond the Buckles" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Beyond the Buckles</div>
+        <div class="card-host">Nathan Gililland, Cody Hart & Blake Skaggs</div>
+        <div class="card-desc">Life beyond the buckle — the backbone of a cowboy. Unfiltered rodeo talk covering bull riding, PBR, PRCA, stock contractors, bullfighters, and the real stories behind the sport. Guests range from active competitors to industry legends and the people who make rodeo run.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/beyond-the-buckles/id1699068328" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/f1/d9/7f/f1d97fc5-ae1a-49c6-d661-1cda81f562fc/mza_9211618199812387574.png/600x600bb.jpg" alt="Beyond the Chutes" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Beyond the Chutes</div>
+        <div class="card-host">Doug Simcox & Sam Swearingen</div>
+        <div class="card-desc">Deep dive into the full spectrum of rodeo life — from the bucking chutes to the timed event box. Hosts Doug Simcox and Sam Swearingen talk with competitors, committee members, stock contractors, judges, announcers, and everyone else who makes the rodeo world turn.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/2Ee9vJCIPBFeWWBjTCYZBG" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/beyond-the-chutes/id1689423857" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/6c/09/33/6c0933ad-ab85-f5fb-91a4-0252bfe46e8a/mza_17737528979996644030.jpg/600x600bb.jpg" alt="Beyond the Saddle" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Beyond the Saddle</div>
+        <div class="card-host">Katie Clinebell</div>
+        <div class="card-desc">The official podcast of EQUUS Magazine and the Equine Network. Host Katie Clinebell interviews professionals across the horse industry about their career paths and how horses remain part of their everyday lives. Episodes cover an eye-opening range of careers — digital marketing, agricultural law, riding center management, equine photography, meat science, and more. A must-listen for anyone who wants to turn their passion for horses into a career. 58 episodes.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/69hRF8kjXWR24nEkLQVJyG" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/beyond-the-saddle/id1483269389" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/31/ea/03/31ea03e1-d16f-1528-7944-e80d15f4c465/mza_10686541964419615462.jpg/600x600bb.jpg" alt="Canada Horse Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Canada Horse Podcast</div>
+        <div class="card-host">Nikki & Nadine</div>
+        <div class="card-desc">Informative and entertaining conversations focused on the Canadian horse industry from Informed Equestrian. Topics span all disciplines relevant to North American horse owners.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/5sLEeKLIWLi7sBoAYzIuY5" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/ca/podcast/canada-horse-podcast/id1537069253" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a9/a0/fd/a9a0fdef-e6e5-23d5-c96e-10976ef82275/mza_14082131807706297909.png/600x600bb.jpg" alt="EquiRatings Eventing Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">EquiRatings Eventing Podcast</div>
+        <div class="card-host">Sam Watson</div>
+        <div class="card-desc">Data-driven approach to eventing with weekly updates, event previews and reviews, up-and-coming horses to watch, plus interviews with showjumpers and equestrian experts.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/36kXM20DbeCb1qLsZmTXx6" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/equiratings-eventing-podcast/id1163693349" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/86/56/38/865638dc-70c8-fbe0-2ea4-978a466edb43/mza_16171644061181598749.png/600x600bb.jpg" alt="EquiRatings Jumping Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">EquiRatings Jumping Podcast</div>
+        <div class="card-host">EquiRatings</div>
+        <div class="card-desc">Data-driven show jumping analysis and athlete interviews from the team behind EquiRatings. Covers FEI results, horse-and-rider statistics, World Cup, and Nations Cup circuits — bringing an analytical edge to the world of international show jumping.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/equiratings-jumping-podcast/id1588727635" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/ad/34/11/ad3411ff-b164-ec44-53a1-8de3e358f4b3/mza_5989754120648985494.jpg/600x600bb.jpg" alt="Equiosity" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Equiosity</div>
+        <div class="card-host">Alexandra Kurland & Dominique Day</div>
+        <div class="card-desc">The name says it all — equus + curiosity. Hosted by clicker training pioneer Alexandra Kurland and Dominique Day, Equiosity is a deep-dive podcast about all things equine with a special emphasis on the horse-human bond. Episodes explore horse behavior, science-based training, applied behavior analysis, pasture management, and the art of becoming your horse</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/equiosity/id1357304644" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/2e/15/94/2e1594a9-2fa4-dff2-628e-375b618ddb77/mza_14757274715269212018.png/600x600bb.jpg" alt="Eventing Radio Show" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Eventing Radio Show</div>
+        <div class="card-host">Professional Riders Organization</div>
+        <div class="card-desc">The premier and longest running podcast about the thrilling equine sport of eventing. Bi-monthly episodes bringing you news and interviews from eventing professionals.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/7E7mZPvXeRO1f7lN6bOmFG" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/eventing-radio-show/id302608056" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/81/55/df/8155df7a-5252-8f31-c2a4-1048848cc5a2/mza_10331293289433230596.jpg/600x600bb.jpg" alt="Fit for Halter Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Fit for Halter Podcast</div>
+        <div class="card-host">Alexis Gooding</div>
+        <div class="card-desc">For pleasure riders who found themselves watching the halter ring. Alexis Gooding breaks down the halter horse world — conditioning, conformation, showing strategy, and what it takes to compete at the highest levels of AQHA and APHA halter.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/fit-for-halter-podcast/id1734124076" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e7/8b/4a/e78b4a78-9120-35a8-4b24-3faefdcd8b77/mza_15831090455919871597.jpg/600x600bb.jpg" alt="Good Horses: Stories of the American Quarter Horse" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Good Horses: Stories of the American Quarter Horse</div>
+        <div class="card-host">American Quarter Horse Association</div>
+        <div class="card-desc">The official AQHA podcast celebrating the incredible stories of the American Quarter Horse. Each episode features personal accounts from owners, breeders, trainers, and competitors who share what makes their good horse truly great.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/good-horses-stories-of-the-american-quarter-horse/id1703321959" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/83/07/1d/83071d99-a7a4-8c9f-c366-e80f5d23be56/mza_16939198319613987790.jpg/600x600bb.jpg" alt="Horse People Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Horse People Podcast</div>
+        <div class="card-host">Gideon Kotkowski</div>
+        <div class="card-desc">A narrative podcast diving into the stories behind the world</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/4m7AAXyyF9AX0tMfwmcL76" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/horse-people-podcast/id1635996657" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/5d/c4/16/5dc4169c-78a2-d1e3-062c-ac04b18a8eee/mza_1582043779802395823.jpg/600x600bb.jpg" alt="Horse Radio Network — All Shows" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Horse Radio Network — All Shows</div>
+        <div class="card-host">Glenn the Geek & Network</div>
+        <div class="card-desc">The leading podcast network for horse lovers worldwide with 15+ shows covering every equestrian discipline. Subscribe to the all-shows feed for everything in one place.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/horse-radio-network-all-shows-feed/id384081509" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3d/ef/eb/3defebcc-5c4d-b84e-3286-1edbf5ecc1ba/mza_1028497833508317512.jpeg/600x600bb.jpg" alt="Horse Show Bestie" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Horse Show Bestie</div>
+        <div class="card-host">Crysta Brown</div>
+        <div class="card-desc">APHA and AQHA all-around trainer Crysta Brown and amateur sidekick Scott Cooper spill the tea on the all-around Quarter Horse and Paint Horse show world. Real talk from the rail — training, showing, and everything in between.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/horse-show-bestie/id1838458869" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/9e/dd/f2/9eddf204-a3ac-0305-e850-6815fcc9fcfe/mza_8715631585696422084.jpg/600x600bb.jpg" alt="Horses in the Morning" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Horses in the Morning</div>
+        <div class="card-host">Jamie Jennings & Glenn the Geek</div>
+        <div class="card-desc">The leading daily horse podcast for horse lovers in 90+ countries. Light, entertaining content with unique segments, exciting guests, training tips, listener call-ins, and more. Part of Horse Radio Network.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/horses-in-the-morning/id399998714" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts114/v4/79/d7/27/79d7274b-daf9-fdad-2f36-b1dbc1ad7b42/mza_1624841802049911368.jpg/600x600bb.jpg" alt="In The Barn" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">In The Barn</div>
+        <div class="card-host">Horse Girls Production</div>
+        <div class="card-desc">Real conversations about real topics that matter to you and your horse. Horse Girls Production digs into the research — or lack of research — behind popular equine products, trends, supplements, training methods, and industry controversies. No fluff, no sponsor spin. Just honest, evidence-based discussion for horse owners who want to make informed decisions. 53 episodes of barn-aisle truth-telling.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/in-the-barn/id1522882428" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/51/ab/36/51ab361e-43cd-e995-ceb3-1f2256a66b72/mza_12887982270845036280.jpg/600x600bb.jpg" alt="NFR Extra" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">NFR Extra</div>
+        <div class="card-host">Andy Seiler, Steve Goedert & Brilynn Bentley</div>
+        <div class="card-desc">In-depth conversations with Wrangler NFR contestants, champions, and icons of the rodeo and Western lifestyle. Personal stories straight from the National Finals Rodeo.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/606fiLsmH8CQuFOhEUyJYy" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/nfr-extra/id1473646852" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/8d/ad/97/8dad97fd-f7d7-6061-3a2e-ca07dfd9164e/mza_18304076029063404791.png/600x600bb.jpg" alt="No Spin Rodeo" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">No Spin Rodeo</div>
+        <div class="card-host">Kendra Santos & Tommy Joe Lucia</div>
+        <div class="card-desc">Straight talk on important rodeo topics — no politics, no BS. Hosts Kendra Santos and Tommy Joe Lucia bring insider perspective on PRCA, PBR, WCRA, and all the stories that matter in the rodeo world. Also featured on Cowboy Channel+.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/4gK7lgJmPC071Hos94NYJC" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/no-spin-rodeo/id1703313107" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/83/9b/51/839b51fc-c661-6955-b6a7-29284c12b8a1/artwork.jpg/600x600bb.jpg" alt="Pony Club Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Pony Club Podcast</div>
+        <div class="card-host">US Pony Clubs</div>
+        <div class="card-desc">The official podcast of United States Pony Clubs, connecting one of the world</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/2D4zq5ZJnO5KmSHgSExSqF" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/pony-club-podcast/id1473704808" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/32/0f/55/320f5509-e17f-6def-8e9f-b42d0a4c0d88/mza_4614441765349808683.jpg/600x600bb.jpg" alt="Practical Horseman Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Practical Horseman Podcast</div>
+        <div class="card-host">Sandra Oliynyk & Julia Murphy</div>
+        <div class="card-desc">Conversations with respected riders, industry leaders, and horse care experts from the hunter/jumper, eventing, and dressage world. Co-hosted by the editors of Practical Horseman magazine.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/450pykudbuN8S1u1aXacNE" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/practical-horseman-podcast/id1456400612" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/32/0f/55/320f5509-e17f-6b1a-5a35-8a2a0ded8b67/mza_10242291455655742669.jpg/600x600bb.jpg" alt="Practical Horseman Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Practical Horseman Podcast</div>
+        <div class="card-host">Sandra Oliynyk & Julia Murphy</div>
+        <div class="card-desc">The official podcast of Practical Horseman magazine — the voice of the English riding world. Co-hosted by editor Sandra Oliynyk and multimedia content assistant Julia Murphy, each episode features in-depth conversations with respected riders, trainers, industry leaders, and horse care experts across hunter/jumper, eventing, and dressage. Informative, inspiring, and bimonthly.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/450pykudbuN8S1u1aXacNE" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/practical-horseman-podcast/id1456400612" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/b0/c0/9a/b0c09a5b-d8ce-c39a-8a0c-224822a9b033/mza_17451667264391633098.jpg/600x600bb.jpg" alt="Rodeo Road Show with Will Rasmussen" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Rodeo Road Show with Will Rasmussen</div>
+        <div class="card-host">Will Rasmussen</div>
+        <div class="card-desc">PRCA Rodeo Announcer and three-time Announcer of the Year nominee Will Rasmussen sits down with rodeo</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/6QusDGLpcjhThqSfJgkfec" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/rodeo-road-show-with-will-rasmussen/id1536833234" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/b3/a3/95/b3a395ee-2910-2ca9-5aa0-b070f7b803db/mza_63180133594425044.jpeg/600x600bb.jpg" alt="Rodeo Time with Dale Brisby" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Rodeo Time with Dale Brisby</div>
+        <div class="card-host">Dale Brisby</div>
+        <div class="card-desc">Dale Brisby is the self-proclaimed expert on all things rodeo, ranching, and pretty much everything. Just ask him. Comedy, hot takes, and interviews with rodeo legends, musicians, and colorful characters from the cowboy world.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/5nR3hQZcNWoUXngEmL4FAh" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/rodeo-time-with-dale-brisby/id1450121744" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/05/59/c9/0559c94d-cee4-e4eb-6190-2e259b000fcb/mza_16724327013277506902.jpg/600x600bb.jpg" alt="Rodeo Wagon Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Rodeo Wagon Podcast</div>
+        <div class="card-host">Kyle Jones</div>
+        <div class="card-desc">Pro bull rider Kyle Jones interviews rodeo athletes, influencers, fans, and industry leaders from all over the world. Real conversations covering bull riding, team roping, family, faith, and the full rodeo lifestyle.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/7wR6r9mzCnP9pSKxhfjJrK" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/rodeo-wagon-podcast/id1676308717" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/7f/32/40/7f324037-8bc0-383b-29af-bade449c569a/mza_9256151518365923378.jpg/600x600bb.jpg" alt="RümpChät" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">RümpChät</div>
+        <div class="card-host">Justin \</div>
+        <div class="card-desc">Hilarious stories and real talk from rodeo</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/6lPlhSUOYT4HsPXE2k0xzi" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/r%C3%BCmpch%C3%A4t/id1472273947" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/cd/c1/e1/cdc1e18c-cfca-7dc5-670c-45aa7f7f2f73/mza_15769115586587044954.jpg/600x600bb.jpg" alt="Stable Scoop" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Stable Scoop</div>
+        <div class="card-host">Glenn the Geek</div>
+        <div class="card-desc">The Horse Radio Network</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/4bIlHsAqaINLEFi8KBkqj2" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/stable-scoop/id287942647" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/b7/85/f9/b785f97d-6520-8d5c-8b5c-f40de8eee780/mza_7136494696706559026.jpg/600x600bb.jpg" alt="Strong in the Saddle" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Strong in the Saddle</div>
+        <div class="card-host">Katrina Lachambre</div>
+        <div class="card-desc">The podcast dedicated to equestrian wellness — physical, mental, emotional, and even spiritual. Host Katrina Lachambre brings over two decades of horse industry experience to weekly episodes covering horsemanship, horse care, equestrian fitness, western lifestyle, and personal growth. Whether you</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/2ZVIWMjbX7xSRs0UPEVOng" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/strong-in-the-saddle/id1476593725" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/1e/67/28/1e672815-8c37-a3cf-53a8-169e5afb9286/mza_9121330142680703365.jpeg/600x600bb.jpg" alt="That Western Life" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">That Western Life</div>
+        <div class="card-host">Katie Schrock & Rachel Owens-Sarno</div>
+        <div class="card-desc">50% rodeo, 50% farming, ranching, and western lifestyle. Hosts Katie Schrock and Rachel Owens-Sarno break down rodeo standings, interview industry insiders, explore western history, and dig into agriculture and natural resources — for fans both inside and outside the arena.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/4snND5oWIV2Q8hVljbpbYr" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/that-western-life/id1451270471" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/34/15/8a/34158ad2-70ca-cb4d-8e78-5615b57810f5/628810960569.png/600x600bb.jpg" alt="The Equestrian Connection" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">The Equestrian Connection</div>
+        <div class="card-host">Danielle Crowell</div>
+        <div class="card-desc">Everything related to the horse industry with experts, trainers, and horse people from all over the world. From sport horses to backyard companions, all disciplines welcome.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/7CgJ5xvnQgaFOdunKFSfIv" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/the-equestrian-connection/id1582176472" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7e/86/70/7e867099-a646-044e-973a-7e1f2c2582c1/mza_6402246999814690109.jpg/600x600bb.jpg" alt="The Equestrian Experience" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">The Equestrian Experience</div>
+        <div class="card-host">Amanda Ross & Bex Mason</div>
+        <div class="card-desc">All-access real-life conversations with global equestrian celebrities — riders to professionals. Nothing is off-limits in these honest, long-form interviews by equestrians, for equestrians.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/7baYjkEC9J4tueKTJLYS13" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/the-equestrian-experience/id1581585323" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7e/86/70/7e867099-a646-044e-973a-7e1f2c2582c1/mza_6402246999814690109.jpg/600x600bb.jpg" alt="The Equestrian Experience" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">The Equestrian Experience</div>
+        <div class="card-host">Amanda Ross & Bex Mason</div>
+        <div class="card-desc">An all-access, real-life podcast co-hosted by Australian Olympic eventer Amanda Ross and British international Grand Prix show jumper Bex Mason. They tried it so you don</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/7baYjkEC9J4tueKTJLYS13" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/the-equestrian-experience/id1581585323" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/2a/14/29/2a142910-66bc-b393-7c05-aafaaf724652/mza_18376864504940466128.jpg/600x600bb.jpg" alt="The Equestrian Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">The Equestrian Podcast</div>
+        <div class="card-host">Bethany Lee</div>
+        <div class="card-desc">Bethany Lee talks to interesting people and top professionals throughout the horse world. One of the most listened-to equestrian podcasts with a wide-ranging guest list.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/0ZGFz99JUtzDViQ5OoBBE1" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/the-equestrian-podcast/id1447789118" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/5f/87/f7/5f87f7b3-a832-e28b-4015-a60b49d42c4a/mza_14507681703372679558.jpg/600x600bb.jpg" alt="The Quarter Horse Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">The Quarter Horse Podcast</div>
+        <div class="card-host">Ashley Winch</div>
+        <div class="card-desc">Pull up a mounting block and settle in. Host Ashley Winch brings together Quarter Horse trainers, competitors, and influencers for barn aisle conversations covering showing, breeding, training, and the Quarter Horse lifestyle.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/the-quarter-horse-podcast/id1742622187" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/df/dd/3d/dfdd3d9d-a1b0-625c-66d4-a0da46f4e3b7/mza_11351107974285815323.jpg/600x600bb.jpg" alt="The Steve Kenyon Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">The Steve Kenyon Podcast</div>
+        <div class="card-host">Steve Kenyon</div>
+        <div class="card-desc">Professional rodeo announcer and 8 Seconds Media founder Steve Kenyon recaps the latest news in the fast-paced world of professional rodeo and western sports. Weekly interviews with world champions, hall of famers, breakaway ropers, rough stock riders, and industry newsmakers.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/2T00W65iwsVZBsgMSrbKnP" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/the-steve-kenyon-podcast/id1700939783" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/dc/47/a9/dc47a936-cf07-f363-a74d-b5f1ec8f0fa3/mza_16374992645698841580.jpeg/600x600bb.jpg" alt="Tough Draw Talks" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Tough Draw Talks</div>
+        <div class="card-host">Bradley J. Hughes</div>
+        <div class="card-desc">All-access pass to rodeo</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/4wMymQTBcMBGaWgi4CXKyU" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/tough-draw-talks/id1543762018" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/c5/1e/ee/c51eeec8-635a-6e13-5c86-8ccb6bf9a933/mza_16718229452865633976.jpg/600x600bb.jpg" alt="USEA Podcast" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">USEA Podcast</div>
+        <div class="card-host">Nicole Brown</div>
+        <div class="card-desc">The official podcast of the United States Eventing Association — 400+ episodes covering competitions, safety, high-performance teams, horse development, and the people who make U.S. eventing run.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/6yaHnqDaezPyK11YMUUXeJ" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/usea-podcast/id1229567848" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/9c/4b/9c/9c4b9c5d-7c18-c4de-14df-e4b96175bb35/mza_13608200715991656013.jpg/600x600bb.jpg" alt="USHJA On Course" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">USHJA On Course</div>
+        <div class="card-host">United States Hunter Jumper Association</div>
+        <div class="card-desc">The official podcast of the United States Hunter Jumper Association. Conversations with USHJA members, trainers, riders, and industry leaders covering hunter, jumper, and equitation competition, policy, and the growth of the H/J discipline nationwide.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/ushja-on-course/id1519027030" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="podcast-art"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts124/v4/27/79/05/2779053d-720f-7445-2a4c-d400f08c72d1/mza_2986937163115321466.jpg/600x600bb.jpg" alt="Where Rodeo Meets The Road!" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';"></div>
+      <div class="card-body">
+        <div class="card-title">Where Rodeo Meets The Road!</div>
+        <div class="card-host">Ken & Julia Dondero</div>
+        <div class="card-desc">A look at rodeo across the country from The Arena Press. Hosts Ken and Julia Dondero break down PRCA and WPRA standings, recap major events, interview rising stars and veterans, and cover everything from Cowboy Christmas to the NFR stretch run.</div>
+        <div class="card-meta">
+          <span class="cat-tag cat-general">General</span>
+          <div class="listen-links">
+            <div class="listen-links-row">
+              <a class="listen-link spotify-link" href="https://open.spotify.com/show/6zIB6I0YZfUhuTkYyuxPG3" target="_blank" rel="noopener">Spotify</a><a class="listen-link apple-link" href="https://podcasts.apple.com/us/podcast/where-rodeo-meets-the-road/id1605490593" target="_blank" rel="noopener">Apple</a>
+            </div>
+            <div class="listen-click-label">Click Here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:var(--bark);color:var(--cream);padding:28px 16px;text-align:center;">
+  <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Podcast Corral</div>
+  <p style="font-size:0.82rem;opacity:0.7;margin-bottom:12px;">The Equestrian Podcast Directory — A Bridle & Bit Magazine Platform</p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:16px;">
+    <a href="/" style="color:var(--tan);font-size:0.8rem;">All Shows</a>
+    <a href="/general/" style="color:var(--tan);font-size:0.8rem;">General</a> <a href="/training/" style="color:var(--tan);font-size:0.8rem;">Training</a> <a href="/lifestyle/" style="color:var(--tan);font-size:0.8rem;">Lifestyle</a> <a href="/roping/" style="color:var(--tan);font-size:0.8rem;">Team Roping</a> <a href="/industry/" style="color:var(--tan);font-size:0.8rem;">Industry</a> <a href="/health/" style="color:var(--tan);font-size:0.8rem;">Health & Vet</a> <a href="/barrel/" style="color:var(--tan);font-size:0.8rem;">Barrel Racing</a> <a href="/western/" style="color:var(--tan);font-size:0.8rem;">Western Lifestyle</a> <a href="/dressage/" style="color:var(--tan);font-size:0.8rem;">Dressage</a> <a href="/rodeo/" style="color:var(--tan);font-size:0.8rem;">Rodeo</a> <a href="/eventing/" style="color:var(--tan);font-size:0.8rem;">Eventing</a> <a href="/breeding/" style="color:var(--tan);font-size:0.8rem;">Breeding</a>
+  </div>
+  <p style="font-size:0.72rem;opacity:0.4;">&copy; 2026 Podcast Corral — A Bridle & Bit Magazine Platform. All rights reserved.</p>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://podcastcorral.com/"},{"@type":"ListItem","position":2,"name":"General Podcasts","item":"https://podcastcorral.com/general/"}]}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"General Equestrian Podcasts","description":"General equestrian podcasts covering all aspects of the horse world \u2014 news, interviews, education, and entertainment.","numberOfItems":38,"itemListElement":[{"@type":"ListItem","position":1,"name":"A Splash of Color: An Equine Podcast","url":"https://podcasts.apple.com/us/podcast/a-splash-of-color-an-equine-podcast/id1851092304"},{"@type":"ListItem","position":2,"name":"Beyond the Buckles","url":"https://podcasts.apple.com/us/podcast/beyond-the-buckles/id1699068328"},{"@type":"ListItem","position":3,"name":"Beyond the Chutes","url":"https://open.spotify.com/show/2Ee9vJCIPBFeWWBjTCYZBG"},{"@type":"ListItem","position":4,"name":"Beyond the Saddle","url":"https://open.spotify.com/show/69hRF8kjXWR24nEkLQVJyG"},{"@type":"ListItem","position":5,"name":"Canada Horse Podcast","url":"https://open.spotify.com/show/5sLEeKLIWLi7sBoAYzIuY5"},{"@type":"ListItem","position":6,"name":"EquiRatings Eventing Podcast","url":"https://open.spotify.com/show/36kXM20DbeCb1qLsZmTXx6"},{"@type":"ListItem","position":7,"name":"EquiRatings Jumping Podcast","url":"https://podcasts.apple.com/us/podcast/equiratings-jumping-podcast/id1588727635"},{"@type":"ListItem","position":8,"name":"Equiosity","url":"https://podcasts.apple.com/us/podcast/equiosity/id1357304644"},{"@type":"ListItem","position":9,"name":"Eventing Radio Show","url":"https://open.spotify.com/show/7E7mZPvXeRO1f7lN6bOmFG"},{"@type":"ListItem","position":10,"name":"Fit for Halter Podcast","url":"https://podcasts.apple.com/us/podcast/fit-for-halter-podcast/id1734124076"},{"@type":"ListItem","position":11,"name":"Good Horses: Stories of the American Quarter Horse","url":"https://podcasts.apple.com/us/podcast/good-horses-stories-of-the-american-quarter-horse/id1703321959"},{"@type":"ListItem","position":12,"name":"Horse People Podcast","url":"https://open.spotify.com/show/4m7AAXyyF9AX0tMfwmcL76"},{"@type":"ListItem","position":13,"name":"Horse Radio Network \u2014 All Shows","url":"https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6"},{"@type":"ListItem","position":14,"name":"Horse Show Bestie","url":"https://podcasts.apple.com/us/podcast/horse-show-bestie/id1838458869"},{"@type":"ListItem","position":15,"name":"Horses in the Morning","url":"https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6"},{"@type":"ListItem","position":16,"name":"In The Barn","url":"https://podcasts.apple.com/us/podcast/in-the-barn/id1522882428"},{"@type":"ListItem","position":17,"name":"NFR Extra","url":"https://open.spotify.com/show/606fiLsmH8CQuFOhEUyJYy"},{"@type":"ListItem","position":18,"name":"No Spin Rodeo","url":"https://open.spotify.com/show/4gK7lgJmPC071Hos94NYJC"},{"@type":"ListItem","position":19,"name":"Pony Club Podcast","url":"https://open.spotify.com/show/2D4zq5ZJnO5KmSHgSExSqF"},{"@type":"ListItem","position":20,"name":"Practical Horseman Podcast","url":"https://open.spotify.com/show/450pykudbuN8S1u1aXacNE"}]}
+</script>
+
+</body>
+</html>
