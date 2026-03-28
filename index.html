@@ -29,6 +29,23 @@
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 300;
     min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Touch delay prevention */
+  a, button, [onclick], .chip, .format-tab, .listen-link, .featured-card, .card {
+    touch-action: manipulation;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
   }
 
   /* HEADER */
@@ -350,7 +367,7 @@
   /* FEATURED CARDS */
   .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1px;
     background: rgba(61,43,31,0.1);
     margin: 0 24px 2px;
@@ -850,9 +867,9 @@
 
     /* Fix 5 – listen button tap targets */
     .listen-link {
-      min-height: 36px;
-      padding: 6px 12px;
-      font-size: 11px;
+      min-height: 44px;
+      padding: 8px 14px;
+      font-size: 12px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -913,6 +930,10 @@
     <div>
       <div class="logo-text">Sponsored by <a href="https://bridleandbit.com" target="_blank" style="color:var(--tan);text-decoration:none;text-transform:uppercase;letter-spacing:2px;">BRIDLE &amp; BIT</a> Magazine</div>
     </div>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/about/" style="font-size:0.78rem;color:var(--tan);text-decoration:none;font-weight:600;letter-spacing:0.5px;">About</a>
+      <a href="/submit/" style="font-size:0.78rem;color:var(--tan);text-decoration:none;font-weight:600;letter-spacing:0.5px;">Submit</a>
+    </div>
   </div>
 </header>
 
@@ -921,7 +942,7 @@
   <h1>The Best Horse Podcasts</h1>
   <p>Podcasts about horses, training, and the western lifestyle.</p>
 
-<div id="heroBanner" style="margin:12px auto 12px;max-width:320px;width:90%;cursor:pointer;" onclick="window.open(bannerAds[currentBanner].url,'_blank')"><img id="bannerImg" src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public" alt="Black Angus Steakhouse" style="width:100%;height:auto;display:block;border-radius:4px;"></div>
+<div id="heroBanner" style="margin:12px auto 12px;max-width:320px;width:90%;cursor:pointer;" onclick="window.open(bannerAds[currentBanner].url,'_blank')"><img id="bannerImg" src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public" alt="Black Angus Steakhouse" loading="lazy" width="320" height="100" style="width:100%;height:auto;display:block;border-radius:4px;"></div>
 <script>
 var bannerAds=[
   {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public",url:"https://www.blackangus.com",alt:"Black Angus Steakhouse"},
@@ -3182,5 +3203,14 @@ function submitForm() {
 // Init
 setFormat('video', document.getElementById('tabVideo'));
 </script>
+
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.3s ease;touch-action:manipulation;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',function(){if(window.scrollY>600){b.style.opacity='1';b.style.pointerEvents='auto'}else{b.style.opacity='0';b.style.pointerEvents='none'}},{passive:true})})();
+</script>
+
 </body>
 </html>
