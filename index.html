@@ -31,6 +31,8 @@
     --sage: #7A8C6E;
     --sky: #5B8FA8;
     --light-tan: #EDE0C4;
+    --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    --font-sans: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,9 +40,8 @@
   body {
     background: var(--cream);
     color: var(--dark);
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--font-sans);
     font-weight: 300;
-    min-height: 100vh;
     overflow-x: hidden;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
@@ -72,6 +73,7 @@
         rgba(255,255,255,0.015) 4px
       );
     padding: 5px 24px;
+    padding-top: calc(5px + env(safe-area-inset-top));
     border-bottom: 2px solid var(--rust);
     position: sticky;
     top: 0;
@@ -214,38 +216,6 @@
   }
 
   /* FORMAT TABS */
-  .format-tabs {
-    background: var(--bark);
-    display: flex;
-    border-bottom: 3px solid var(--rust);
-  }
-
-  .format-tab {
-    flex: 1;
-    padding: 14px 0;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(15px, 2.5vw, 20px);
-    font-weight: 700;
-    color: rgba(245,237,216,0.45);
-    cursor: pointer;
-    border: none;
-    background: none;
-    letter-spacing: 0.5px;
-    transition: all 0.15s;
-    border-bottom: 3px solid transparent;
-    margin-bottom: -3px;
-  }
-
-  .format-tab.active {
-    color: var(--cream);
-    border-bottom-color: var(--tan);
-  }
-
-  @media(hover:hover) { .format-tab:hover:not(.active) { color: rgba(245,237,216,0.75); } }
-
-  .format-tab .tab-icon { margin-right: 8px; }
-
   /* FORMAT TABS */
   .format-tabs {
     background: var(--dark);
@@ -3215,6 +3185,20 @@ function closeDetail() {
   document.getElementById("detailOverlay").classList.remove("open");
 }
 
+// Swipe down to close detail modal
+(function() {
+  var startY = 0;
+  document.addEventListener('touchstart', function(e) {
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', function(e) {
+    var o = document.getElementById('detailOverlay');
+    if (!o || !o.classList.contains('open')) return;
+    var dist = e.changedTouches[0].clientY - startY;
+    if (dist > 60) closeDetail();
+  }, { passive: true });
+})();
+
 document.addEventListener("keydown", function(e) {
   if (e.key === "Escape") {
     var o = document.getElementById("detailOverlay");
@@ -3257,7 +3241,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- Back to Top Button -->
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.3s ease;touch-action:manipulation;">
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:calc(20px + env(safe-area-inset-bottom));right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.3s ease;touch-action:manipulation;">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 <script>
