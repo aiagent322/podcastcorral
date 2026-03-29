@@ -73,7 +73,6 @@
         rgba(255,255,255,0.015) 4px
       );
     padding: 5px 24px;
-    padding-top: calc(5px + env(safe-area-inset-top));
     border-bottom: 2px solid var(--rust);
     position: sticky;
     top: 0;
@@ -904,13 +903,6 @@
     .btn-cancel, .btn-submit { width: 100%; text-align: center; }
 
     .section-label { padding: 16px 12px 8px; }
-
-    /* Fix 7 – safe-area insets for iPhone notch/home bar */
-    footer {
-      padding-bottom: calc(28px + env(safe-area-inset-bottom));
-      padding-left: calc(24px + env(safe-area-inset-left));
-      padding-right: calc(24px + env(safe-area-inset-right));
-    }
 
     /* Fix 8 – prevent iOS auto-zoom on search input focus */
     .search-input { font-size: 16px; }
@@ -3241,7 +3233,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- Back to Top Button -->
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:calc(20px + env(safe-area-inset-bottom));right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.3s ease;touch-action:manipulation;">
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:20px;right:16px;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--rust);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.3s ease;touch-action:manipulation;">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 <script>
