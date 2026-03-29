@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="theme-color" content="#3D2B1F">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Podcast Corral – The Equestrian Podcast Directory</title>
 <meta name="description" content="Discover the best horse and equestrian podcasts. Team roping, barrel racing, training, health, breeding and more. Free, curated, no pay-to-play.">
@@ -235,7 +235,7 @@
     border: none;
     background: transparent;
     color: rgba(245,237,216,0.45);
-    transition: all 0.2s;
+    transition: color 0.2s, border-color 0.2s;
     border-bottom: 3px solid transparent;
     margin-bottom: -3px;
   }
@@ -309,7 +309,7 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
     color: var(--bark);
   }
 
@@ -369,6 +369,7 @@
   }
 
   @media(hover:hover) { .featured-card:hover { background: white; } }
+  .featured-card:active { background: white; transform: scale(0.99); }
 
   .featured-tag {
     position: absolute;
@@ -376,7 +377,7 @@
     right: 12px;
     background: var(--rust);
     color: white;
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     padding: 3px 8px;
@@ -488,7 +489,7 @@
     text-decoration: none;
     padding: 3px 8px;
     background: var(--light-tan);
-    transition: all 0.15s;
+    transition: background 0.15s, opacity 0.15s;
     white-space: nowrap;
   }
 
@@ -639,6 +640,7 @@
   }
 
   @media(hover:hover) { .grid-card:hover { background: white; } }
+  .grid-card:active { background: white; transform: scale(0.99); }
 
   .grid-art {
     width: 72px;
@@ -858,7 +860,7 @@
     /* Fix 5 – search full width */
     .search-wrap { min-width: 0; max-width: 100%; width: 100%; }
 
-    .podcast-art { width: 90px; height: 90px; font-size: 28px; flex-shrink: 0; }
+    .podcast-art { width: 80px; height: 80px; font-size: 26px; flex-shrink: 0; }
     .card-desc { -webkit-line-clamp: 1; margin-bottom: 6px; }
 
     /* Fix 5 – listen button tap targets */
