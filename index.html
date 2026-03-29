@@ -928,13 +928,14 @@
   }
 </style>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Podcast Corral","url":"https://podcastcorral.com/","description":"The equestrian podcast directory — 129 shows across 12 categories. Free, curated, no pay-to-play.","publisher":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}},{"@context":"https://schema.org","@type":"Organization","name":"Podcast Corral","url":"https://podcastcorral.com/","parentOrganization":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}}]</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Featured Equestrian Podcasts","description":"Hand-picked featured shows from the Podcast Corral equestrian podcast directory.","url":"https://podcastcorral.com/","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"PodcastSeries","name":"The Almosta Cowboy","author":{"@type":"Person","name":"Al Dunning"},"url":"https://open.spotify.com/show/0maYvfFBusMuXlKOMaq6QU"}},{"@type":"ListItem","position":2,"item":{"@type":"PodcastSeries","name":"Raw with Clinton Anderson","author":{"@type":"Person","name":"Clinton Anderson"},"url":"https://open.spotify.com/show/2qvy1IXMdzwyBRl85kGm8b"}},{"@type":"ListItem","position":3,"item":{"@type":"PodcastSeries","name":"Rodeo Time with Dale Brisby","author":{"@type":"Person","name":"Dale Brisby"},"url":"https://open.spotify.com/show/5nR3hQZcNWoUXngEmL4FAh"}},{"@type":"ListItem","position":4,"item":{"@type":"PodcastSeries","name":"Horses in the Morning","author":{"@type":"Person","name":"Jamie Jennings & Glenn the Geek"},"url":"https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6"}},{"@type":"ListItem","position":5,"item":{"@type":"PodcastSeries","name":"Train Your Own Horse","author":{"@type":"Person","name":"Stacy Westfall"},"url":"https://open.spotify.com/show/6rz2WZeMu7o6z6usg1aGit"}},{"@type":"ListItem","position":6,"item":{"@type":"PodcastSeries","name":"The Journey On Podcast","author":{"@type":"Person","name":"Warwick Schiller"},"url":"https://open.spotify.com/show/4eUcex8YwWe5z1xXlQWJj3"}},{"@type":"ListItem","position":7,"item":{"@type":"PodcastSeries","name":"Tom McCutcheon's THE SHOW","author":{"@type":"Person","name":"Tom McCutcheon"},"url":"https://open.spotify.com/show/6gxikHAu26r2V7qilQc7QN"}},{"@type":"ListItem","position":8,"item":{"@type":"PodcastSeries","name":"The Score Podcast","author":{"@type":"Person","name":"Team Roping Journal"},"url":"https://open.spotify.com/show/0NC8LsedyH4rOaNeAyGcMj"}}]}</script>
 </head>
 <body>
 
 <header>
   <div class="logo-area">
     <div>
-      <div class="logo-text">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener" style="color:var(--tan);text-decoration:none;text-transform:uppercase;letter-spacing:2px;">BRIDLE &amp; BIT</a> Magazine</div>
+      <div class="logo-text">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener noreferrer" style="color:var(--tan);text-decoration:none;text-transform:uppercase;letter-spacing:2px;">BRIDLE &amp; BIT</a> Magazine</div>
     </div>
   </div>
 </header>
@@ -1033,7 +1034,7 @@ setInterval(function(){
     <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('breeding',document.querySelector('.chip[data-cat=breeding]'));return false;" style="color:var(--tan);font-size:0.8rem;">Breeding</a>
   </div>
   </div>
-  <p style="font-size:0.75rem;opacity:0.5;margin-bottom:8px;">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener" style="color:var(--tan);">Bridle &amp; Bit Magazine</a></p>
+  <p style="font-size:0.75rem;opacity:0.5;margin-bottom:8px;">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener noreferrer" style="color:var(--tan);">Bridle &amp; Bit Magazine</a></p>
   <p style="font-size:0.72rem;opacity:0.4;">&copy; 2026 Podcast Corral — A Bridle &amp; Bit Magazine Platform. All rights reserved.</p>
 </footer>
 
@@ -3095,9 +3096,9 @@ function renderAll() {
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
             <div class="listen-links-row">
-              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Spotify</a>` : ''}
-              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Apple</a>` : ''}
-              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Watch</a>` : ''}
+              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Spotify</a>` : ''}
+              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Apple</a>` : ''}
+              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Watch</a>` : ''}
               ${!p.spotify && !p.apple && !p.website ? `<span class="listen-link" style="opacity:0.4;cursor:default;">No Link</span>` : ''}
             </div>
             ${(p.spotify || p.apple || p.website) ? `<div class="listen-click-label">Click Here</div>` : ''}
@@ -3118,9 +3119,9 @@ function renderAll() {
           <span class="cat-tag ${p.catClass}">${p.catLabel}</span>
           <div class="listen-links">
             <div class="listen-links-row">
-              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Spotify</a>` : ''}
-              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Apple</a>` : ''}
-              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Watch</a>` : ''}
+              ${p.spotify ? `<a class="listen-link spotify-link" href="${p.spotify}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Spotify</a>` : ''}
+              ${p.apple ? `<a class="listen-link apple-link" href="${p.apple}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Apple</a>` : ''}
+              ${p.website ? `<a class="listen-link" href="${p.website}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Watch</a>` : ''}
               ${!p.spotify && !p.apple && !p.website ? `<span class="listen-link" style="opacity:0.4;cursor:default;">No Link</span>` : ''}
             </div>
             ${(p.spotify || p.apple || p.website) ? `<div class="listen-click-label">Click Here</div>` : ''}
@@ -3154,9 +3155,9 @@ function openPodcastDetail(id) {
        <div class="detail-art-placeholder" style="display:none;">${p.emoji}</div>`
     : `<div class="detail-art-placeholder">${p.emoji}</div>`;
   const linksHtml = [
-    p.spotify ? `<a class="detail-link spotify" href="${p.spotify}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Spotify</a>` : '',
-    p.apple   ? `<a class="detail-link apple"   href="${p.apple}"   target="_blank" rel="noopener" onclick="event.stopPropagation();">Apple Podcasts</a>` : '',
-    p.website ? `<a class="detail-link website" href="${p.website}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Watch / Website</a>` : ''
+    p.spotify ? `<a class="detail-link spotify" href="${p.spotify}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Spotify</a>` : '',
+    p.apple   ? `<a class="detail-link apple"   href="${p.apple}"   target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Apple Podcasts</a>` : '',
+    p.website ? `<a class="detail-link website" href="${p.website}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Watch / Website</a>` : ''
   ].join('');
   document.getElementById('detailModal').innerHTML = `
     ${artHtml}
