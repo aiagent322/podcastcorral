@@ -313,7 +313,7 @@
     background: white;
     border: 1px solid rgba(61,43,31,0.2);
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--dark);
     outline: none;
     transition: border 0.2s;
@@ -779,7 +779,7 @@
     background: white;
     border: 1px solid rgba(61,43,31,0.2);
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--dark);
     outline: none;
   }
@@ -947,6 +947,28 @@
 
     /* Fix 9 – banner ad breathing room at 320px */
     #heroBanner { max-width: calc(100% - 24px) !important; width: calc(100% - 24px) !important; }
+
+    /* Fix – detail modal on mobile */
+    .detail-art { height: 160px; }
+    .detail-art-placeholder { height: 120px; font-size: 36px; }
+    .detail-overlay { padding: 12px; align-items: flex-end; }
+    .detail-modal { border-radius: 12px 12px 0 0; max-height: 85dvh; }
+    .detail-link {
+      min-height: 44px;
+      padding: 10px 16px;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .detail-close {
+      min-height: 44px;
+      padding: 10px 16px;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 </style>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Podcast Corral","url":"https://podcastcorral.com/","description":"The equestrian podcast directory — 129 shows across 12 categories. Free, curated, no pay-to-play.","publisher":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}},{"@context":"https://schema.org","@type":"Organization","name":"Podcast Corral","url":"https://podcastcorral.com/","parentOrganization":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}}]</script>
@@ -1041,24 +1063,21 @@ setInterval(function(){
   <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Podcast Corral</div>
   <p style="font-size:0.82rem;opacity:0.7;margin-bottom:12px;">The Equestrian Podcast Directory — A Bridle &amp; Bit Magazine Platform</p>
   <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:12px;">
-    <a href="/general/" style="color:var(--tan);font-size:0.8rem;">General</a>
-    <a href="/training/" style="color:var(--tan);font-size:0.8rem;">Training</a>
-    <a href="/lifestyle/" style="color:var(--tan);font-size:0.8rem;">Lifestyle</a>
-    <a href="/roping/" style="color:var(--tan);font-size:0.8rem;">Team Roping</a>
-    <a href="/industry/" style="color:var(--tan);font-size:0.8rem;">Industry</a>
-    <a href="/health/" style="color:var(--tan);font-size:0.8rem;">Health &amp; Vet</a>
-    <a href="/barrel/" style="color:var(--tan);font-size:0.8rem;">Barrel Racing</a>
-    <a href="/western/" style="color:var(--tan);font-size:0.8rem;">Western Lifestyle</a>
-    <a href="/dressage/" style="color:var(--tan);font-size:0.8rem;">Dressage</a>
-    <a href="/rodeo/" style="color:var(--tan);font-size:0.8rem;">Rodeo</a>
-    <a href="/eventing/" style="color:var(--tan);font-size:0.8rem;">Eventing</a>
-    <a href="/breeding/" style="color:var(--tan);font-size:0.8rem;">Breeding</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('general',document.querySelector('.chip[data-cat=general]'));return false;" style="color:var(--tan);font-size:0.8rem;">General</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('training',document.querySelector('.chip[data-cat=training]'));return false;" style="color:var(--tan);font-size:0.8rem;">Training</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('lifestyle',document.querySelector('.chip[data-cat=lifestyle]'));return false;" style="color:var(--tan);font-size:0.8rem;">Lifestyle</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('roping',document.querySelector('.chip[data-cat=roping]'));return false;" style="color:var(--tan);font-size:0.8rem;">Team Roping</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('industry',document.querySelector('.chip[data-cat=industry]'));return false;" style="color:var(--tan);font-size:0.8rem;">Industry</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('health',document.querySelector('.chip[data-cat=health]'));return false;" style="color:var(--tan);font-size:0.8rem;">Health &amp; Vet</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('barrel',document.querySelector('.chip[data-cat=barrel]'));return false;" style="color:var(--tan);font-size:0.8rem;">Barrel Racing</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('western',document.querySelector('.chip[data-cat=western]'));return false;" style="color:var(--tan);font-size:0.8rem;">Western Lifestyle</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('dressage',document.querySelector('.chip[data-cat=dressage]'));return false;" style="color:var(--tan);font-size:0.8rem;">Dressage</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('rodeo',document.querySelector('.chip[data-cat=rodeo]'));return false;" style="color:var(--tan);font-size:0.8rem;">Rodeo</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('eventing',document.querySelector('.chip[data-cat=eventing]'));return false;" style="color:var(--tan);font-size:0.8rem;">Eventing</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('breeding',document.querySelector('.chip[data-cat=breeding]'));return false;" style="color:var(--tan);font-size:0.8rem;">Breeding</a>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:16px;">
-    <a href="/about/" style="color:var(--tan);font-size:0.8rem;">About</a>
-    <a href="/faq/" style="color:var(--tan);font-size:0.8rem;">FAQ</a>
-    <a href="/how-to-submit/" style="color:var(--tan);font-size:0.8rem;">How to Submit</a>
-    <a href="/submit/" style="color:var(--tan);font-size:0.8rem;">Submit Your Podcast</a>
+    <a href="#" onclick="openModal();return false;" style="color:var(--tan);font-size:0.8rem;">Submit Your Podcast</a>
   </div>
   <p style="font-size:0.75rem;opacity:0.5;margin-bottom:8px;">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener" style="color:var(--tan);">Bridle &amp; Bit Magazine</a></p>
   <p style="font-size:0.72rem;opacity:0.4;">&copy; 2026 Podcast Corral — A Bridle &amp; Bit Magazine Platform. All rights reserved.</p>
