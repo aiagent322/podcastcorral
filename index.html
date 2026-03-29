@@ -3234,7 +3234,9 @@ function submitForm() {
 
 
 // Init
-setFormat('audio', document.getElementById('tabAudio'));
+document.addEventListener('DOMContentLoaded', function() {
+  setFormat('audio', document.getElementById('tabAudio'));
+});
 </script>
 
 <!-- Back to Top Button -->
