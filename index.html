@@ -778,19 +778,6 @@
     color: var(--bark);
   }
 
-  .btn-submit {
-    padding: 10px 28px;
-    background: var(--rust);
-    border: none;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: white;
-  }
-
   /* FOOTER */
   footer {
     background: var(--bark);
@@ -902,7 +889,7 @@
     .modal { padding: 20px 18px; }
     .modal h3 { font-size: 20px; }
     .modal-footer { flex-direction: column-reverse; gap: 8px; }
-    .btn-cancel, .btn-submit { width: 100%; text-align: center; }
+    .btn-cancel { width: 100%; text-align: center; }
 
     .section-label { padding: 16px 12px 8px; }
 
@@ -1040,8 +1027,6 @@ setInterval(function(){
     <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('eventing',document.querySelector('.chip[data-cat=eventing]'));return false;" style="color:var(--tan);font-size:0.8rem;">Eventing</a>
     <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});setFilter('breeding',document.querySelector('.chip[data-cat=breeding]'));return false;" style="color:var(--tan);font-size:0.8rem;">Breeding</a>
   </div>
-  <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:16px;">
-    <a href="#" onclick="openModal();return false;" style="color:var(--tan);font-size:0.8rem;">Submit Your Podcast</a>
   </div>
   <p style="font-size:0.75rem;opacity:0.5;margin-bottom:8px;">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener" style="color:var(--tan);">Bridle &amp; Bit Magazine</a></p>
   <p style="font-size:0.72rem;opacity:0.4;">&copy; 2026 Podcast Corral — A Bridle &amp; Bit Magazine Platform. All rights reserved.</p>
@@ -1090,8 +1075,7 @@ setInterval(function(){
       <input type="email" placeholder="for confirmation only, not published">
     </div>
     <div class="modal-footer">
-      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
-      <button class="btn-submit" onclick="submitForm()">Submit Show</button>
+      <button class="btn-cancel" onclick="closeModal()">Close</button>
     </div>
   </div>
 </div>
@@ -3149,7 +3133,13 @@ function renderAll() {
   podcastGrid.style.display = empty ? 'none' : '';
 }
 
-var MODAL_FORM_HTML = '';
+function openModal() {
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
 
 function openPodcastDetail(id) {
   const p = PODCASTS.find(x => x.id === id);
@@ -3203,28 +3193,6 @@ document.addEventListener("keydown", function(e) {
 });
 
 
-
-function openModal() {
-  if (!MODAL_FORM_HTML) MODAL_FORM_HTML = document.querySelector('.modal').innerHTML;
-  document.querySelector('.modal').innerHTML = MODAL_FORM_HTML;
-  document.getElementById('modalOverlay').classList.add('open');
-}
-
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('open');
-}
-
-function submitForm() {
-  const modal = document.querySelector('.modal');
-  modal.innerHTML = `
-    <div style="text-align:center;padding:24px 0;">
-      <div style="font-size:48px;margin-bottom:16px;">🎙️</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--bark);margin-bottom:10px;">You're in the Corral!</h3>
-      <p style="font-size:14px;color:rgba(26,18,8,0.6);line-height:1.6;margin-bottom:24px;">Thanks for submitting your show. We review all submissions within 48 hours and will be in touch.</p>
-      <button class="btn-submit" style="width:100%;" onclick="closeModal()">Done</button>
-    </div>
-  `;
-}
 
 
 
