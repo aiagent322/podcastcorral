@@ -324,6 +324,12 @@
     border-color: var(--bark);
   }
 
+
+  .chip a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+  }
   .chip.active { background: var(--rust); border-color: var(--rust); }
 
   /* FEATURED */
@@ -983,18 +989,18 @@ setInterval(function(){
   </div>
   <div class="filter-chips">
     <button class="chip active" data-cat="all" onclick="setFilter('all', this)">All Shows</button>
-    <button class="chip" data-cat="roping" onclick="setFilter('roping', this)">Team Roping</button>
-    <button class="chip" data-cat="training" onclick="setFilter('training', this)">Training</button>
-    <button class="chip" data-cat="barrel" onclick="setFilter('barrel', this)">Barrel Racing</button>
-    <button class="chip" data-cat="health" onclick="setFilter('health', this)">Health & Vet</button>
-    <button class="chip" data-cat="lifestyle" onclick="setFilter('lifestyle', this)">Lifestyle</button>
-    <button class="chip" data-cat="breeding" onclick="setFilter('breeding', this)">Breeding</button>
-    <button class="chip" data-cat="industry" onclick="setFilter('industry', this)">Industry</button>
-    <button class="chip" data-cat="general" onclick="setFilter('general', this)">General</button>
-    <button class="chip" data-cat="dressage" onclick="setFilter('dressage', this)">Dressage</button>
-    <button class="chip" data-cat="eventing" onclick="setFilter('eventing', this)">Eventing</button>
-    <button class="chip" data-cat="rodeo" onclick="setFilter('rodeo', this)">Rodeo</button>
-    <button class="chip" data-cat="western" onclick="setFilter('western', this)">Western</button>
+    <button class="chip" data-cat="roping" onclick="setFilter('roping', this)"><a href="/roping/" onclick="event.stopPropagation()">Team Roping</a></button>
+    <button class="chip" data-cat="training" onclick="setFilter('training', this)"><a href="/training/" onclick="event.stopPropagation()">Training</a></button>
+    <button class="chip" data-cat="barrel" onclick="setFilter('barrel', this)"><a href="/barrel/" onclick="event.stopPropagation()">Barrel Racing</a></button>
+    <button class="chip" data-cat="health" onclick="setFilter('health', this)"><a href="/health/" onclick="event.stopPropagation()">Health &amp; Vet</a></button>
+    <button class="chip" data-cat="lifestyle" onclick="setFilter('lifestyle', this)"><a href="/lifestyle/" onclick="event.stopPropagation()">Lifestyle</a></button>
+    <button class="chip" data-cat="breeding" onclick="setFilter('breeding', this)"><a href="/breeding/" onclick="event.stopPropagation()">Breeding</a></button>
+    <button class="chip" data-cat="industry" onclick="setFilter('industry', this)"><a href="/industry/" onclick="event.stopPropagation()">Industry</a></button>
+    <button class="chip" data-cat="general" onclick="setFilter('general', this)"><a href="/general/" onclick="event.stopPropagation()">General</a></button>
+    <button class="chip" data-cat="dressage" onclick="setFilter('dressage', this)"><a href="/dressage/" onclick="event.stopPropagation()">Dressage</a></button>
+    <button class="chip" data-cat="eventing" onclick="setFilter('eventing', this)"><a href="/eventing/" onclick="event.stopPropagation()">Eventing</a></button>
+    <button class="chip" data-cat="rodeo" onclick="setFilter('rodeo', this)"><a href="/rodeo/" onclick="event.stopPropagation()">Rodeo</a></button>
+    <button class="chip" data-cat="western" onclick="setFilter('western', this)"><a href="/western/" onclick="event.stopPropagation()">Western</a></button>
   </div>
 </div>
 
