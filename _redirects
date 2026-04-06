@@ -3,3 +3,16 @@
 /shows/raw-with-clinton-anderson/ /shows/raw-clinton-anderson/ 301
 /shows/rodeo-time-with-dale-brisby/ /shows/rodeo-time-dale-brisby/ 301
 /shows/tom-mccutcheon-s-the-show/ /shows/tom-mccutcheon-the-show/ 301
+
+# Old category pages -> new category pages
+/categories/barrel-racing-podcasts.html /barrel/ 301
+/categories/breeding-podcasts.html /breeding/ 301
+/categories/cutting-reining-podcasts.html /western/ 301
+/categories/horse-health-podcasts.html /health/ 301
+/categories/horse-training-podcasts.html /training/ 301
+/categories/rodeo-podcasts.html /rodeo/ 301
+/categories/team-roping-podcasts.html /roping/ 301
+/categories/western-lifestyle-podcasts.html /lifestyle/ 301
+
+# Old individual podcast pages -> homepage
+/podcast/* / 301
