@@ -324,12 +324,6 @@
     border-color: var(--bark);
   }
 
-
-  .chip a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-  }
   .chip.active { background: var(--rust); border-color: var(--rust); }
 
   /* FEATURED */
@@ -989,18 +983,18 @@ setInterval(function(){
   </div>
   <div class="filter-chips">
     <button class="chip active" data-cat="all" onclick="setFilter('all', this)">All Shows</button>
-    <button class="chip" data-cat="roping" onclick="setFilter('roping', this)"><a href="/roping/" onclick="event.stopPropagation()">Team Roping</a></button>
-    <button class="chip" data-cat="training" onclick="setFilter('training', this)"><a href="/training/" onclick="event.stopPropagation()">Training</a></button>
-    <button class="chip" data-cat="barrel" onclick="setFilter('barrel', this)"><a href="/barrel/" onclick="event.stopPropagation()">Barrel Racing</a></button>
-    <button class="chip" data-cat="health" onclick="setFilter('health', this)"><a href="/health/" onclick="event.stopPropagation()">Health &amp; Vet</a></button>
-    <button class="chip" data-cat="lifestyle" onclick="setFilter('lifestyle', this)"><a href="/lifestyle/" onclick="event.stopPropagation()">Lifestyle</a></button>
-    <button class="chip" data-cat="breeding" onclick="setFilter('breeding', this)"><a href="/breeding/" onclick="event.stopPropagation()">Breeding</a></button>
-    <button class="chip" data-cat="industry" onclick="setFilter('industry', this)"><a href="/industry/" onclick="event.stopPropagation()">Industry</a></button>
-    <button class="chip" data-cat="general" onclick="setFilter('general', this)"><a href="/general/" onclick="event.stopPropagation()">General</a></button>
-    <button class="chip" data-cat="dressage" onclick="setFilter('dressage', this)"><a href="/dressage/" onclick="event.stopPropagation()">Dressage</a></button>
-    <button class="chip" data-cat="eventing" onclick="setFilter('eventing', this)"><a href="/eventing/" onclick="event.stopPropagation()">Eventing</a></button>
-    <button class="chip" data-cat="rodeo" onclick="setFilter('rodeo', this)"><a href="/rodeo/" onclick="event.stopPropagation()">Rodeo</a></button>
-    <button class="chip" data-cat="western" onclick="setFilter('western', this)"><a href="/western/" onclick="event.stopPropagation()">Western</a></button>
+    <button class="chip" data-cat="roping" onclick="setFilter('roping', this)">Team Roping</button>
+    <button class="chip" data-cat="training" onclick="setFilter('training', this)">Training</button>
+    <button class="chip" data-cat="barrel" onclick="setFilter('barrel', this)">Barrel Racing</button>
+    <button class="chip" data-cat="health" onclick="setFilter('health', this)">Health & Vet</button>
+    <button class="chip" data-cat="lifestyle" onclick="setFilter('lifestyle', this)">Lifestyle</button>
+    <button class="chip" data-cat="breeding" onclick="setFilter('breeding', this)">Breeding</button>
+    <button class="chip" data-cat="industry" onclick="setFilter('industry', this)">Industry</button>
+    <button class="chip" data-cat="general" onclick="setFilter('general', this)">General</button>
+    <button class="chip" data-cat="dressage" onclick="setFilter('dressage', this)">Dressage</button>
+    <button class="chip" data-cat="eventing" onclick="setFilter('eventing', this)">Eventing</button>
+    <button class="chip" data-cat="rodeo" onclick="setFilter('rodeo', this)">Rodeo</button>
+    <button class="chip" data-cat="western" onclick="setFilter('western', this)">Western</button>
   </div>
 </div>
 
@@ -1913,7 +1907,7 @@ const PODCASTS = [
     featured: false,
     title: "Let's Freakin' Rodeo",
     host: "Ty Harris & Cole Harris",
-    category: "rodeo",
+    category: "lifestyle",
     catLabel: "Lifestyle",
     catClass: "cat-lifestyle",
     emoji: "🤠",
@@ -2368,7 +2362,7 @@ const PODCASTS = [
     catLabel: "General",
     catClass: "cat-general",
     emoji: "🤣",
-    desc: "Hilarious stories and real talk from rodeo's most entertaining duo. 10x Rodeo Clown of the Year Justin 'Rump' Rumford and 3x Music Director of the Year Josh 'Hambone' Hilton sit down with rodeo's biggest personalities for candid conversations, laughs, and the unfiltered western lifestyle.",
+    desc: "Hilarious stories and real talk from rodeo's most entertaining duo. 10x Rodeo Clown of the Year Justin \"Rump\" Rumford and 3x Music Director of the Year Josh \"Hambone\" Hilton sit down with rodeo's biggest personalities for candid conversations, laughs, and the unfiltered western lifestyle.",
     format: "video",
     spotify: "https://open.spotify.com/show/6lPlhSUOYT4HsPXE2k0xzi",
     apple: "https://podcasts.apple.com/us/podcast/r%C3%BCmpch%C3%A4t/id1472273947",
@@ -2454,7 +2448,7 @@ const PODCASTS = [
     featured: false,
     title: "Rodeo Road Show with Will Rasmussen",
     host: "Will Rasmussen",
-    category: "rodeo",
+    category: "general",
     catLabel: "General",
     catClass: "cat-general",
     emoji: "🏟️",
@@ -2469,7 +2463,7 @@ const PODCASTS = [
     featured: false,
     title: "Beyond the Chutes",
     host: "Doug Simcox & Sam Swearingen",
-    category: "rodeo",
+    category: "general",
     catLabel: "General",
     catClass: "cat-general",
     emoji: "🏟️",
@@ -2484,7 +2478,7 @@ const PODCASTS = [
     featured: false,
     title: "No Spin Rodeo",
     host: "Kendra Santos & Tommy Joe Lucia",
-    category: "rodeo",
+    category: "general",
     catLabel: "General",
     catClass: "cat-general",
     emoji: "🏟️",
@@ -2499,7 +2493,7 @@ const PODCASTS = [
     featured: false,
     title: "Rodeo Wagon Podcast",
     host: "Kyle Jones",
-    category: "rodeo",
+    category: "general",
     catLabel: "General",
     catClass: "cat-general",
     emoji: "🏟️",
@@ -2698,7 +2692,7 @@ const PODCASTS = [
     catLabel: "Training",
     catClass: "cat-training",
     emoji: "🐎",
-    desc: "Professional trainer and clinician Phil Haugen shares his 1% better every day philosophy — mindset, methods, and performance tips for horsemanship and life. 30+ years of experience bridging the language barrier between horse and rider.",
+    desc: "Professional trainer and clinician Phil Haugen shares his \"1% better every day\" philosophy — mindset, methods, and performance tips for horsemanship and life. 30+ years of experience bridging the language barrier between horse and rider.",
     format: "audio",
     spotify: "https://open.spotify.com/show/3QUJ1Z8n0oI3ghAXCaL4fu",
     apple: "https://podcasts.apple.com/us/podcast/be-your-best-horsemanship/id1485420399",
@@ -2904,7 +2898,7 @@ const PODCASTS = [
     featured: false,
     title: "Strong in the Saddle",
     host: "Katrina Lachambre",
-    category: "training",
+    category: "general",
     catLabel: "General",
     catClass: "cat-general",
     emoji: "🐴",
@@ -3016,202 +3010,7 @@ const PODCASTS = [
     spotify: "https://open.spotify.com/show/3Vz2YjlA4Wi9tMW49JMx88",
     apple: "https://podcasts.apple.com/us/podcast/cowboy-office-show/id1659149039",
     artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/c7/c3/a7/c7c3a7ba-db73-c786-e34c-a573884a88b4/mza_8218733166022187924.jpg/600x600bb.jpg"
-  },
-  {
-    id: 999,
-    featured: false,
-    title: "How To Dressage Podcast",
-    host: "How To Dressage",
-    category: "dressage",
-    catLabel: "Dressage",
-    catClass: "cat-dressage",
-    emoji: "🏇",
-    artwork: "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1ff5559e573df65aa5e86b3d3f",
-    desc: "British Dressage judges break down the How To's of dressage in clear, practical episodes. Designed to help you train your horse correctly, improve your scores, and move up the levels with confidence.",
-    apple: "",
-    spotify: "https://open.spotify.com/show/2s7TXwmbOrxwjNw3NJnBtY",
-    web: "https://howtodressage.com"
-  },
-  {
-    id: 1001,
-    featured: false,
-    title: "Horse Training in Harmony",
-    host: "Karen Rohlf",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🐴",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/1a/e6/a9/1ae6a9d3-61a8-da86-a6f8-df074a2ad072/mza_18278167385982505381.jpg/600x600bb.jpg",
-    desc: "Karen Rohlf, creator of Dressage Naturally, explores how to advance in training without sacrificing horse welfare. Interviews with top professionals, practical techniques, and outside-the-box concepts for riders of every level and discipline.",
-    apple: "https://podcasts.apple.com/us/podcast/horse-training-in-harmony/id1528419883",
-    spotify: "https://open.spotify.com/show/3s8mJIS4vt2uAxzg8mXFGk",
-    web: ""
-  },
-  {
-    id: 1002,
-    featured: false,
-    title: "Horse Person",
-    host: "Beth, Caroline & Guests",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🐴",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/2b/bf/df/2bbfdfed-4492-251d-49ae-3a721330c3b1/mza_15459758508122527583.png/600x600bb.jpg",
-    desc: "Bringing together different 'bubbles' of the horse world, Horse Person features conversations with Warwick Schiller and other respected horsemen on connection, awareness, and the evolving science of horsemanship. Updated biweekly, active in 2026.",
-    apple: "https://podcasts.apple.com/us/podcast/horse-person/id1772792285",
-    spotify: "",
-    web: ""
-  },
-  {
-    id: 1003,
-    featured: false,
-    title: "Best Horse Practices Podcast",
-    host: "Maddy Butcher & Jec Ballou",
-    category: "training",
-    catLabel: "Training",
-    catClass: "cat-training",
-    emoji: "🐴",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/86/81/60/86816033-908d-8668-eb6a-e8f6a055f2bb/mza_3174013445074432449.png/600x600bb.jpg",
-    desc: "An evidence-based horsemanship podcast for riders and owners of all disciplines. Hosts Maddy Butcher and Jec Ballou interview trainers, veterinarians, and researchers on how to connect better with horses and make real progress.",
-    apple: "https://podcasts.apple.com/us/podcast/best-horse-practices-podcast/id1527581041",
-    spotify: "",
-    web: ""
-  },
-  {
-    id: 1010,
-    featured: false,
-    title: "Ask The Horse",
-    host: "The Horse: Your Guide to Equine Health Care",
-    category: "health",
-    catLabel: "Health",
-    catClass: "cat-health",
-    emoji: "🏥",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/3a/4c/d7/3a4cd743-9275-880a-db53-54e426aae7c0/mza_17074706658569352842.jpg/600x600bb.jpg",
-    desc: "The official podcast of The Horse magazine. Leading veterinarians and industry experts answer horse owner questions live. Covers cutting-edge research and practical advice on lameness, nutrition, joint health, reproduction, and more. Active through 2025.",
-    apple: "https://podcasts.apple.com/us/podcast/ask-the-horse/id1472032845",
-    spotify: "https://open.spotify.com/show/0mAHz8JBpxDmJvZPFMruTO",
-    web: "https://thehorse.com"
-  },
-  {
-    id: 1011,
-    featured: false,
-    title: "Farm Calls",
-    host: "EQUUS Magazine",
-    category: "health",
-    catLabel: "Health",
-    catClass: "cat-health",
-    emoji: "🏥",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/51/5d/ff/515dff11-1da5-a142-3212-c12bc1416fe8/mza_1261810035858439959.jpg/600x600bb.jpg",
-    desc: "EQUUS Magazine brings together top equine veterinarians, researchers, and horse health experts. Covers everything from hay quality and behavior to emerging diseases, hoof care, and dental health — practical and accessible for everyday horse owners.",
-    apple: "https://podcasts.apple.com/us/podcast/farm-calls/id1604666902",
-    spotify: "",
-    web: "https://equusmagazine.com"
-  },
-  {
-    id: 1012,
-    featured: false,
-    title: "The Horse First: A Veterinary Sport Horse Podcast",
-    host: "Dr. Audrey DeClue, DVM",
-    category: "health",
-    catLabel: "Health",
-    catClass: "cat-health",
-    emoji: "🏥",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/5e/c6/5e/5ec65ebb-0df2-f015-d80f-8049574b077c/mza_16694948735222225676.png/600x600bb.jpg",
-    desc: "Dr. Audrey DeClue takes a whole-horse approach to equine sports medicine — not just limb lameness. Covers biomechanics, girthiness, behavioral issues, neurological conditions, and the need for a paradigm shift in veterinary education. Active through 2025.",
-    apple: "https://podcasts.apple.com/us/podcast/the-horse-first-a-veterinary-sport-horse-podcast/id1435735981",
-    spotify: "",
-    web: ""
-  },
-  {
-    id: 1013,
-    featured: false,
-    title: "Scoop & Scale: An Equine Podcast (Mostly) About Nutrition",
-    host: "Dr. Clair Thunes",
-    category: "health",
-    catLabel: "Health",
-    catClass: "cat-health",
-    emoji: "🏥",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/7d/fe/d4/7dfed4bb-aed9-5350-5ddc-c0b5b42402b9/mza_9731604792013391331.jpg/600x600bb.jpg",
-    desc: "Equine nutritionist Dr. Clair Thunes breaks down feeding, supplements, weight management, metabolic conditions, and senior horse care. Evidence-based, practical guidance for horse owners navigating the overwhelming world of equine nutrition.",
-    apple: "https://podcasts.apple.com/us/podcast/scoop-scale-an-equine-podcast-mostly-about-nutrition/id1722362615",
-    spotify: "",
-    web: ""
-  },
-  {
-    id: 1014,
-    featured: false,
-    title: "Horse Talk with Doc",
-    host: "Dr. Yardley – Ohio State University",
-    category: "health",
-    catLabel: "Health",
-    catClass: "cat-health",
-    emoji: "🏥",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/d3/77/8b/d3778bc9-3143-2e4c-b41d-41d74ad0606b/mza_13158374224975491955.jpg/600x600bb.jpg",
-    desc: "Dr. Yardley from Ohio State University covers timely, evidence-based equine veterinary care. Episodes on vaccines, colic, lameness, botulism, foal health, and more — delivered in plain language so horse owners can make fully informed decisions.",
-    apple: "https://podcasts.apple.com/us/podcast/horse-talk-with-doc/id1612888312",
-    spotify: "",
-    web: ""
-  },
-  {
-    id: 2001,
-    featured: false,
-    title: "Genetics Unbridled",
-    host: "Etalon Equine Genetics",
-    category: "breeding",
-    catLabel: "Breeding",
-    catClass: "cat-breeding",
-    emoji: "🧬",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f3/e7/27/f3e7271e-a9db-2a5d-ecc5-7942d9e9d457/mza_2581712695692530688.jpg/600x600bb.jpg",
-    desc: "Horse DNA, genetic testing, coat color, ancestry, breed testing, cloning, CRISPR, genetic editing, performance, and health. Conversations with breeders, judges, registries, and everyday owners — brought to you by scientists who are also horse people.",
-    apple: "https://podcasts.apple.com/us/podcast/id1723876969",
-    spotify: "https://open.spotify.com/show/5JYI13HNLp3ks6U1FsVD1z",
-    web: ""
-  },
-  {
-    id: 2002,
-    featured: false,
-    title: "Horse Talk with Doc",
-    host: "Dr. Yardley – Ohio State University",
-    category: "breeding",
-    catLabel: "Breeding",
-    catClass: "cat-breeding",
-    emoji: "🧬",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/d3/77/8b/d3778bc9-3143-2e4c-b41d-41d74ad0606b/mza_13158374224975491955.jpg/600x600bb.jpg",
-    desc: "Equine veterinarian Dr. Yardley from Ohio State covers breeding soundness exams, insemination techniques, mare and foal care, stallion management, and foaling. Evidence-based equine care and reproduction from one of the country's leading academic veterinary programs.",
-    apple: "https://podcasts.apple.com/us/podcast/id1612888312",
-    spotify: "",
-    web: ""
-  },
-  {
-    id: 2003,
-    featured: false,
-    title: "Powered by Trans Ova",
-    host: "Trans Ova Genetics",
-    category: "breeding",
-    catLabel: "Breeding",
-    catClass: "cat-breeding",
-    emoji: "🧬",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/82/7b/91827b0a-f1d5-946b-1722-2ff50c3a1ac8/mza_7045658017190233394.png/600x600bb.jpg",
-    desc: "Trans Ova team members cover embryo transfer, in vitro fertilization, sorted semen, and reproductive management to multiply genetic success in livestock and equine breeding programs. Practical guidance on building and scaling breeding operations.",
-    apple: "https://podcasts.apple.com/us/podcast/id1554148984",
-    spotify: "https://open.spotify.com/show/52yRednlGT0SivmBMkHN6n",
-    web: ""
-  },
-  {
-    id: 2004,
-    featured: false,
-    title: "In The Ring Pedigree Podcast",
-    host: "Acacia Courtney – In The Money Media",
-    category: "breeding",
-    catLabel: "Breeding",
-    catClass: "cat-breeding",
-    emoji: "🧬",
-    artwork: "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/40/fa/e2/40fae276-eea9-8d0a-dc7c-3b7adf33a4ac/mza_8921893425410271140.jpg/600x600bb.jpg",
-    desc: "A horse-industry focused show covering all issues relevant to the breeding and sales business, with a heavy emphasis on two-year-old racing. Conversations with breeders, buyers, trainers, and industry insiders on stallion selection, sales trends, and bloodstock.",
-    apple: "https://podcasts.apple.com/us/podcast/in-the-ring-pedigree-podcast/id1493138096",
-    spotify: "https://open.spotify.com/show/1KxDUo05cllE0wnvKfaVYw",
-    web: ""
-  },
+  }
 ];
 
 let currentFilter = 'all';
@@ -3392,7 +3191,6 @@ document.addEventListener("keydown", function(e) {
 // Init
 document.addEventListener('DOMContentLoaded', function() {
   setFormat('audio', document.getElementById('tabAudio'));
-  renderAll();
 });
 </script>
 
