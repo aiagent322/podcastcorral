@@ -124,6 +124,22 @@
     border-bottom: 1px solid rgba(212,169,106,0.2);
   }
 
+  .hero-eyebrow {
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 12px;
+  }
+  .hero-eyebrow a {
+    color: var(--cream);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color .2s;
+  }
+  .hero-eyebrow a:hover { color: var(--tan); }
+
   .hero-site-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(36px, 8vw, 64px);
@@ -932,15 +948,8 @@
 </head>
 <body>
 
-<header>
-  <div class="logo-area">
-    <div>
-      <div class="logo-text">Sponsored by <a href="https://bridleandbit.com" target="_blank" rel="noopener noreferrer" style="color:var(--tan);text-decoration:none;text-transform:uppercase;letter-spacing:2px;">BRIDLE &amp; BIT</a> Magazine</div>
-    </div>
-  </div>
-</header>
-
 <section class="hero">
+  <p class="hero-eyebrow">Sponsored by Bridle &amp; Bit Magazine (<a href="https://bridleandbit.com" target="_blank" rel="noopener noreferrer">READ HERE</a>)</p>
   <div class="hero-site-title">Podcast Corral</div>
   <h1>The Best Horse Podcasts</h1>
   <p>Podcasts about horses, training, and the western lifestyle.</p>
