@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Podcast Corral</title>
+  <meta name="description" content="Contact Podcast Corral — submit your horse podcast, ask a question, or get in touch with the Bridle & Bit Magazine team.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rust: #C1440E; --rust-dk: #a33a0c;
+      --tan: #D4A96A; --cream: #F5EDD8;
+      --dark: #1A1208; --bark: #3D2B1F;
+      --sage: #7A8C6E; --light-tan: #EDE0C4;
+      --border: #c8b89a; --r: 5px;
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Source Sans 3','Helvetica Neue',Arial,sans-serif; font-weight:300; background:var(--cream); color:var(--dark); line-height:1.6; }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--bark);
+      background-image: repeating-linear-gradient(45deg,transparent,transparent 2px,rgba(255,255,255,0.015) 2px,rgba(255,255,255,0.015) 4px);
+      padding: 5px 24px; border-bottom: 2px solid var(--rust);
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .header-left { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .tagline { font-size: 12px; color: #fff; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+    .contact-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--rust); color: #fff;
+      border-radius: var(--r); padding: 6px 13px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: .78rem; font-weight: 600;
+      text-decoration: none; white-space: nowrap; transition: background .15s;
+    }
+    .contact-btn:hover { background: var(--rust-dk); }
+    .bb-logo-link { display: flex; align-items: center; line-height: 0; flex-shrink: 0; }
+
+    /* ── HERO ── */
+    .page-hero {
+      background: var(--bark); padding: 48px 16px 40px;
+      text-align: center; color: var(--cream);
+      border-bottom: 3px solid var(--rust);
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 700;
+      margin-bottom: 8px; color: var(--tan);
+    }
+    .page-hero p { font-size: 1rem; opacity: .85; max-width: 500px; margin: 0 auto; }
+
+    /* ── FORM ── */
+    .contact-wrap { max-width: 660px; margin: 48px auto 64px; padding: 0 16px; }
+    .info-strip {
+      display: flex; gap: 24px; flex-wrap: wrap;
+      justify-content: center; margin-bottom: 28px;
+      font-size: .84rem; color: var(--sage);
+    }
+    .info-strip span { display: flex; align-items: center; gap: 6px; }
+    .contact-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 8px; padding: 32px;
+      box-shadow: 0 2px 8px rgba(61,43,31,0.1);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: .85rem; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+    .form-group label .req { color: var(--rust); margin-left: 2px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 10px 12px; border: 1px solid var(--border);
+      border-radius: var(--r); font-size: .95rem; color: var(--dark);
+      background: #fff; font-family: 'Source Sans 3', sans-serif; transition: border-color .2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--rust); box-shadow: 0 0 0 3px rgba(193,68,14,.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media(max-width:520px){ .form-row { grid-template-columns: 1fr; } }
+    .submit-btn {
+      width: 100%; padding: 13px; background: var(--rust); color: #fff;
+      border: none; border-radius: var(--r); font-size: 1rem; font-weight: 700;
+      font-family: 'Source Sans 3', sans-serif; cursor: pointer; transition: background .2s; margin-top: 4px;
+    }
+    .submit-btn:hover:not(:disabled) { background: var(--rust-dk); }
+    .submit-btn:disabled { opacity: .6; cursor: not-allowed; }
+    .form-msg { display: none; margin-top: 16px; padding: 14px 16px; border-radius: var(--r); font-size: .9rem; font-weight: 500; }
+    .form-msg.success { display:block; background:#f0fdf4; color:#15803d; border:1px solid #86efac; }
+    .form-msg.error   { display:block; background:#fef2f2; color:#991b1b; border:1px solid #fca5a5; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--bark); border-top: 2px solid var(--rust); color: rgba(213,184,138,.7); text-align: center; padding: 20px 16px; font-size: .8rem; }
+    footer a { color: var(--tan); text-decoration: none; }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="/contact/" class="contact-btn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Contact Us
+    </a>
+    <span class="tagline">PODCAST CORRAL &mdash; SPONSORED BY BRIDLE &amp; BIT MAGAZINE</span>
+  </div>
+  <a href="https://www.bridleandbit.com" target="_blank" rel="noopener noreferrer" class="bb-logo-link">
+    <img src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/bb-hp-0/public" alt="Bridle &amp; Bit Magazine" style="height:36px;width:auto;">
+  </a>
+</header>
+
+<section class="page-hero">
+  <h1>Contact Us</h1>
+  <p>Submit your podcast, ask a question, or get in touch with the Bridle &amp; Bit Magazine team behind Podcast Corral.</p>
+</section>
+
+<div class="contact-wrap">
+  <div class="info-strip">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Responds within 24 hours
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Your info is never sold
+    </span>
+  </div>
+
+  <div class="contact-card">
+    <form id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name <span class="req">*</span></label>
+          <input type="text" id="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="(555) 000-0000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject <span class="req">*</span></label>
+        <select id="subject" required>
+          <option value="">Select a topic…</option>
+          <option>Submit a Podcast</option>
+          <option>Update Podcast Listing</option>
+          <option>Remove Podcast Listing</option>
+          <option>Advertising &amp; Sponsorship</option>
+          <option>Partnership Inquiry</option>
+          <option>General Question</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message <span class="req">*</span></label>
+        <textarea id="message" placeholder="Tell us about your podcast or how we can help — include a link if submitting a show…" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Podcast Corral &nbsp;·&nbsp; A <a href="https://www.bridleandbit.com" target="_blank" rel="noopener">Bridle &amp; Bit Magazine</a> property</p>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  msg.className = 'form-msg';
+  const payload = {
+    name:    document.getElementById('name').value.trim(),
+    email:   document.getElementById('email').value.trim(),
+    phone:   document.getElementById('phone').value.trim(),
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value.trim(),
+    source_site: 'PodcastCorral.com'
+  };
+  try {
+    const res  = await fetch('https://contact-form.bridleandbit.workers.dev', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (data.success) {
+      msg.className = 'form-msg success';
+      msg.textContent = "Message sent! We'll be in touch within 24 hours.";
+      this.reset();
+    } else { throw new Error(data.error || 'failed'); }
+  } catch(err) {
+    msg.className = 'form-msg error';
+    msg.textContent = 'Something went wrong. Please try again or email bridleandbit@aol.com directly.';
+  } finally { btn.disabled = false; btn.textContent = 'Send Message'; }
+});
+</script>
+</body>
+</html>
