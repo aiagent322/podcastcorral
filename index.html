@@ -81,6 +81,15 @@
     max-height: 154px !important;
     margin: 0 auto !important;
   }
+  /* Every other section on this page (.hero, .section-label, .featured-grid)
+     has its own 24px/12px horizontal gutter baked in. .revive-ad-slot had
+     none, so on phones it stretched edge-to-edge while everything around it
+     stayed inset — making it look oversized by contrast even though its own
+     610x154 box was correctly proportioned. This wrapper gives it the same
+     gutter as the rest of the page, matching the site's existing pattern. */
+  .revive-ad-wrap {
+    padding: 0 24px;
+  }
 
   body {
     background: var(--cream);
@@ -859,6 +868,7 @@
     /* Fix 3 – header */
     .tagline { display: none; }
     .hero { padding: 14px 12px 12px; }
+    .revive-ad-wrap { padding: 0 12px; }
     .hero-site-title { font-size: clamp(28px, 7vw, 36px); margin-bottom: 4px; }
 
     /* Fix 4 – filter chips scroll row */
@@ -1000,7 +1010,7 @@
   </div>
 </div>
 
-<div class="revive-ad-slot" style="margin-top:14px;"><ins data-revive-zoneid="30275" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins></div>
+<div class="revive-ad-wrap"><div class="revive-ad-slot" style="margin-top:14px;"><ins data-revive-zoneid="30275" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins></div></div>
 
 <div class="format-tabs">
   <button class="format-tab" id="tabVideo" onclick="setFormat('video', this)"><span class="tab-icon">🎬</span>Video Podcasts</button>
@@ -1040,7 +1050,7 @@
 
 <div class="featured-grid" id="featuredGrid"></div>
 
-<div class="revive-ad-slot" style="margin-top:6px;"><ins data-revive-zoneid="30276" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins></div>
+<div class="revive-ad-wrap"><div class="revive-ad-slot" style="margin-top:6px;"><ins data-revive-zoneid="30276" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins></div></div>
 
 <div class="section-label">
   <h2>All Shows</h2>
