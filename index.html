@@ -9,6 +9,8 @@
   gtag('js', new Date());
   gtag('config', 'G-5Z95PCY1QQ');
 </script>
+<!-- Revive Adserver (Hosted) — loaded once for the page -->
+<script async src="//servedby.revive-adserver.net/asyncjs.php"></script>
 <meta charset="UTF-8">
 <meta name="theme-color" content="#3D2B1F">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -49,6 +51,32 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ── REVIVE AD SLOT ──
+     max-height + overflow:hidden on the outer wrapper is a hard cap: whatever
+     Revive injects inside (an <ins>, <img>, or <iframe> with its own inline
+     width/height that may not match this zone's intended 610x154 size) gets
+     clipped to this box rather than blowing up the page layout. !important
+     on the child rule beats any inline style Revive's fill script sets
+     directly on the injected element. */
+  .revive-ad-slot {
+    max-width: 610px;
+    width: 100%;
+    max-height: 154px;
+    overflow: hidden;
+    margin: 0 auto 14px;
+    text-align: center;
+  }
+  .revive-ad-slot ins,
+  .revive-ad-slot img,
+  .revive-ad-slot iframe {
+    display: block !important;
+    width: 100% !important;
+    height: 154px !important;
+    max-width: 610px !important;
+    max-height: 154px !important;
+    margin: 0 auto !important;
+  }
 
   body {
     background: var(--cream);
@@ -985,6 +1013,8 @@ setInterval(function(){
     <div class="stat-item"><span class="stat-num">13</span><span class="stat-label">Categories</span></div>
   </div>
 </div>
+
+<div class="revive-ad-slot" style="margin-top:14px;"><ins data-revive-zoneid="30275" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins></div>
 
 <div class="format-tabs">
   <button class="format-tab" id="tabVideo" onclick="setFormat('video', this)"><span class="tab-icon">🎬</span>Video Podcasts</button>
