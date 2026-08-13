@@ -941,9 +941,6 @@
     /* Fix 8 – prevent iOS auto-zoom on search input focus */
     .search-input { font-size: 16px; }
 
-    /* Fix 9 – banner ad breathing room at 320px */
-    #heroBanner { max-width: calc(100% - 24px) !important; width: calc(100% - 24px) !important; }
-
     /* Fix – detail modal on mobile */
     .detail-art { height: 160px; }
     .detail-art-placeholder { height: 120px; font-size: 36px; }
@@ -990,21 +987,6 @@
   <div class="hero-site-title">Podcast Corral</div>
   <h1>The Best Horse Podcasts</h1>
   <p>Podcasts about horses, training, and the western lifestyle.</p>
-
-<div id="heroBanner" style="margin:12px auto 12px;max-width:320px;width:90%;cursor:pointer;" onclick="window.open(bannerAds[currentBanner].url,'_blank')"><img id="bannerImg" src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public" alt="Black Angus Steakhouse" loading="lazy" width="320" height="100" style="width:100%;height:auto;display:block;border-radius:4px;"></div>
-<script>
-var bannerAds=[
-  {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public",url:"https://www.blackangus.com",alt:"Black Angus Steakhouse"},
-  {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-k4-gourmet-beef/public",url:"https://www.gourmetbeef.com",alt:"K4 Gourmet Beef"},
-  {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-twin-peaks/public",url:"https://twinpeaksrestaurant.com",alt:"Twin Peaks Restaurant"}
-];
-var currentBanner=0;
-setInterval(function(){
-  currentBanner=(currentBanner+1)%bannerAds.length;
-  document.getElementById('bannerImg').src=bannerAds[currentBanner].img;
-  document.getElementById('bannerImg').alt=bannerAds[currentBanner].alt;
-},5000);
-</script>
 </section>
 
 <div class="stats-bar-wrap">
