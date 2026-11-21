@@ -167,7 +167,10 @@
     text-transform: uppercase;
     color: var(--tan);
     margin-bottom: 12px;
-    white-space: nowrap;
+    white-space: normal;
+  }
+  @media (min-width: 601px) {
+    .hero-eyebrow { white-space: nowrap; }
   }
   .hero-eyebrow a {
     color: var(--cream);
@@ -875,6 +878,7 @@
     .filter-section {
       padding: 10px 12px;
       flex-direction: column;
+      flex-wrap: nowrap;
       align-items: stretch;
       gap: 10px;
     }

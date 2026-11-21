@@ -36,7 +36,8 @@
       display: flex; align-items: center; justify-content: space-between; gap: 12px;
     }
     .header-left { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .tagline { font-size: 12px; color: #fff; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+    .tagline { display: none; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+    @media (min-width: 601px) { .tagline { display: inline; } }
     .contact-btn {
       display: inline-flex; align-items: center; gap: 5px;
       background: var(--rust); color: #fff;
