@@ -88,7 +88,7 @@
      610x154 box was correctly proportioned. This wrapper gives it the same
      gutter as the rest of the page, matching the site's existing pattern. */
   .revive-ad-wrap {
-    padding: 0 24px;
+    padding: 0 12px;
   }
 
   body {
@@ -144,10 +144,11 @@
     color: rgba(213,184,138,0.85);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    white-space: nowrap;
+    white-space: nowrap; display: none;}
+  .bb-logo-link { display:none; align-items:center; line-height:0; flex-shrink:0; }
+  @media (min-width: 600px) {
+    .bb-logo-link { display: flex; }
   }
-  .bb-logo-link { display:flex; align-items:center; line-height:0; flex-shrink:0; }
-  @media(max-width:599px){ .bb-logo-link { display:none; } }
 
 
 
@@ -155,7 +156,7 @@
   .hero {
     background: var(--bark);
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    padding: 20px 24px 16px;
+    padding: 14px 12px 12px;
     text-align: center;
     border-bottom: 1px solid rgba(212,169,106,0.2);
   }
@@ -182,12 +183,12 @@
 
   .hero-site-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 8vw, 64px);
+    font-size: clamp(28px, 7vw, 36px);
     font-weight: 900;
     color: var(--tan);
     letter-spacing: -1px;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   .hero h1 {
@@ -250,12 +251,12 @@
   }
 
   .stat-item {
-    padding: 6px 28px;
+    padding: 10px 16px;
     text-align: center;
-    border-right: 1px solid rgba(255,255,255,0.15);
+    border-right: none;
     flex: 1;
-    min-width: 100px;
-  }
+    min-width: 0; border-bottom: none; flex-basis: 50%;}
+  .stat-item:first-child { border-right: 1px solid rgba(255,255,255,0.15); }
 
   .stat-item:last-child { border-right: none; }
 
@@ -314,19 +315,17 @@
   .filter-section {
     background: var(--light-tan);
     border-bottom: 2px solid rgba(61,43,31,0.1);
-    padding: 16px 24px;
+    padding: 10px 12px;
     display: flex;
-    gap: 12px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+    gap: 10px;
+    align-items: stretch;
+    flex-wrap: nowrap; flex-direction: column;}
 
   .search-wrap {
     position: relative;
     flex: 1;
-    min-width: 160px;
-    max-width: 360px;
-  }
+    min-width: 0;
+    max-width: 100%; width: 100%; width: 100%;}
 
   .search-wrap svg {
     position: absolute;
@@ -354,14 +353,13 @@
   .filter-chips {
     display: flex;
     gap: 8px;
-    flex-wrap: wrap;
-  }
+    flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%); mask-image: linear-gradient(to right, black 85%, transparent 100%);}
 
   .chip {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
-    padding: 7px 16px;
+    padding: 8px 14px;
     background: white;
     border: 1px solid rgba(61,43,31,0.2);
     font-family: 'Source Sans 3', sans-serif;
@@ -371,8 +369,7 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background 0.15s, color 0.15s, border-color 0.15s;
-    color: var(--bark);
-  }
+    color: var(--bark); flex-shrink: 0;}
 
   .chip:hover, .chip.active {
     background: var(--bark);
@@ -384,7 +381,7 @@
 
   /* FEATURED */
   .section-label {
-    padding: 24px 24px 12px;
+    padding: 16px 12px 8px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -412,12 +409,11 @@
   /* FEATURED CARDS */
   .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1px;
     background: rgba(61,43,31,0.1);
-    margin: 0 24px 2px;
-    border: 1px solid rgba(61,43,31,0.1);
-  }
+    margin: 0 0 2px;
+    border: 1px solid rgba(61,43,31,0.1); border-left: none; border-right: none;}
 
   .featured-card {
     background: var(--cream);
@@ -446,14 +442,14 @@
   }
 
   .podcast-art {
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
     flex-shrink: 0;
     background: var(--bark);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 32px;
+    font-size: 26px;
     border: 2px solid rgba(61,43,31,0.15);
     overflow: hidden;
   }
@@ -494,9 +490,9 @@
     font-weight: 700;
     color: rgba(26,18,8,0.65);
     line-height: 1.4;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -542,17 +538,16 @@
   }
 
   .listen-link {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.8px;
     text-transform: uppercase;
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
-    padding: 3px 8px;
+    padding: 8px 14px;
     background: var(--light-tan);
     transition: background 0.15s, opacity 0.15s;
-    white-space: nowrap;
-  }
+    white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; justify-content: space-between;}
 
   .listen-link.spotify-link {
     background: #e00000;
@@ -587,14 +582,14 @@
     inset: 0;
     background: rgba(26,18,8,0.75);
     z-index: 200;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    padding: 24px;
+    padding: 12px;
   }
   .detail-overlay.open { display: flex; }
   .detail-modal {
     max-height: 90vh;
-    max-height: 90dvh;
+    max-height: 85dvh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     background: var(--cream);
@@ -602,23 +597,22 @@
     max-width: 520px;
     border-top: 4px solid var(--rust);
     animation: slideUp 0.2s ease;
-    overflow: hidden;
-  }
+    overflow: hidden; border-radius: 12px 12px 0 0;}
   .detail-art {
     width: 100%;
-    height: 300px;
+    height: 160px;
     object-fit: cover;
     object-position: top;
     display: block;
   }
   .detail-art-placeholder {
     width: 100%;
-    height: 220px;
+    height: 120px;
     background: var(--bark);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 48px;
+    font-size: 36px;
   }
   .detail-body {
     padding: 12px 16px 14px;
@@ -652,44 +646,41 @@
     align-items: center;
   }
   .detail-link {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-    padding: 5px 12px;
-    line-height: 1;
-  }
+    padding: 10px 16px;
+    line-height: 1; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;}
   .detail-link.spotify { background: #e00000; }
   .detail-link.apple { background: #1a7a1a; }
   .detail-link.website { background: var(--bark); }
   .detail-close {
     margin-left: auto;
-    padding: 5px 12px;
+    padding: 10px 16px;
     background: transparent;
     border: 1px solid rgba(61,43,31,0.25);
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--bark);
     cursor: pointer;
     line-height: 1;
-    white-space: nowrap;
-  }
+    white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;}
   .detail-close:hover { background: rgba(61,43,31,0.08); }
 
   /* GRID CARDS */
   .podcast-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1px;
     background: rgba(61,43,31,0.08);
-    margin: 0 24px 24px;
-    border: 1px solid rgba(61,43,31,0.1);
-  }
+    margin: 0 0 16px;
+    border: 1px solid rgba(61,43,31,0.1); border-left: none; border-right: none;}
 
   .grid-card {
     background: var(--cream);
@@ -763,7 +754,7 @@
     z-index: 200;
     align-items: center;
     justify-content: space-between;
-    padding: 24px;
+    padding: 12px;
   }
 
   .modal-overlay.open { display: flex; }
@@ -772,7 +763,7 @@
     background: var(--cream);
     width: 100%;
     max-width: 520px;
-    padding: 36px;
+    padding: 20px 18px;
     border-top: 4px solid var(--rust);
     animation: slideUp 0.2s ease;
   }
@@ -784,7 +775,7 @@
 
   .modal h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: 20px;
     color: var(--bark);
     margin-bottom: 6px;
   }
@@ -824,10 +815,9 @@
 
   .modal-footer {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     justify-content: flex-end;
-    margin-top: 8px;
-  }
+    margin-top: 8px; flex-direction: column-reverse;}
 
   .btn-cancel {
     padding: 10px 20px;
@@ -836,8 +826,7 @@
     font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
     cursor: pointer;
-    color: var(--bark);
-  }
+    color: var(--bark); width: 100%; text-align: center;}
 
   /* FOOTER */
   footer {
@@ -867,119 +856,38 @@
     display: none;
   }
 
-  @media (max-width: 600px) {
-    /* Fix 3 – header */
-    .tagline { display: none; }
-    .hero { padding: 14px 12px 12px; }
-    .revive-ad-wrap { padding: 0 12px; }
-    .hero-site-title { font-size: clamp(28px, 7vw, 36px); margin-bottom: 4px; }
-
-    /* Fix 4 – filter chips scroll row */
-    .filter-section {
-      padding: 10px 12px;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-items: stretch;
-      gap: 10px;
-    }
-    .search-wrap {
-      min-width: 0;
-      max-width: 100%;
-      width: 100%;
-    }
-    .filter-chips {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      padding-bottom: 2px;
-      -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
-      mask-image: linear-gradient(to right, black 85%, transparent 100%);
-    }
-    .filter-chips::-webkit-scrollbar { display: none; }
-    .chip {
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-      flex-shrink: 0;
-      padding: 8px 14px;
-      font-size: 12px;
-      min-height: 44px;
-    }
-
-    /* Fix 5 – search full width */
-    .search-wrap { min-width: 0; max-width: 100%; width: 100%; }
-
-    .podcast-art { width: 80px; height: 80px; font-size: 26px; flex-shrink: 0; }
-    .card-desc { -webkit-line-clamp: 1; margin-bottom: 6px; }
-
-    /* Fix 5 – listen button tap targets */
-    .listen-link {
-      min-height: 44px;
-      padding: 8px 14px;
-      font-size: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    /* Fix 6 – stats bar 2 items: single row, one divider */
-    .stat-item {
-      padding: 10px 16px;
-      border-right: none;
-      border-bottom: none;
-      flex-basis: 50%;
-      min-width: 0;
-    }
+  .filter-chips::-webkit-scrollbar { display: none; }
+  @media (min-width: 601px) {
+    .tagline { display: revert; }
+    .hero { padding: 20px 24px 16px; }
+    .revive-ad-wrap { padding: 0 24px; }
+    .hero-site-title { font-size: clamp(36px, 8vw, 64px); margin-bottom: 8px; }
+    .filter-section { padding: 16px 24px; flex-direction: revert; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .search-wrap { min-width: 160px; max-width: 360px; width: revert; }
+    .filter-chips { flex-wrap: wrap; overflow-x: revert; -webkit-overflow-scrolling: revert; scrollbar-width: revert; padding-bottom: revert; -webkit-mask-image: revert; mask-image: revert; }
+    .filter-chips::-webkit-scrollbar { display: revert; }
+    .chip { min-height: 44px; display: inline-flex; align-items: center; flex-shrink: revert; padding: 7px 16px; font-size: 12px; min-height: 44px; }
+    .search-wrap { min-width: 160px; max-width: 360px; width: revert; }
+    .podcast-art { width: 110px; height: 110px; font-size: 32px; flex-shrink: 0; }
+    .card-desc { -webkit-line-clamp: 2; margin-bottom: 8px; }
+    .listen-link { min-height: revert; padding: 3px 8px; font-size: 10px; display: revert; align-items: revert; justify-content: revert; }
+    .stat-item { padding: 6px 28px; border-right: 1px solid rgba(255,255,255,0.15); border-bottom: revert; flex-basis: 0%; min-width: 100px; }
     .stat-item:first-child { border-right: 1px solid rgba(255,255,255,0.15); }
-
-    /* Fix 7 – grids: full-width single column on small phones */
-    .featured-grid {
-      grid-template-columns: 1fr;
-      margin: 0 0 2px;
-      border-left: none;
-      border-right: none;
-    }
-    .podcast-grid {
-      grid-template-columns: 1fr;
-      margin: 0 0 16px;
-      border-left: none;
-      border-right: none;
-    }
-
-    /* Fix 8 – modal padding */
-    .modal-overlay { padding: 12px; }
-    .modal { padding: 20px 18px; }
-    .modal h3 { font-size: 20px; }
-    .modal-footer { flex-direction: column-reverse; gap: 8px; }
-    .btn-cancel { width: 100%; text-align: center; }
-
-    .section-label { padding: 16px 12px 8px; }
-
-    /* Fix 8 – prevent iOS auto-zoom on search input focus */
+    .featured-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin: 0 24px 2px; border-left: 1px solid rgba(61,43,31,0.1); border-right: 1px solid rgba(61,43,31,0.1); }
+    .podcast-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin: 0 24px 24px; border-left: 1px solid rgba(61,43,31,0.1); border-right: 1px solid rgba(61,43,31,0.1); }
+    .modal-overlay { padding: 24px; }
+    .modal { padding: 36px; }
+    .modal h3 { font-size: 24px; }
+    .modal-footer { flex-direction: revert; gap: 12px; }
+    .btn-cancel { width: revert; text-align: revert; }
+    .section-label { padding: 24px 24px 12px; }
     .search-input { font-size: 16px; }
-
-    /* Fix – detail modal on mobile */
-    .detail-art { height: 160px; }
-    .detail-art-placeholder { height: 120px; font-size: 36px; }
-    .detail-overlay { padding: 12px; align-items: flex-end; }
-    .detail-modal { border-radius: 12px 12px 0 0; max-height: 85dvh; }
-    .detail-link {
-      min-height: 44px;
-      padding: 10px 16px;
-      font-size: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .detail-close {
-      min-height: 44px;
-      padding: 10px 16px;
-      font-size: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .detail-art { height: 300px; }
+    .detail-art-placeholder { height: 220px; font-size: 48px; }
+    .detail-overlay { padding: 24px; align-items: center; }
+    .detail-modal { border-radius: revert; max-height: 90dvh; }
+    .detail-link { min-height: revert; padding: 5px 12px; font-size: 11px; display: revert; align-items: revert; justify-content: revert; }
+    .detail-close { min-height: revert; padding: 5px 12px; font-size: 11px; display: revert; align-items: revert; justify-content: revert; }
   }
 </style>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Podcast Corral","url":"https://podcastcorral.com/","description":"The equestrian podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play.","publisher":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}},{"@context":"https://schema.org","@type":"Organization","name":"Podcast Corral","url":"https://podcastcorral.com/","parentOrganization":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}}]</script>
