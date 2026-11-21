@@ -1050,8 +1050,6 @@
 
 <div class="featured-grid" id="featuredGrid"></div>
 
-<div class="revive-ad-wrap"><div class="revive-ad-slot" style="margin-top:6px;"><ins data-revive-zoneid="30276" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins></div></div>
-
 <div class="section-label">
   <h2>All Shows</h2>
   <div class="line"></div>
@@ -1059,6 +1057,8 @@
 </div>
 
 <div class="podcast-grid" id="podcastGrid"></div>
+<div class="revive-ad-wrap" id="midAdWrap"><div class="revive-ad-slot" style="margin-top:6px;"><ins data-revive-zoneid="30276" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins></div></div>
+<div class="podcast-grid" id="podcastGrid2"></div>
 <div class="no-results" id="noResults">No shows found. Try a different search or category.</div>
 </div><!-- end audioUI -->
 
@@ -3214,7 +3214,7 @@ function renderAll() {
     </div>
   `).join('');
 
-  podcastGrid.innerHTML = regular.map(p => `
+  const cardHtml = p => `
     <div class="grid-card" onclick="openPodcastDetail(${p.id})" style="cursor:pointer;">
       <div class="grid-art">${p.artwork ? `<img src="${p.artwork}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';">` : p.emoji}</div>
       <div class="grid-body">
@@ -3235,7 +3235,20 @@ function renderAll() {
         </div>
       </div>
     </div>
-  `).join('');
+  `;
+
+  // Mid-page Revive zone (30276): split All Shows at the middle, row-aligned.
+  // Hidden when too few cards to split (avoids sitting next to footer zone 31889).
+  const podcastGrid2 = document.getElementById('podcastGrid2');
+  const midAdWrap = document.getElementById('midAdWrap');
+  const gridW = podcastGrid.parentElement.clientWidth || window.innerWidth;
+  const cols = Math.max(1, Math.floor((gridW - 2) / 281));
+  const splitAt = Math.ceil(Math.ceil(regular.length / 2) / cols) * cols;
+  const canSplit = regular.length >= 4 && splitAt < regular.length;
+  podcastGrid.innerHTML = regular.slice(0, canSplit ? splitAt : regular.length).map(cardHtml).join('');
+  podcastGrid2.innerHTML = canSplit ? regular.slice(splitAt).map(cardHtml).join('') : '';
+  midAdWrap.style.display = canSplit ? '' : 'none';
+  podcastGrid2.style.display = canSplit ? '' : 'none';
 
   showingCount.textContent = matching.length + ' shows';
   // totalCount is static (100) — do not overwrite dynamically
