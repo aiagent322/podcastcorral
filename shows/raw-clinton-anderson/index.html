@@ -13,10 +13,10 @@
 <meta name="theme-color" content="#3D2B1F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raw with Clinton Anderson — Clinton Anderson | Podcast Corral</title>
-<meta name="description" content="Raw with Clinton Anderson podcast hosted by Clinton Anderson. Featured on Podcast Corral — the equestrian podcast directory. Listen on Spotify and Apple Podcasts.">
+<title>Raw with Clinton Anderson | Podcast Corral</title>
+<meta name="description" content="Raw with Clinton Anderson podcast hosted by Clinton Anderson. Listen on Spotify and Apple Podcasts via Podcast Corral, the equestrian directory.">
 <link rel="canonical" href="https://podcastcorral.com/shows/raw-clinton-anderson/">
-<meta property="og:title" content="Raw with Clinton Anderson — Clinton Anderson | Podcast Corral">
+<meta property="og:title" content="Raw with Clinton Anderson | Podcast Corral">
 <meta property="og:description" content="Featured equestrian podcast hosted by Clinton Anderson. Listen on Spotify and Apple Podcasts.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://podcastcorral.com/shows/raw-clinton-anderson/">
@@ -74,6 +74,12 @@ a, button { touch-action: manipulation; }
 @media (min-width: 601px) {
     .revive-ad-wrap { padding: 0 24px; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 </head>
 <body>

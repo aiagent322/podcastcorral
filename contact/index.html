@@ -115,6 +115,12 @@
 @media (min-width: 601px) {
     .revive-ad-wrap { padding: 0 24px; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 </head>
 <body>

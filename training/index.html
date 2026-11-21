@@ -11,15 +11,15 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horse Training Podcasts | Tips, Techniques, Behavior &amp; Performance</title>
-<meta name="description" content="Listen to horse training podcasts covering groundwork, riding techniques, behavior, and performance. Learn from top trainers across Western and English disciplines.">
-<meta property="og:title" content="Horse Training Podcasts | Tips, Techniques, Behavior &amp; Performance">
+<title>Horse Training Podcasts | Tips, Techniques &amp; Behavior</title>
+<meta name="description" content="Listen to horse training podcasts covering groundwork, riding techniques, behavior, and performance from top trainers across Western and English disciplines.">
+<meta property="og:title" content="Horse Training Podcasts | Tips, Techniques &amp; Behavior">
 <meta property="og:description" content="Discover the best horse training podcasts featuring expert clinicians, horsemanship philosophy, rider development, and practical training techniques for all disciplines.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://podcastcorral.com/training/">
 <meta property="og:image" content="https://podcastcorral.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Horse Training Podcasts | Tips, Techniques, Behavior &amp; Performance">
+<meta name="twitter:title" content="Horse Training Podcasts | Tips, Techniques &amp; Behavior">
 <meta name="twitter:image" content="https://podcastcorral.com/og-image.png">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://podcastcorral.com/training/">
@@ -117,6 +117,12 @@
 @media (min-width: 601px) {
     .revive-ad-wrap { padding: 0 24px; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 </head>
 <body>

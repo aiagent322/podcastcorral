@@ -15,7 +15,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ — Podcast Corral Questions &amp; Answers</title>
-<meta name="description" content="Frequently asked questions about Podcast Corral — how to find equestrian podcasts, submit your show, get featured, and everything else about the equestrian podcast directory.">
+<meta name="description" content="Frequently asked questions about Podcast Corral: how to find equestrian podcasts, submit your show, get featured, and more about the directory.">
 <link rel="canonical" href="https://podcastcorral.com/faq/">
 <meta property="og:title" content="FAQ — Podcast Corral Questions &amp; Answers">
 <meta property="og:description" content="Frequently asked questions about Podcast Corral — how to find shows, submit your podcast, get featured, and more.">
@@ -177,6 +177,12 @@ button, a { touch-action:manipulation; }
 @media (min-width: 601px) {
     .revive-ad-wrap { padding: 0 24px; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 </head>
 <body>

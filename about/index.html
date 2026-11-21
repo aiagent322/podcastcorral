@@ -14,17 +14,17 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Podcast Corral — The Equestrian Podcast Directory</title>
-<meta name="description" content="Podcast Corral is the equestrian world's dedicated podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play. A Bridle & Bit Magazine platform.">
+<meta name="description" content="Podcast Corral is the equestrian world's dedicated podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play.">
 <link rel="canonical" href="https://podcastcorral.com/about/">
 <meta property="og:title" content="About Podcast Corral — The Equestrian Podcast Directory">
-<meta property="og:description" content="Podcast Corral is the equestrian world's dedicated podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play. A Bridle & Bit Magazine platform.">
+<meta property="og:description" content="Podcast Corral is the equestrian world's dedicated podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play.">
 <meta property="og:image" content="https://podcastcorral.com/og-image.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://podcastcorral.com/about/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About Podcast Corral — The Equestrian Podcast Directory">
 <meta name="twitter:image" content="https://podcastcorral.com/og-image.png">
-<meta name="twitter:description" content="Podcast Corral is the equestrian world's dedicated podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play. A Bridle & Bit Magazine platform.">
+<meta name="twitter:description" content="Podcast Corral is the equestrian world's dedicated podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
@@ -245,6 +245,12 @@ a, button { touch-action: manipulation; }
 @media (min-width: 601px) {
     .revive-ad-wrap { padding: 0 24px; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 </head>
 <body>

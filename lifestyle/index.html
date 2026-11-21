@@ -11,15 +11,15 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horse Lifestyle Podcasts | Equestrian Life, Horses, Ranch &amp; Travel</title>
+<title>Horse Lifestyle Podcasts | Equestrian Life &amp; Ranch</title>
 <meta name="description" content="Explore horse lifestyle podcasts covering equestrian living, horse care, ranch life, travel, and stories from riders, trainers, and horse owners.">
-<meta property="og:title" content="Horse Lifestyle Podcasts | Equestrian Life, Horses, Ranch &amp; Travel">
+<meta property="og:title" content="Horse Lifestyle Podcasts | Equestrian Life &amp; Ranch">
 <meta property="og:description" content="Explore horse lifestyle podcasts covering equestrian culture, barn life, travel, relationships, and the daily realities of living with horses.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://podcastcorral.com/lifestyle/">
 <meta property="og:image" content="https://podcastcorral.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Horse Lifestyle Podcasts | Equestrian Life, Horses, Ranch &amp; Travel">
+<meta name="twitter:title" content="Horse Lifestyle Podcasts | Equestrian Life &amp; Ranch">
 <meta name="twitter:image" content="https://podcastcorral.com/og-image.png">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://podcastcorral.com/lifestyle/">
@@ -99,6 +99,12 @@
 @media (min-width: 601px) {
     .revive-ad-wrap { padding: 0 24px; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 </head>
 <body>

@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tom McCutcheon's The Show | Podcast Corral</title>
-<meta name="description" content="Tom McCutcheon's The Show podcast hosted by Tom McCutcheon, Gunny Mathison & Joe Schmidt. Featured on Podcast Corral — the equestrian podcast directory. Listen on Spotify and Apple Podcasts.">
+<meta name="description" content="Tom McCutcheon's The Show podcast hosted by Tom McCutcheon, Gunny Mathison & Joe Schmidt. Listen on Spotify and Apple Podcasts via Podcast Corral.">
 <link rel="canonical" href="https://podcastcorral.com/shows/tom-mccutcheon-the-show/">
 <meta property="og:title" content="Tom McCutcheon's The Show — Tom McCutcheon, Gunny Mathison & Joe Schmidt | Podcast Corral">
 <meta property="og:description" content="Featured equestrian podcast hosted by Tom McCutcheon, Gunny Mathison & Joe Schmidt. Listen on Spotify and Apple Podcasts.">
@@ -74,6 +74,12 @@ a, button { touch-action: manipulation; }
 @media (min-width: 601px) {
     .revive-ad-wrap { padding: 0 24px; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 </head>
 <body>

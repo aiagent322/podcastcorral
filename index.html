@@ -889,6 +889,12 @@
     .detail-link { min-height: revert; padding: 5px 12px; font-size: 11px; display: revert; align-items: revert; justify-content: revert; }
     .detail-close { min-height: revert; padding: 5px 12px; font-size: 11px; display: revert; align-items: revert; justify-content: revert; }
   }
+/* Touch targets: 44px minimum hit area on touch devices (padding on inline links adds no layout height) */
+@media (pointer: coarse) {
+  footer a, .breadcrumb a, .back-link, .content p a, .content li a, .faq-answer-inner a { padding-block: 13px; }
+  .cat-nav a { min-height: 44px; }
+  .listen-btn, .listen-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
 </style>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Podcast Corral","url":"https://podcastcorral.com/","description":"The equestrian podcast directory — 132 shows across 12 categories. Free, curated, no pay-to-play.","publisher":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}},{"@context":"https://schema.org","@type":"Organization","name":"Podcast Corral","url":"https://podcastcorral.com/","parentOrganization":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}}]</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Featured Equestrian Podcasts","description":"Hand-picked featured shows from the Podcast Corral equestrian podcast directory.","url":"https://podcastcorral.com/","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"PodcastSeries","name":"The Almosta Cowboy","author":{"@type":"Person","name":"Al Dunning"},"url":"https://open.spotify.com/show/0maYvfFBusMuXlKOMaq6QU"}},{"@type":"ListItem","position":2,"item":{"@type":"PodcastSeries","name":"Raw with Clinton Anderson","author":{"@type":"Person","name":"Clinton Anderson"},"url":"https://open.spotify.com/show/2qvy1IXMdzwyBRl85kGm8b"}},{"@type":"ListItem","position":3,"item":{"@type":"PodcastSeries","name":"Rodeo Time with Dale Brisby","author":{"@type":"Person","name":"Dale Brisby"},"url":"https://open.spotify.com/show/5nR3hQZcNWoUXngEmL4FAh"}},{"@type":"ListItem","position":4,"item":{"@type":"PodcastSeries","name":"Horses in the Morning","author":{"@type":"Person","name":"Jamie Jennings & Glenn the Geek"},"url":"https://open.spotify.com/show/5MJT9VSdBkXD8ydvxgZIi6"}},{"@type":"ListItem","position":5,"item":{"@type":"PodcastSeries","name":"Train Your Own Horse","author":{"@type":"Person","name":"Stacy Westfall"},"url":"https://open.spotify.com/show/6rz2WZeMu7o6z6usg1aGit"}},{"@type":"ListItem","position":6,"item":{"@type":"PodcastSeries","name":"The Journey On Podcast","author":{"@type":"Person","name":"Warwick Schiller"},"url":"https://open.spotify.com/show/4eUcex8YwWe5z1xXlQWJj3"}},{"@type":"ListItem","position":7,"item":{"@type":"PodcastSeries","name":"Tom McCutcheon's THE SHOW","author":{"@type":"Person","name":"Tom McCutcheon"},"url":"https://open.spotify.com/show/6gxikHAu26r2V7qilQc7QN"}},{"@type":"ListItem","position":8,"item":{"@type":"PodcastSeries","name":"The Score Podcast","author":{"@type":"Person","name":"Team Roping Journal"},"url":"https://open.spotify.com/show/0NC8LsedyH4rOaNeAyGcMj"}}]}</script>
@@ -3088,6 +3094,10 @@ function matchesPodcast(p) {
   return fmtMatch && catMatch && searchMatch;
 }
 
+// Cards display artwork at 72-110px; Apple's CDN serves any size, so request 300px
+// (about 19KB) instead of the 600px original (about 45KB). The detail modal keeps the original.
+function thumb(u) { return u ? u.replace('/600x600bb.', '/300x300bb.') : u; }
+
 function renderAll() {
   const matching = PODCASTS.filter(matchesPodcast);
   const featured = matching.filter(p => p.featured);
@@ -3105,7 +3115,7 @@ function renderAll() {
   featuredGrid.innerHTML = featured.map(p => `
     <div class="featured-card" onclick="openPodcastDetail(${p.id})" style="cursor:pointer;">
       <span class="featured-tag">⭐ Featured</span>
-      <div class="podcast-art">${p.artwork ? `<img src="${p.artwork}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';">` : p.emoji}</div>
+      <div class="podcast-art">${p.artwork ? `<img src="${thumb(p.artwork)}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';">` : p.emoji}</div>
       <div class="card-body">
         <div class="card-title">${p.title}</div>
         <div class="card-host">${p.host}</div>
@@ -3128,7 +3138,7 @@ function renderAll() {
 
   const cardHtml = p => `
     <div class="grid-card" onclick="openPodcastDetail(${p.id})" style="cursor:pointer;">
-      <div class="grid-art">${p.artwork ? `<img src="${p.artwork}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';">` : p.emoji}</div>
+      <div class="grid-art">${p.artwork ? `<img src="${thumb(p.artwork)}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.cssText='display:flex;align-items:center;justify-content:center;font-size:32px;';">` : p.emoji}</div>
       <div class="grid-body">
         <div class="grid-title">${p.title}</div>
         <div class="grid-host">${p.host}</div>
